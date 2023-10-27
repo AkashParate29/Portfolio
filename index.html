@@ -3,54 +3,62 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta http-equiv="refresh" content="5" /> -->
-    <meta name="keywords" content="" />
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- Add a meta tag for character set and viewport settings. -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link rel="stylesheet" href="public/docs/css/index.css">
 
-    <!-- Bootstrap Local -->
+    <!-- Bootstrap Local (Note: the version number should be accurate) -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
 
-    <!-- Bootstrap Online -->
+    <!-- Bootstrap Online (Note: the version numbers should be accurate) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    
 
-    <link rel="shortcut icon" href="" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Add a link to your favicon. -->
+
     <title>Home</title>
+
     <style>
-        #home {
+        main {
             margin-top: 20px;
+        }
+
+        #img-profile-background {
             height: 100vh;
             width: 100%;
             background-image: url(public/images/profile-image-2.jpg);
-            background-size: 100% 100%;
+            background-size: cover;
             background-attachment: fixed;
+        }
 
-            display: flex;
-            justify-content: center;
-            justify-items: center;
-            align-items: center;
+        .text-format {
             font-family: arial;
-            font-size: 39px;
+            font-size: 40px;
             font-weight: bold;
+            text-align: center;
+        }
+
+        #myName {
+            padding: 50px;
+            margin-top: 250px;
             color: cyan;
         }
 
-        #div-about {
+        #div-about {            
             display: grid;
-            grid-template-columns: 4fr 4fr 4fr;
-
+            grid-template-columns: repeat(3, 1fr);
+            /* Use 'repeat' for grid-template-columns. */
+            gap: 20px;
+            /* Add a gap between grid items. */
         }
 
-
-
-        label {            
+        label {
             margin-left: 25px;
             margin-bottom: 20px;
             color: brown;
@@ -62,113 +70,237 @@
             text-align: justify;
         }
 
-
         .title {
+            font-family: elephant;
+            letter-spacing: 2px;
             font-size: 30px;
             font-weight: bold;
-            text-decoration-line: underline;
+            text-decoration: underline;
+            /* Correct the property name for text-decoration. */
             color: navy;
+            margin-top: 30px;
         }
 
         li {
-            line-height: 50px;
+            line-height: 40px;
             font-size: 20px;
         }
 
-        /* 
-        li {
-            list-style-type: none;
-            margin-left: 20px;
-        } */
+        /* Typing text Starts */
+        .text-container p {
+            padding: 75px;
+            margin-top: 290px;
+            color: red;
+        }
+
+        .text-container p span {
+            white-space: nowrap;
+            overflow: hidden;
+            background: transparent;
+            animation: typing 5s steps(18) 1s forwards, blink-caret 1s step-end infinite;
+        }
+
+        .text-container p:last-child span:last-child {
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+        /* Typing text Ends */
+
+
     </style>
 </head>
 
 <body class="container-fluid mt-2">
-
     <header>
-        <div>
-            <ul class="nav nav-tabs">
-                <li class="nav-item"><a href="#home" data-bs-toggle="tab" class="nav-link active">Home</a></li>
-                <li class="nav-item"><a href="#about" data-bs-toggle="tab" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#resume" data-bs-toggle="tab" class="nav-link">Resume</a></li>
-                <li class="nav-item"><a href="#portfolio" data-bs-toggle="tab" class="nav-link">Portfolio</a></li>
-                <li class="nav-item"><a href="#services" data-bs-toggle="tab" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="#contact" data-bs-toggle="tab" class="nav-link">Contact</a></li>                
-            </ul>
-        </div>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a href="#home" data-bs-toggle="tab" class="nav-link active">
+                    Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#about" data-bs-toggle="tab" class="nav-link">
+                    About
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#resume" data-bs-toggle="tab" class="nav-link">
+                    Resume
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#portfolio" data-bs-toggle="tab" class="nav-link">
+                    Portfolio
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#services" data-bs-toggle="tab" class="nav-link">
+                    Services
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#contact" data-bs-toggle="tab" class="nav-link">
+                    Contact
+                </a>
+            </li>
+        </ul>
+
     </header>
+
     <main>
-        <div class="tab-pane" id="home">Akash N. Parate</div>
+        <div class="tab-content">            
 
-        <div id="about">
-            <h1>About</h1>
-            <p>
-                An opportunity to make a strong contribution to organizational goals through continues development of
-                professional skills and to effectively work as a team member and perform all the assigned work. To
-                obtain a challenging and responsible position where I contribute the successful growth of the
-                organization using my skill and hard work.
-            </p>
-            <div class="tab-pane" id="div-about">
-                <div id="col-1">
-                    <img src="public/images/profile-image-3.jpg" alt="" width="250px" height="250px">
+                <div id="home" class="tab-pane active">
+                    <div id="img-profile-background">
+
+                        <p id="myName" class="text-format position-absolute">
+                            Akash N. Parate
+                        </p>
+
+                        <div class="text-container">
+                            <p class="text-format position-absolute">
+                                <span>I'm&nbsp;</span><span id="text"> good person</span>
+                            </p>
+                        </div>
+
+                    </div>
                 </div>
-                <div id="col-2">
-                    <div><label for="">Birthday:</label> 29 March 1989</div>
-                    <div><label for="">Birthday:</label> akashparate29@gmail.com</div>
-                    <div><label for="">City:</label> Chandrapur, Maharashtra, India</div>
+          
+
+                <div id="about" class="tab-pane active">
+                    <h1 class="title">About</h1>
+                    <p>
+                        An opportunity to make a strong contribution to organizational goals through continuous
+                        development
+                        of professional skills and to effectively work as a team member and perform all the assigned
+                        work.
+                        To
+                        obtain a challenging and responsible position where I contribute to the successful growth of the
+                        organization using my skills and hard work.
+                    </p>
+                    <div id="div-about">
+                        <div>
+                            <img src="public/images/profile-image-3.jpg" alt="Profile Image" width="400px"
+                                height="400px">
+                        </div>
+                        <div>
+                            <label for="birthday">Birthday:</label> 29 March 1989
+                            <br>
+                            <label for="email">Email:</label> akashparate29@gmail.com
+                            <br>
+                            <label for="city">City:</label> Chandrapur, Maharashtra, India
+                        </div>
+                        <div>
+                            <label for="education">Education:</label> BCCA, B.Ed, M.Com
+                            <br>
+                            <label for="freelance">Freelance:</label> Available
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">UI / UX Designer & Web Developer</p>
+                        <p>
+                            I am a versatile professional, adept in the fields of UI/UX design and web development. With a
+                            passion for creating seamless and engaging user experiences, I thrive on combining aesthetic
+                            appeal
+                            with functionality. My skills encompass a deep understanding of design principles, front-end and
+                            back-end development, and a knack for crafting visually striking, user-friendly websites. I
+                            constantly seek to stay at the forefront of industry trends and technologies to deliver
+                            innovative
+                            and tailored solutions. My goal is to make the digital world more accessible and delightful for
+                            users, one project at a time.
+                        </p>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> Firm determination and a strive for perfection</li>
+                            <li><i class="bi bi-chevron-right"></i> Honesty, teamwork, recognition, communication</li>
+                            <li><i class="bi bi-chevron-right"></i> Positive and creative attitude</li>
+                            <li><i class="bi bi-chevron-right"></i> Eagerness to learn new things</li>
+                            <li><i class="bi bi-chevron-right"></i> Cooperative with seniors and subordinates</li>
+                        </ul>
+    
+                        <p class="title">Skills</p>
+                        <p>
+                            As a UI/UX designer and web developer, I combine a keen eye for aesthetics with a strong coding
+                            proficiency. My skill set encompasses crafting visually appealing interfaces, conducting user
+                            research, and seamlessly translating design concepts into functional, user-centric websites.
+                        </p>
+                    </div>
                 </div>
-                <div id="col-3">
-                    <div><label for="">Education:</label> BCCA, B.ed, M.com</div>        
-                    <div><label for="">Freelance:</label> Available</div>            
-                </div>
+                
+                
+            
 
 
-
+            <div id="resume" class="tab-pane active">
+                Resume
             </div>
-        </div>
-        <div>
-            <p class="title">UI / UX Designer & Web Developer</p>
-            <p>
-                I am a versatile professional, adept in the fields of UI/UX design and web development. With a passion
-                for creating seamless and engaging user experiences, I thrive on combining aesthetic appeal with
-                functionality. My skills encompass a deep understanding of design principles, front-end and back-end
-                development, and a knack for crafting visually striking, user-friendly websites. I constantly seek to
-                stay at the forefront of industry trends and technologies to deliver innovative and tailored solutions.
-                My goal is to make the digital world more accessible and delightful for users, one project at a time.
-            </p>
-            <ul id="ul-unlist">
-                <li class="bi bi-chevron-right">Firm determined, Strive for perfection</li>
-                <li class="bi bi-chevron-right">Honest, Team work, Recognition, Communication</li>
-                <li class="bi bi-chevron-right">Positive and creative attitude</li>
-                <li class="bi bi-chevron-right">Eagerness to learn the new things.</li>
-                <li class="bi bi-chevron-right">Co-operative with Seniors & Subordinates</li>
-            </ul>
 
-            <p class="title">Skills</p>
+            <div id="portfolio" class="tab-pane active">
+                Portfolio
+            </div>
 
-            <p>
-                As a UI/UX designer and web developer, I combine a keen eye for aesthetics with a strong coding proficiency. My skill set encompasses crafting visually appealing interfaces, conducting user research, and seamlessly translating design concepts into functional, user-centric websites.
-            </p>
+            <div id="services" class="tab-pane active">
+                Services
+            </div>
 
+            <div id="contact" class="tab-pane active">
+                Contact
+            </div>
 
         </div>
 
-        <div class="tab-pane" id="resume">
-            Resume
-        </div>
-
-        <div class="tab-pane" id="portfolio">
-            Portfolio
-        </div>
-
-        <div class="tab-pane" id="services">
-            Services
-        </div>
-
-        <div class="tab-pane" id="contact">
-            Contact
-        </div>
     </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const textElement = document.getElementById("text");
+        const phrases = [" good person", " bad person", " Villager", " attractive"];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeText() {
+            const currentPhrase = phrases[phraseIndex];
+            if (isDeleting) {
+                textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                setTimeout(typeText, 1000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                setTimeout(typeText, 500);
+            } else {
+                setTimeout(typeText, isDeleting ? 50 : 100);
+            }
+        }
+
+        typeText();
+    </script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- JavaScript libraries (jQuery and Bootstrap) -->
