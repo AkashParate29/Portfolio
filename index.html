@@ -28,13 +28,14 @@
         html {
             font-family: arial;
         }
-        a{
+
+        a {
             text-decoration: none;
         }
 
         header {
             font-size: 25px;
-            text-align: center;            
+            text-align: center;
             background-color: darkcyan;
             border-radius: 5px;
             display: flex;
@@ -92,7 +93,7 @@
             margin-bottom: -10px;
         }
 
-        #ui-ux{
+        #ui-ux {
             columns: 2;
             column-gap: 50px;
             margin-top: 10px;
@@ -106,9 +107,9 @@
             margin-top: 5px;
         }
 
-        #nav-ul{
-            margin-left: -20px; 
-            
+        #nav-ul {
+            margin-left: -20px;
+
         }
 
         .nav-li {
@@ -120,7 +121,8 @@
             padding: 5px;
             margin-bottom: 20px;
         }
-        .nav-li a{
+
+        .nav-li a {
             color: yellow;
         }
 
@@ -180,6 +182,7 @@
             animation-iteration-count: infinite;
             animation-fill-mode: forwards;
         }
+
         /* Typing text Ends */
 
 
@@ -203,41 +206,86 @@
             padding: 20px;
             font-size: 20px;
             font-family: arial;
-        }       
+        }
 
         #about-ul li {
             line-height: 40px;
             font-size: 20px;
-            color: red;
+            /* color: red; */
         }
+
         /*About ends*/
 
 
         /*Resume starts here*/
         #cv-nav-tabs {
+            /* position: sticky;
+            top: 30px;     */
             position: sticky;
             top: 30px;
+            /* You can adjust the top value to position the tabs as needed */
+            z-index: 1;
+            /* Ensure the tabs are above other content */
+            background-color: white;
+            /* Set the background color of the tabs if needed */
         }
 
-        #technical-skill-main{
-            font-size: 20px;				
-			list-style: none;              
+        #resume-body {
+            /* position: sticky; */
+            background-color: yellow;
+
         }
-        #technical-skill-sub{
-            font-size: 15px;				
+
+        #technical-skill-main {
+            font-size: 20px;
+            list-style: none;
         }
-        .bi-bookmark-check-fill{
-            color:green;
+
+        #technical-skill-sub {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .bi-bookmark-check-fill {
+            color: green;
             margin-right: 10px;
-            
+
         }
-        .bi-box-arrow-right{
-            color: blue;            
+
+        .bi-box-arrow-right {
+            color: blue;
             margin-left: 50px;
             margin-right: 10px;
-            
         }
-       
+
+        mark {
+            font-weight: bold;
+        }
+
+        /* education starts here*/
+        table{
+            width: 90%;
+            border: 1px solid gray;
+            border-radius: 10px;
+            box-shadow: 10px 10px 5px 3px lightgray;
+            border-collapse: collapse;
+        }
+        #heading-row{
+            font-size: 20px;                 
+        }
+        thead tr th{
+            padding: 10px;
+            color: gray;
+        }
+        th, td {
+            border: 1px solid lightgray; 
+            /* text-align: center;             */
+            padding: 15px;
+        }
+        
+
+        /* education ends here*/
+
 
         /*Resume ends here*/
     </style>
@@ -375,7 +423,13 @@
                 <p class="title sub-title mt-4">UI / UX Designer & Web Developer</p>
                 <div class="div-p">
                     <p id="ui-ux">
-                        I am a versatile professional, adept in the fields of UI/UX design and web development. With a passion for creating seamless and engaging user experiences, I thrive on combining aesthetic appeal with functionality. My skills encompass a deep understanding of design principles, front-end and back-end development, and a knack for crafting visually striking, user-friendly websites. I constantly seek to stay at the forefront of industry trends and technologies to deliver innovative and tailored solutions. My goal is to make the digital world more accessible and delightful for users, one project at a time.
+                        I am a versatile professional, adept in the fields of UI/UX design and web development. With a
+                        passion for creating seamless and engaging user experiences, I thrive on combining aesthetic
+                        appeal with functionality. My skills encompass a deep understanding of design principles,
+                        front-end and back-end development, and a knack for crafting visually striking, user-friendly
+                        websites. I constantly seek to stay at the forefront of industry trends and technologies to
+                        deliver innovative and tailored solutions. My goal is to make the digital world more accessible
+                        and delightful for users, one project at a time.
                     </p>
                 </div>
                 <ul id="about-ul">
@@ -395,7 +449,7 @@
                     </p>
                 </div>
             </div>
-            
+
             <!-- About ends here -->
 
 
@@ -412,39 +466,39 @@
                         <a href="#basic-details" class="nav-link active" data-bs-toggle="tab">Basic Details</a>
                     </li>
 
-                    <li class="nav nav-tabs">
+                    <li class="nav-item">
                         <a href="#technical-skill" class="nav-link" data-bs-toggle="tab">Technical Skill</a>
                     </li>
-        
-                    <li class="nav nav-tabs">
-                        <a href="#employment-summary" class="nav-link" data-bs-toggle="tab">Employment Summary</a>
-                    </li>
 
-                    <li class="nav nav-tab">
+                    <!-- <li class="nav-item">
+                        <a href="#employment-summary" class="nav-link" data-bs-toggle="tab">Employment Summary</a>
+                    </li> -->
+
+                    <li class="nav-item">
                         <a href="#education" class="nav-link" data-bs-toggle="tab">Education</a>
                     </li>
 
-                    <li class="nav nav-tab">
+                    <li class="nav-item">
                         <a href="#courses" class="nav-link" data-bs-toggle="tab">Courses</a>
                     </li>
 
-                    <li class="nav nav-tab">
+                    <li class="nav-item">
                         <a href="#personai-info" class="nav-link" data-bs-toggle="tab">Personal Information</a>
                     </li>
 
-                    <li class="nav nav-tab">
-                        <a href="#declaration" class="nav-link">Declarations</a>
+                    <li class="nav-item">
+                        <a href="#declaration" class="nav-link">Declaration</a>
                     </li>
                 </ul>
 
                 <div class="tab-content">
-                    <div class="tab-pane  mt-4 ms-4" id="basic-details">
+                    <div class="tab-pane active mt-4 ms-4" id="basic-details">
                         <h2><b> MR. AKASH NILKANTH PARATE </b></h2>
                         <h3>
                             <p>
                                 Near Kamal girls hostel, <br>
                                 GanjWard No.-2, <br>
-                                Chandrapur 442402. (M.H.) 
+                                Chandrapur 442402. (M.H.)
                             </p>
                         </h3>
                         <h5>
@@ -456,69 +510,141 @@
                         </h5>
 
                         <h5>
-                            Portfolio: <a href="https://akashparate29.github.io/Portfolio">https://akashparate29.github.io/Portfolio</a>
-                        </h5>                        
+                            Portfolio: <a
+                                href="https://akashparate29.github.io/Portfolio">https://akashparate29.github.io/Portfolio</a>
+                        </h5>
                     </div>
                 </div>
 
                 <div class="tab-content">
-                    <div class="tab-pane active mt-4 ms-4" id="technical-skill">
+                    <div class="tab-pane mt-4 ms-4" id="technical-skill">
                         <ul id="technical-skill-main" class="list-unstyled">
                             <li>
                                 <span class="bi bi-bookmark-check-fill"></span>
-                                Knowledge of following programming language:                                
+                                Knowledge of following programming language:
                                 <ul id="technical-skill-sub" class="list-unstyled">
                                     <li>
                                         <span class="bi bi-box-arrow-right"></span>
-                                        Oracle, SQL, Pl/SQL</li>
+                                        Oracle, SQL, Pl/SQL
+                                    </li>
                                     <li>
                                         <span class="bi bi-box-arrow-right"></span>
-                                        HTML, CSS, Java Script, Bootstrap, Type Script</li>
+                                        HTML, CSS, Java Script, Bootstrap, Type Script
+                                    </li>
                                     <li>
                                         <span class="bi bi-box-arrow-right"></span>
-                                        Core Java</li>
+                                        Core Java
+                                    </li>
                                     <li>
                                         <span class="bi bi-box-arrow-right"></span>
-                                        Android with Kotlin & XML</li>
+                                        Android with Kotlin & XML
+                                    </li>
                                     <li>
                                         <span class="bi bi-box-arrow-right"></span>
-                                        Visual Basic (Version: - 6.0)</li>
+                                        Visual Basic (Version: - 6.0)
+                                    </li>
                                     <li>
                                         <span class="bi bi-box-arrow-right"></span>
-                                        LOGO</li>
+                                        LOGO
+                                    </li>
                                 </ul>
-                            </li>                            
-                            <li>
-                                <span class="bi bi-bookmark-check-fill"></span>
-                                Knowledge of MS Office (version:-2003, 2007, 2010, 2013 & onward)
-                            </li>                            
-                            <li>                                
-                                <span class="bi bi-bookmark-check-fill"></span>
-                                Having good command on Excel
                             </li>
                             <li>
                                 <span class="bi bi-bookmark-check-fill"></span>
-                                Knowledge of Tally in. (5.4, 7.2, 9.0 & ERP)
+                                Knowledge of <mark>HTML</mark> language with <mark>CSS & BOOTSTRAP</mark> technology
+                                (Web designing)
 
                             </li>
                             <li>
                                 <span class="bi bi-bookmark-check-fill"></span>
-                                Knowledge of Internet & Mailing
+                                Knowledge of <mark>MS Office</mark> (version:-2003, 2007, 2010, 2013 & onward)
                             </li>
                             <li>
                                 <span class="bi bi-bookmark-check-fill"></span>
-                                Knowledge of all Parts (Hardware) of Computer in details
+                                Having good command on <mark>Excel</mark>
                             </li>
                             <li>
                                 <span class="bi bi-bookmark-check-fill"></span>
-                                Knowledge of Windows XP, Windows 7, Window 10 & other Operating System
-                            </li>                            
+                                Knowledge of <mark>Tally</mark> (5.4, 7.2, 9.0 & ERP)
+
+                            </li>
+                            <li>
+                                <span class="bi bi-bookmark-check-fill"></span>
+                                Knowledge of <mark>Internet & Mailing</mark>
+                            </li>
+                            <li>
+                                <span class="bi bi-bookmark-check-fill"></span>
+                                Knowledge of all <mark>Parts</mark> (Hardware) of Computer in details
+                            </li>
+                            <li>
+                                <span class="bi bi-bookmark-check-fill"></span>
+                                Knowledge of <mark>Windows XP, Windows 7, Window 10</mark> & other Operating System
+                            </li>
                         </ul>
                     </div>
                 </div>
 
+                <div class="tab-content">
+                    <div class="tab-pane active mt-4 ms-4" id="education">
+                        <table>
+                            <!-- <caption>
+                                <h2>Education Summary</h2>
+                            </caption> -->
 
+                            <thead>
+                                <tr>
+                                    <th>Qualification</th>
+                                    <th>Institution Name</th>
+                                    <th>University / Board</th>
+                                    <th>Year</th>
+                                    <th>Achievement</th>
+                                </tr>
+                            </thead>
 
+                            <tbody>
+                                <tr>
+                                    <td>M. Com.</td>
+                                    <td>Arts, Commerce Mahila Mahavidyalaya, Ballarpur</td>
+                                    <td>YCMOU University</td>
+                                    <td>2021</td>
+                                    <td>I Class</td>
+                                </tr>
+
+                                <tr>
+                                    <td>B.Ed.</td>
+                                    <td>Janta Shikshan Mahavidyalaya, Civil line, Chandrapur</td>
+                                    <td>Gondwana University</td>
+                                    <td>2018</td>
+                                    <td>I Class</td>
+                                </tr>
+
+                                <tr>
+                                    <td>B.C.C.A.</td>
+                                    <td>Indira College of Science & Management Tukum, Chandrapur</td>
+                                    <td>RTM Nagpur University</td>
+                                    <td>2011</td>
+                                    <td>II Class</td>
+                                </tr>
+
+                                <tr>
+                                    <td>H.S.C.</td>
+                                    <td>Sardar Patel College, Chandrapur</td>
+                                    <td>Nagpur Division</td>
+                                    <td>2007</td>
+                                    <td>II Class</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>S.S.C.</td>
+                                    <td>Marathi City High School, Chandrapur</td>
+                                    <td>Nagpur Division</td>
+                                    <td>2005</td>
+                                    <td>II Class</td>
+                                </tr>
+                            </tbody>
+                        </table>                        
+                    </div>
+                </div>
 
 
             </div>
