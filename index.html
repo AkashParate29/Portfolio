@@ -263,28 +263,98 @@
         }
 
         /* education starts here*/
-        table{
+        table {
             width: 90%;
             border: 1px solid gray;
             border-radius: 10px;
             box-shadow: 10px 10px 5px 3px lightgray;
             border-collapse: collapse;
         }
-        #heading-row{
-            font-size: 20px;                 
+
+        #heading-row {
+            font-size: 20px;
         }
-        thead tr th{
+
+        thead tr th {
             padding: 10px;
             color: gray;
         }
-        th, td {
-            border: 1px solid lightgray; 
+
+        th,
+        td {
+            border: 1px solid lightgray;
             /* text-align: center;             */
             padding: 15px;
         }
-        
 
         /* education ends here*/
+
+
+        /* courses starts here */
+        #display-in-two-column {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            box-shadow: 10px 5px 10px red;
+            border-radius: 10px;
+            width: 450px;
+            border: 1px solid red;
+            /* Add your desired border styles */
+            height: 220px;
+        }
+        legend {
+            text-align: center;
+            background-color: black;
+            color: red;
+            font-weight: bold;
+            padding: 5px;
+            border: 5px solid yellow;
+            box-shadow: 10px 5px 10px cyan;
+            border-radius: 15px;
+        }
+        .list-unstyled li {
+            font-size: 20px;
+            text-shadow: 5px 2px yellow;
+            color: red;
+        }
+        /* courses ends here*/
+
+        /* skill - school starts here */
+        #skill-in-school {
+            font-size: 20px;            
+            list-style: none;
+        }
+
+        #skill-in-school li {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        .bi-tag-fill {
+            color: green;
+        }
+        #skill-in-school li span {
+            color: black;
+        }
+        /* skill - school ends here */
+        
+        
+        /* declaration starts here */
+        #declaration {
+            font-size: 20px;
+            word-spacing: 10px;
+            text-align: justify;
+            color: red;
+            width: 700px;
+        }
+        #my-declaration {
+            line-height: 20px;            
+        }
+
+        /* declaration ends here */
+
+
 
 
         /*Resume ends here*/
@@ -292,6 +362,7 @@
 </head>
 
 <body class="container-fluid mt-1">
+
     <header>
         <div>
             <a href="#home">
@@ -359,7 +430,6 @@
                     <a href="#contact" class="bi bi-telephone-plus"> Contact</a>
                 </li>
             </ul>
-
         </nav>
 
         <main>
@@ -409,14 +479,16 @@
                 <div>
                     <label for="birthday">Date of birth:</label> 29 March 1989
                     <br>
+                    <label for="gender">Gender:</label> Male
+                    <br>
                     <label for="email">Email:</label> akashparate29@gmail.com
                     <br>
                     <label for="city">City:</label> Chandrapur, Maharashtra, India
-                </div>
-                <div>
                     <label for="education">Education:</label> BCCA, B.Ed, M.Com
                     <br>
                     <label for="freelance">Freelance:</label> Available
+                </div>
+                <div>
                 </div>
             </div>
             <div>
@@ -483,11 +555,12 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#personai-info" class="nav-link" data-bs-toggle="tab">Personal Information</a>
+                        <a href="#experience-skill-in-school" class="nav-link" data-bs-toggle="tab">Experience Skill in
+                            School</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#declaration" class="nav-link">Declaration</a>
+                        <a href="#declaration" class="nav-link" data-bs-toggle="tab">Declaration</a>
                     </li>
                 </ul>
 
@@ -525,7 +598,7 @@
                                 <ul id="technical-skill-sub" class="list-unstyled">
                                     <li>
                                         <span class="bi bi-box-arrow-right"></span>
-                                        Oracle, SQL, Pl/SQL
+                                        Oracle, SQL, PL/SQL
                                     </li>
                                     <li>
                                         <span class="bi bi-box-arrow-right"></span>
@@ -584,9 +657,9 @@
                     </div>
                 </div>
 
-                <div class="tab-content">
-                    <div class="tab-pane active mt-4 ms-4" id="education">
-                        <table>
+                <div class="tab-content table-responsive">
+                    <div class="tab-pane mt-4 ms-4" id="education">
+                        <table class="table table-hover table-striped">
                             <!-- <caption>
                                 <h2>Education Summary</h2>
                             </caption> -->
@@ -629,24 +702,104 @@
                                 <tr>
                                     <td>H.S.C.</td>
                                     <td>Sardar Patel College, Chandrapur</td>
-                                    <td>Nagpur Division</td>
+                                    <td>MSBSHSE Nagpur Division</td>
                                     <td>2007</td>
                                     <td>II Class</td>
                                 </tr>
-                                
+
                                 <tr>
                                     <td>S.S.C.</td>
                                     <td>Marathi City High School, Chandrapur</td>
-                                    <td>Nagpur Division</td>
+                                    <td>MSBSHSE Nagpur Division</td>
                                     <td>2005</td>
                                     <td>II Class</td>
                                 </tr>
                             </tbody>
-                        </table>                        
+                        </table>
                     </div>
                 </div>
 
+                <div class="tab-content">
+                    <div class="tab-pane mt-4 ms-4" id="courses">
+                        <div id="display-in-two-column">
 
+                            <div>
+                                <fieldset class="border-danger rounded p-3">
+                                    <legend class="float-none w-auto px-3">Computer</legend>
+                                    <ul class="list-unstyled">
+                                        <li><span class="bi bi-check2-square"></span> CCC</li>
+                                        <li><span class="bi bi-check2-square"></span> Tally</li>
+                                        <li><span class="bi bi-check2-square"></span> MS-CIT</li>
+                                        <li><span class="bi bi-check2-square"></span> Kotlin Development Masterclass
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            </div>
+
+                            <div>
+                                <fieldset class="border-danger rounded p-3">
+                                    <legend class="float-none w-auto px-3">Typing</legend>
+                                    <ul class="list-unstyled">
+                                        <li><span class="bi bi-check2-circle"></span> English typing <em>30 WPM</em>
+                                        </li>
+                                        <li><span class="bi bi-check2-circle"></span> English typing <em>40 WPM</em>
+                                        </li>
+                                        <li><span class="bi bi-check2-circle"></span> Marathi typing <em>30 WPM</em>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            </div>
+
+                        </div>
+                        <div class="d-flex justify-content-around">
+                            <fieldset class="border-danger rounded p-3 w-auto h-auto">
+                                <legend class=" float-none w-auto px-3">Other Certificate</legend>
+                                <ul class="list-unstyled">
+                                    <li><span class="bi bi-check-lg"></span> MS CIT Authorized Learning Center
+                                        Certificate</li>
+                                    <li><span class="bi bi-check-lg"></span> Maharashtra center for Entrepreneurship
+                                        Development</li>
+                                </ul>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-pane mt-4 ms-4" id="experience-skill-in-school">
+                        <ul id="skill-in-school">
+                            <li class="bi bi-tag-fill">
+                                <span>Worked on Saral Database</span>
+                            </li>
+                            <li class="bi bi-tag-fill">
+                                <span>Worked with Exam Department</span>
+                            </li>
+                            <li class="bi bi-tag-fill">
+                                <span>Successful planed for Various Events</span>
+                            </li>
+                            <li class="bi bi-tag-fill">
+                                <span>Worked as an Admin for Online classes</span>
+                            </li>
+                            <li class="bi bi-tag-fill">
+                                <span>Generating Format for various event</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+          
+                
+
+                <div class="tab-content">
+                    <div class="tab-pane mt-4 ms-4" id="declaration">
+                        <input type="checkbox" name="" id="" checked>
+                        <span id="my-declaration">
+                            I hereby declare that all the information given above is true to the best of my knowledge. 
+                            If you found anything wrong regarding above information then I’ll be treated as falseness 
+                            and I’ll be cut off from the candidature.
+                        </span>
+                        <img src="public/images/bullet1.png" alt="">
+                    </div>
+                </div>
             </div>
             <!-- Resume ends here -->
 
