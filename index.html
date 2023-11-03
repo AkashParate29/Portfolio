@@ -295,6 +295,10 @@
             display: grid;
             grid-template-columns: 6fr 6fr;
         }
+        .inner-display-in-two-column{
+            display: flex;
+            justify-content: space-between;
+        }
         fieldset {
             margin-bottom: 20px;
             box-shadow: 10px 5px 10px red;
@@ -314,7 +318,7 @@
             box-shadow: 10px 5px 10px cyan;
             border-radius: 15px;
         }
-        .list-unstyled li {
+        .text-shadaow {
             font-size: 20px;
             text-shadow: 5px 2px yellow;
             color: red;
@@ -350,6 +354,16 @@
         }
         #my-declaration {
             line-height: 20px;            
+        }
+        #img-declaration {
+            height: 130px;
+            width: 150px;
+            box-shadow: 10px 10px 10px silver;
+            margin-left: 200px;
+        }
+        #img-declaration:hover {
+            transform: scale(4,3);
+            transition: 3s;
         }
         /* declaration ends here */
         /*Resume ends here*/
@@ -418,9 +432,13 @@
         </div>
 
         <div class="btn-group">
+            <button class="btn btn-warning">
+                <a class="text-danger" href="public/docs/pdf/Akash Parate CV.pdf" target="_blank"> <span class="bi bi-file-earmark-pdf"> CV</span></a>
+            </button>
             <button class="btn btn-primary bi-facebook"></button>
             <button class="btn btn-success bi-whatsapp"></button>
             <button class="btn btn-info bi-telegram"></button>
+            
         </div>
     </header>
 
@@ -615,12 +633,12 @@
                                 <ul id="technical-skill-sub" class="list-unstyled">
                                     <li>
                                         <span class="bi bi-box-arrow-right"></span>
-                                        Oracle, SQL, PL/SQL
+                                        HTML, CSS, Java Script, Bootstrap, Type Script
                                     </li>
                                     <li>
                                         <span class="bi bi-box-arrow-right"></span>
-                                        HTML, CSS, Java Script, Bootstrap, Type Script
-                                    </li>
+                                        Oracle, SQL, PL/SQL
+                                    </li>                                    
                                     <li>
                                         <span class="bi bi-box-arrow-right"></span>
                                         Core Java
@@ -688,6 +706,7 @@
                                     <th>University / Board</th>
                                     <th>Year</th>
                                     <th>Achievement</th>
+                                    <th>PDF</th>
                                 </tr>
                             </thead>
 
@@ -698,6 +717,9 @@
                                     <td>YCMOU University</td>
                                     <td>2021</td>
                                     <td>I Class</td>
+                                    <td>
+                                        <a href="public/docs/pdf/Akash Parate M-Com marksheet.pdf" target="_blank"><span class="bi bi-file-pdf-fill"></span></a>
+                                    </td>
                                 </tr>
 
                                 <tr>
@@ -706,6 +728,9 @@
                                     <td>Gondwana University</td>
                                     <td>2018</td>
                                     <td>I Class</td>
+                                    <td>
+                                        <a href="public/docs/pdf/Akash Parate B ed Marksheet.pdf" target="_blank"><span class="bi bi-file-pdf-fill"></span></a>
+                                    </td>
                                 </tr>
 
                                 <tr>
@@ -714,6 +739,9 @@
                                     <td>RTM Nagpur University</td>
                                     <td>2011</td>
                                     <td>II Class</td>
+                                    <td>
+                                        <a href="public/docs/pdf/Akash Parate BCCA Marksheet.pdf" target="_blank"><span class="bi bi-file-pdf-fill"></span></a>
+                                    </td>
                                 </tr>
 
                                 <tr>
@@ -722,6 +750,9 @@
                                     <td>MSBSHSE Nagpur Division</td>
                                     <td>2007</td>
                                     <td>II Class</td>
+                                    <td>
+                                        <a href="public/docs/pdf/Akash Parate HSC Marksheet.pdf" target="_blank"><span class="bi bi-file-pdf-fill"></span></a>
+                                    </td>
                                 </tr>
 
                                 <tr>
@@ -730,6 +761,9 @@
                                     <td>MSBSHSE Nagpur Division</td>
                                     <td>2005</td>
                                     <td>II Class</td>
+                                    <td>
+                                        <a href="public/docs/pdf/Akash Parate SSC Marksheet.pdf" tabindex="_blank"><span class="bi bi-file-pdf-fill"></span></a>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -743,40 +777,69 @@
                             <div>
                                 <fieldset class="border-danger rounded p-3">
                                     <legend class="float-none w-auto px-3">Computer</legend>
-                                    <ul class="list-unstyled">
-                                        <li><span class="bi bi-check2-square"></span> CCC</li>
-                                        <li><span class="bi bi-check2-square"></span> Tally</li>
-                                        <li><span class="bi bi-check2-square"></span> MS-CIT</li>
-                                        <li><span class="bi bi-check2-square"></span> Kotlin Development Masterclass
-                                        </li>
-                                    </ul>
+                                    <div class="inner-display-in-two-column">
+                                        <div>
+                                            <ul class="list-unstyled text-shadaow">
+                                                <li><span class="bi bi-check2-square"></span> CCC</li>
+                                                <li><span class="bi bi-check2-square"></span> Tally</li>
+                                                <li><span class="bi bi-check2-square"></span> MS-CIT</li>
+                                                <li><span class="bi bi-check2-square"></span> Kotlin Development Masterclass
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <ul class="list-unstyled text-shadaow">
+                                                <li><a href="public/docs/pdf/Akash Parate CCC Certificate.pdf" target="_blank"><span class="bi bi-filetype-pdf"></span></a></li>
+                                                <li><a href="public/docs/pdf/Akash Parate Tally Certificate.pdf" target="_blank"><span class="bi bi-filetype-pdf"></span></a></li>
+                                                <li><a href="public/docs/pdf/Akash Parate MS CIT Certificate.pdf" target="_blank"><span class="bi bi-filetype-pdf"></span></a></li>
+                                                <li><a href="public/docs/pdf/Akash Parate Kotlin Development Masterclass Udemy certificate.pdf" target="_blank"><span class="bi bi-filetype-pdf"></span></a></li>
+                                            </ul>                                                                                        
+                                        </div>
+                                    </div>
                                 </fieldset>
                             </div>
 
                             <div>
                                 <fieldset class="border-danger rounded p-3">
                                     <legend class="float-none w-auto px-3">Typing</legend>
-                                    <ul class="list-unstyled">
-                                        <li><span class="bi bi-check2-circle"></span> English typing <em>30 WPM</em>
-                                        </li>
-                                        <li><span class="bi bi-check2-circle"></span> English typing <em>40 WPM</em>
-                                        </li>
-                                        <li><span class="bi bi-check2-circle"></span> Marathi typing <em>30 WPM</em>
-                                        </li>
-                                    </ul>
+                                    <div class="inner-display-in-two-column">
+                                        <div>
+                                            <ul class="list-unstyled text-shadaow">
+                                                <li><span class="bi bi-check2-circle"></span> English typing <em>30 WPM</em></li>
+                                                <li><span class="bi bi-check2-circle"></span> English typing <em>40 WPM</em></li>
+                                                <li><span class="bi bi-check2-circle"></span> Marathi typing <em>30 WPM</em></li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <ul class="list-unstyled text-shadaow">
+                                                <li><a href="public/docs/pdf/Akash Parate Typing English 30.pdf" target="_blank"><span class="bi bi-filetype-pdf"></span></a></li>
+                                                <li><a href="public/docs/pdf/Akash Parate Typing English 40.pdf" target="_blank"><span class="bi bi-filetype-pdf"></span></a></li>
+                                                <li><a href="public/docs/pdf/Akash Parate Typing Marathi 30.pdf" target="_blank"><span class="bi bi-filetype-pdf"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </fieldset>
                             </div>
-
                         </div>
+
                         <div class="d-flex justify-content-around">
-                            <fieldset class="border-danger rounded p-3 w-auto h-auto">
+                            <fieldset class="border-danger rounded p-3 w-75 h-auto">
                                 <legend class=" float-none w-auto px-3">Other Certificate</legend>
-                                <ul class="list-unstyled">
-                                    <li><span class="bi bi-check-lg"></span> MS CIT Authorized Learning Center
-                                        Certificate</li>
-                                    <li><span class="bi bi-check-lg"></span> Maharashtra center for Entrepreneurship
-                                        Development</li>
-                                </ul>
+                                <div class="inner-display-in-two-column">
+                                    <div>
+                                        <ul class="list-unstyled text-shadaow">
+                                            <li><span class="bi bi-check-lg"></span> MS CIT Authorized Learning Center Certificate</li>
+                                            <li><span class="bi bi-check-lg"></span> Maharashtra center for Entrepreneurship Development</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <ul class="list-unstyled text-shadaow">
+                                            <li><a href="public/docs/pdf/Akash Parate MS CIT ALC Certificate.pdf" target="_blank"><span class="bi bi-filetype-pdf"></span></a></li>
+                                            <li><a href="public/docs/pdf/Akash Parate Dic certificate.pdf" target="_blank"><span class="bi bi-filetype-pdf"></span></a></li>
+                                        </ul>                                        
+                                    </div>
+                                </div>
+                                
                             </fieldset>
                         </div>
                     </div>
@@ -814,6 +877,8 @@
                             If you found anything wrong regarding above information then I’ll be treated as falseness 
                             and I’ll be cut off from the candidature.
                         </span>
+                        <br>
+                        <img id="img-declaration" src="public/images/declaration.jpg" alt="Akash self declaration" height="300px" width="400px">
                     </div>
                 </div>
                 <!-- declaration ends here -->
@@ -830,7 +895,8 @@
                 <ul>
                     <li class="right-arrow">
                         <span>
-                            Presently Working as a <strong>Computer Operator</strong> with <strong>Vaishnavi Enterprises</strong>, Near RTO, Chandrapur
+                            Presently Working as a <strong>Computer Operator</strong> with <strong>Vaishnavi online services</strong>, Near RTO, Chandrapur
+                            <p>(Period: April-01-2021 to till now)</p>
                         </span>
                     </li>
                     <li class="right-arrow">
