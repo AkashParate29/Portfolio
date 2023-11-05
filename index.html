@@ -152,17 +152,18 @@
 
         #div-home-right {
             display: block;
-            padding: 50px;
+            padding: 5px;
             font-size: 50px;
         }
 
         #myName {
-            font-weight: bold;
+            font-weight: bold;            
         }
 
         #img-home {
             height: 350px;
             width: 350px;
+            box-shadow: 10px 10px 10px silver;
         }
 
         /* Typing text Starts */
@@ -172,9 +173,9 @@
         }
 
         .text-container p span {
-            white-space: nowrap;
-            overflow: hidden;
-            background: transparent;
+            /* white-space: nowrap; */
+            /* overflow: hidden; */
+            /* background: transparent; */
             animation: typing 5s steps(18) 1s forwards, blink-caret 1s step-end infinite;
         }
 
@@ -189,7 +190,7 @@
         /*About starts*/
         #div-about {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
         }
 
@@ -527,7 +528,7 @@
 
                     <div class="text-container">
                         <p>
-                            <span>I'm&nbsp;</span><span id="text"> good person</span>
+                            <span>I'm</span><span id="text"></span>
                         </p>
                     </div>
                 </div>
@@ -577,16 +578,19 @@
 
             <div id="div-about">
                 <div>
-                    <img src="public/images/profile-image-3.jpg" alt="Profile Image" width="400px" height="400px">
+                    <img src="public/images/profile-image-3.jpg" alt="Profile Image" width="400px" height="350px" style="margin-left: 50px;">
                 </div>
                 <div>
                     <label for="birthday">Date of birth:</label> 29 March 1989
                     <br>
                     <label for="gender">Gender:</label> Male
                     <br>
+                    <label for="language">Language Known:</label> Marathi, Hindi, English
+                    <br>
                     <label for="email">Email:</label> akashparate29@gmail.com
                     <br>
                     <label for="city">City:</label> Chandrapur, Maharashtra, India
+                    <br>
                     <label for="education">Education:</label> BCCA, B.Ed, M.Com
                     <br>
                     <label for="freelance">Freelance:</label> Available
@@ -1367,7 +1371,7 @@ Advocate for digital literacy and technology skills for all students.
 
     <script>
         const textElement = document.getElementById("text");
-        const phrases = [" good person", " bad person", " Villager", " attractive"];
+        const phrases = [" dedicated computer teacher", " lifelong learner, constantly staying updated", " committed to bridging the digital divide", " enthusiastic about fostering creativity and innovation"];
         let phraseIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
