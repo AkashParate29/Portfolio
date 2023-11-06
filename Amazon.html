@@ -14,94 +14,179 @@
         body {
             font-family: arial;
         }
-        header {            
+
+        header {
             background-color: #131921;
             color: white;
-            border-radius: 10px 0px 0px 0px;            
+            border-radius: 10px 0px 0px 0px;
             padding: 10px;
-            
-            display:  flex;
+
+            display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        header div {
-            margin-left: 2px;
-            margin-right: 2px;
+
+        /* /////////////////////// */
+        #main-logo,
+        #location-div,
+        #nav-search,
+        #flag-lang,
+        #account-div,
+        #return-orders,
+        .d-flex {
+            flex-shrink: 0; /* Prevent these elements from shrinking */
+        }
+        /* ////////////////////// */
+
+        
+        #location-div {
+            display: flex;
         }
 
-        #location-div {
-            display: flex;            
-        }
         #location-icon {
             display: flex;
-            align-items: flex-end;
-            margin-right: -2px;
+            align-items: flex-end;        
         }
+
         #amazon-logo {
-            width:100px ;
+            width: 100px;
         }
+
         .header-top-text {
-            font-size: 8px;
+            display: block;
+            font-size: 9px;
         }
+
         .header-bottom-text {
+            display: block;
             font-size: 12px;
+            font-weight: bold;
+        }
+
+        #nav-search {
+            display: flex;
+            justify-content: space-evenly;
+            width: 620px;
+            height: 40px;
+            border-radius: 4px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        #nav-search:hover {
+            border: 2px solid #ff9900;
+        }
+
+        #opt-select {
+            background-color: #e6e6e6;
+            padding-left: 10px;
+            padding-right: 10px;
+            width: 60px;
+            text-align: center;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border: none;
+        }
+
+        #header-search-box {
+            width: 100%;
+            font-size: 1rem;
+            border: none;
+        }
+
+        #search-icon {
+            width: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            background-color: #febd69;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        #flag {
+            width: 18px;
+            height: 13px;
+        }
+
+        #language {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .bi-cart2 {
+            font-size: 25px;
+            position: relative;
+        }
+
+        #txt-cart {
+            display: flex;
+            align-items: end;
+            margin-right: 10px;
+        }
+
+        #cart-count {
+            position: absolute;
+            margin-left: 10px;
+            margin-top: 9px;
+            top: 0;
+            color: goldenrod;
             font-weight: bold;
         }
     </style>
     <script>
-        
+
     </script>
 </head>
 
 <body class="container-fluid mt-1">
-    <header>       
-            <div>
-                <img id="amazon-logo" src="public/images/amazon-images/amazon-logo.png" alt="amazon-logo">
-            </div>
-            
-            <div id="location-div">
-                <div id="location-icon">
-                    <span class="bi bi-geo-alt"></span>
-                </div>
-                <div>
-                    <span class="d-block header-top-text">Delivery to Chandrapur 442402</span>                     
-                    <span class="d-block header-bottom-text">Update location</span>
-                </div>
-            </div>
-            
-            <div>
-                <button class="btn-group bg-white">
-                    <select name="" id="" class="bg-dark-subtle border-0" >
-                        <option value="">All</option>
-                    </select>
+    <header>
+        <div id="main-logo">
+            <img id="amazon-logo" src="public/images/amazon-images/amazon-logo.png" alt="amazon-logo">
+        </div>
 
-                    <input type="text" name="" id="" placeholder="Search Amazon.in" style="width: 500px;">
+        <div id="location-div">
+            <div id="location-icon">
+                <span class="bi bi-geo-alt"></span>
+            </div>
+            <div>
+                <span class="header-top-text">Delivery to Chandrapur 442402</span>
+                <span class="header-bottom-text">Update location</span>
+            </div>
+        </div>
 
-                    <span class="bi bi-search bg-warning"></span>
-                </button>
+        <div id="nav-search">
+            <select name="" id="opt-select">
+                <option value="">All</option>
+            </select>
+            <input id="header-search-box" type="text" placeholder="Search Amazon.in">
+            <div id="search-icon">
+                <i class="bi bi-search text-black"></i>
             </div>
-            <div>
-                <img src="public/images/amazon-images/india-flag.png" alt="india-flag" height="15">
-                EN
-                <select name="" id="" class="bg-dark text-white"></select>
-            </div>
+        </div>
 
-            <div>
-                <span>Hello, sign in</span> <br>
-                <span>Account & Lists</span>
-                <select name="" id="" class="bg-dark text-white"></select>
-            </div>
+        <div id="flag-lang">
+            <img id="flag" src="public/images/amazon-images/india-flag.png" alt="india-flag">
+            <span id="language" class="dropdown-toggle">EN</span>
+        </div>
 
-            <div>
-                <span>Returns</span>
-                <br>
-                <span>& Orders</span>
-            </div>
-            <div>
-                <span class="bi bi-cart2" >Cart</span>
-            </div>        
+        <div id="account-div">
+            <span class="header-top-text">Hello, sign in</span>
+            <span class="header-bottom-text dropdown-toggle">Account & Lists</span>
+        </div>
+
+        <div id="return-orders">
+            <span class="header-top-text">Returns</span>
+            <span class="header-bottom-text">& Orders</span>
+        </div>
+        <div class="d-flex">
+            <span class="bi bi-cart2"></span>
+            <span id="txt-cart" class="header-bottom-text">Cart</span>
+            <span id="cart-count">0</span>
+        </div>
     </header>
-    
+
 
 
 
@@ -113,4 +198,5 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
