@@ -15,6 +15,30 @@
             font-family: arial;
         }
 
+        #main-logo:hover,
+        #location-div:hover,
+        #flag-lang:hover,
+        #account-div:hover,
+        #return-orders:hover,
+        #cart-div:hover,
+        #navbar-festival-deals-div:hover,
+        #navbar-div a:hover 
+        {
+            border: 1px solid white;
+        }
+
+        #btn-carousel-left:hover,
+        #btn-carousel-right:hover 
+        {
+            border: 1px solid black;
+            box-shadow: 2px 2px 20px white;
+            width: 4rem;
+            margin: 50px;
+            padding: 20px;
+            font-size: 100px;
+            color: white;
+        }
+
         header {
             background-color: #131921;
             color: white;
@@ -144,25 +168,45 @@
             background-color: #232f3e;
             /* border: 1px solid red; */
         }
+
+        #navbar-div {
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 5px 5px 20px;
+        }
+
+        #navbar-div a {
+            margin-right: 20px;
+        }
+
         .navbar div {
             /* border: 1px solid red; */
-            
-        }
-        #navbar-festival-deals-div {
-            background-image: url(public/images/amazon-images/festival-deals.png);
-            background-size: contain;
-            background-repeat: no-repeat;            
-            background-position: center center;            
-        }
-        #navbar-festival-deals-div:hover {
-            border: 1px solid white;
-        }
-        
-        
-      
 
-        
+        }
+
+        #navbar-festival-deals-div {
+            width: 400px;
+            height: 30px;
+            background-image: url(public/images/amazon-images/festival-deals.png);
+            background-size: 300px;
+            background-repeat: no-repeat;
+            background-position: center right;
+        }
         /* Navbar ends here */
+        
+        
+        
+        /* Carousel starts here */
+        
+        
+        /* Carousel ends here */
+
+
+
+
+
     </style>
     <script>
 
@@ -209,7 +253,7 @@
             <span class="header-top-text">Returns</span>
             <span class="header-bottom-text">& Orders</span>
         </div>
-        <div class="d-flex">
+        <div id="cart-div" class="d-flex">
             <span class="bi bi-cart2"></span>
             <span id="txt-cart" class="header-bottom-text">Cart</span>
             <span id="cart-count">0</span>
@@ -217,47 +261,55 @@
     </header>
 
     <main>
-        <div class="navbar navbar-expand-lg navbar-dark">
-            <div class="w-75">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <span class="nav-link bi bi-list">All</span>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Aamazon miniTV</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Sell</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Best Sellers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Today's Deals</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Mobiles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Customer Service</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Electronics</a>
-                    </li>
-                </ul>
+        <!-- navbar starts here  -->
+        <div id="navbar-div" class="navbar navbar-expand-lg">
+            <div id="navbar-div">
+                <a href="#" class="nav-link"> <span class="nav-link bi bi-list">All</span> </a>
+                <a href="#" class="nav-link">Amazon miniTV</a>
+                <a href="#" class="nav-link">Sell</a>
+                <a href="#" class="nav-link">Best Sellers</a>
+                <a href="#" class="nav-link">Today's Deals</a>
+                <a href="#" class="nav-link">Mobiles</a>
+                <a href="#" class="nav-link">Customer Service</a>
+                <a href="#" target="_blank" class="nav-link">Electronics</a>
             </div>
-            <div id="navbar-festival-deals-div" class="w-25">
-                <ul>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <!-- <img src="public/images/amazon-images/festival-deals.png" alt=""> -->
-                        </a>
-                    </li>
-                </ul>
+            <div id="navbar-festival-deals-div">
+                <a href="#" class="nav-link">                   
+                </a>
             </div>
         </div>
+        <!-- navbar ends here -->
 
+        <div id="carousel-top-banner" class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-interval="2000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="public/images/amazon-images/carousel-slide1.png" alt="" class="w-100 d-block">
+                </div>
+                <div class="carousel-item">
+                    <img src="public/images/amazon-images/carousel-slide2.png" alt="" class="w-100 d-block">
+                </div>
+                <div class="carousel-item">
+                    <img src="public/images/amazon-images/carousel-slide3.png" alt="" class="w-100 d-block">
+                </div>
+                <div class="carousel-item">
+                    <img src="public/images/amazon-images/carousel-slide4.png" alt="" class="w-100 d-block">
+                </div>
+
+                <!-- <button id="btn-carousel-left" class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carousel-top-banner">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button id="btn-carousel-right" class="carousel-control-next" data-bs-slide="next" data-bs-target="#carousel-top-banner">
+                    <i class="carousel-control-next-icon" ></i>
+                </button> -->
+
+                <div id="btn-carousel-left" class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carousel-top-banner">
+                    <span class="carousel-control-prev-icon"></span>
+                </div>
+                <div id="btn-carousel-right" class="carousel-control-next" data-bs-slide="next" data-bs-target="#carousel-top-banner">
+                    <i class="carousel-control-next-icon" ></i>
+                </div>
+            </div>
+        </div>
 
 
 
