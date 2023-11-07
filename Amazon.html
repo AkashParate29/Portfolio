@@ -27,6 +27,10 @@
             border: 1px solid white;
         }
 
+        #nav-search:hover {
+            border: 2px solid #ff9900;
+        }
+
         #btn-carousel-left:hover,
         #btn-carousel-right:hover 
         {
@@ -65,70 +69,35 @@
         /* ////////////////////// */
 
 
-        #location-div {
-            display: flex;
-        }
-
-        #location-icon {
-            display: flex;
-            align-items: flex-end;
-        }
-
         #amazon-logo {
             width: 100px;
         }
+
+        #location-div {
+            display: flex;
+        }
+        #location-icon {
+            display: flex;
+            align-items: flex-end;
+        }        
 
         .header-top-text {
             display: block;
             font-size: 9px;
         }
-
         .header-bottom-text {
             display: block;
             font-size: 12px;
             font-weight: bold;
         }
 
-        #nav-search {
-            display: flex;
-            justify-content: space-evenly;
-            width: 620px;
-            height: 40px;
-            border-radius: 4px;
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-
-        #nav-search:hover {
-            border: 2px solid #ff9900;
-        }
-
-        #opt-select {
+        #header-search-select {
             background-color: #e6e6e6;
-            padding-left: 10px;
-            padding-right: 10px;
-            width: 60px;
-            text-align: center;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-            border: none;
+            width: 150px;
         }
-
-        #header-search-box {
-            width: 100%;
-            font-size: 1rem;
-            border: none;
-        }
-
-        #search-icon {
-            width: 45px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.2rem;
-            background-color: #febd69;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
+        
+        #btn-search-icon {           
+            background-color: #febd69;            
         }
 
         #flag {
@@ -166,9 +135,8 @@
         /* Navbar starts here */
         .navbar {
             background-color: #232f3e;
-            /* border: 1px solid red; */
+            font-size: 15px;            
         }
-
         #navbar-div {
             color: white;
             display: flex;
@@ -176,16 +144,9 @@
             align-items: center;
             padding: 5px 5px 5px 20px;
         }
-
         #navbar-div a {
             margin-right: 20px;
         }
-
-        .navbar div {
-            /* border: 1px solid red; */
-
-        }
-
         #navbar-festival-deals-div {
             width: 400px;
             height: 30px;
@@ -198,10 +159,13 @@
         
         
         
-        /* Carousel starts here */
+        /* Main starts here */
         
+        main {
+        }
+        /* Main ends here */
+
         
-        /* Carousel ends here */
 
 
 
@@ -213,7 +177,7 @@
     </script>
 </head>
 
-<body class="container-fluid mt-1">
+<body class="mt-1 ms-1">
     <header>
         <div id="main-logo">
             <img id="amazon-logo" src="public/images/amazon-images/amazon-logo.png" alt="amazon-logo">
@@ -228,16 +192,16 @@
                 <span class="header-bottom-text">Update location</span>
             </div>
         </div>
-
-        <div id="nav-search">
-            <select name="" id="opt-select">
-                <option value="">All</option>
-            </select>
-            <input id="header-search-box" type="text" placeholder="Search Amazon.in">
-            <div id="search-icon">
-                <i class="bi bi-search text-black"></i>
-            </div>
+        <div id="nav-search" class="w-50 input-group">
+            <select id="header-search-select" class="input-group-text">
+                <option>All Categories</option>
+                <option>Mobiles</option>
+                <option>Watches</option>
+            </select>            
+            <input type="text" placeholder="Search Amazon.in" class="form-control">
+            <button id="btn-search-icon" class="btn bi bi-search"></button>
         </div>
+
 
         <div id="flag-lang">
             <img id="flag" src="public/images/amazon-images/india-flag.png" alt="india-flag">
@@ -260,7 +224,7 @@
         </div>
     </header>
 
-    <main>
+    <section>
         <!-- navbar starts here  -->
         <div id="navbar-div" class="navbar navbar-expand-lg">
             <div id="navbar-div">
@@ -310,9 +274,10 @@
                 </div>
             </div>
         </div>
+    </section>
 
-
-
+    <main>
+        
     </main>
 
 
