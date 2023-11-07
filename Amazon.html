@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="" />
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <title>58_2 26-10-23 JS Input techniques form input elements - Miraj Cinema Book Ticket</title>
+    <title>Akash-Amazon-Clone</title>
     <style>
         body {
             font-family: arial;
@@ -34,18 +34,20 @@
         #account-div,
         #return-orders,
         .d-flex {
-            flex-shrink: 0; /* Prevent these elements from shrinking */
+            flex-shrink: 0;
+            /* Prevent these elements from shrinking */
         }
+
         /* ////////////////////// */
 
-        
+
         #location-div {
             display: flex;
         }
 
         #location-icon {
             display: flex;
-            align-items: flex-end;        
+            align-items: flex-end;
         }
 
         #amazon-logo {
@@ -134,6 +136,33 @@
             color: goldenrod;
             font-weight: bold;
         }
+
+        /* header ends here */
+
+        /* Navbar starts here */
+        .navbar {
+            background-color: #232f3e;
+            /* border: 1px solid red; */
+        }
+        .navbar div {
+            /* border: 1px solid red; */
+            
+        }
+        #navbar-festival-deals-div {
+            background-image: url(public/images/amazon-images/festival-deals.png);
+            background-size: contain;
+            background-repeat: no-repeat;            
+            background-position: center center;            
+        }
+        #navbar-festival-deals-div:hover {
+            border: 1px solid white;
+        }
+        
+        
+      
+
+        
+        /* Navbar ends here */
     </style>
     <script>
 
@@ -186,6 +215,53 @@
             <span id="cart-count">0</span>
         </div>
     </header>
+
+    <main>
+        <div class="navbar navbar-expand-lg navbar-dark">
+            <div class="w-75">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <span class="nav-link bi bi-list">All</span>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Aamazon miniTV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Sell</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Best Sellers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Today's Deals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Mobiles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Customer Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Electronics</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="navbar-festival-deals-div" class="w-25">
+                <ul>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <!-- <img src="public/images/amazon-images/festival-deals.png" alt=""> -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+    </main>
 
 
 
