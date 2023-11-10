@@ -24,25 +24,28 @@
 
 	<title>Amazon Footer</title>
 	<style>
+
+		/*Footer starts here*/		
 		#footer-header {
 			background-color: #37475a;
 			color: white;
 			text-align: center;
 			padding: 15px;
 		}
+
 		.footer-body-background {
 			background-color: #232f3e;
 			color: white;
 			padding: 50px;
 		}
+
 		#footer-body-1 {
-			/* border: 1px solid red; */
 			display: flex;
 			justify-content: space-evenly;
 		}
+
 		#footer-body-2 {
 			margin-top: -60px;
-			/* border: 10px solid blue; */
 		}
 
 		.footer-title {
@@ -50,6 +53,7 @@
 			font-weight: bold;
 			margin-bottom: 10px;
 		}
+
 		span a {
 			text-decoration: none;
 			color: white;
@@ -57,20 +61,53 @@
 			display: block;
 			margin-top: 5px;
 		}
+
 		span a:hover {
 			text-decoration-line: underline;
 		}
-		#footer-countries-link {			
-			margin-top: 50px;			
+
+		#footer-countries-link {
+			margin-top: 50px;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
-			text-align: center;		
+			text-align: center;
 		}
+
 		#footer-countries-link a {
-			margin: 0px 10px 0px 10px;
+			margin: 0px 15px 0px 15px;
 		}
-		
+
+
+		/*Footer End part starts here*/
+		#footer-end {
+			background-color: #131a22;
+		}
+
+		.row {			
+			padding-left: 50px;
+		}
+
+		.row div {
+			margin-left: 40px;
+			margin-right: 40px;
+		}
+
+		.footer-end-flex div {			
+			margin: 20px 20px 20px 20px;
+		}
+
+		.footer-end-font {
+			font-size: 12px;
+		}
+
+		#footer-last-div {
+			text-align: center;
+			padding-bottom: 20px;
+			color: white;
+		}
+		/*Footer End part ends here*/
+		/*Footer ends here*/
 	</style>
 </head>
 
@@ -164,15 +201,15 @@
 				</div>
 			</div>
 		</div>
-		
-		
+
+
 		<div id="footer-body-2" class="footer-body-background">
 			<hr>
 			<div class="d-flex justify-content-center align-items-center mt-5">
 				<a href=" #">
 					<img src="public/images/amazon-images/amazon-footer-logo.png" alt="" height="25px" width="100px">
 				</a>
-				
+
 				<button class="btn text-white border ms-5">
 					<span class="bi bi-globe"></span>
 					English
@@ -181,26 +218,109 @@
 			</div>
 
 			<div id="footer-countries-link">
-				<span><a href="#">Australia</a></span>
-				<span><a href="#">Brazil</a></span>
-				<span><a href="#">Canada</a></span>
-				<span><a href="#">China</a></span>
-				<span><a href="#">France</a></span>
-				<span><a href="#">Germany</a></span>
-				<span><a href="#">Italy</a></span>
-				<span><a href="#">Japan</a></span>
-				<span><a href="#">Mexico</a></span>
-				<span><a href="#">Netherlands</a></span>
-				<span><a href="#">Poland</a></span>
-				<span><a href="#">Singapore</a></span>
-				<span><a href="#">Spain</a></span>
-				<span><a href="#">Turkey</a></span>
-				<span><a href="#">United Arab Emirates</a></span>
-				<span><a href="#">United Kingdom</a></span>
-				<span><a href="#">United States</a></span>
+				<span><a href="#" class="footer-end-font">Australia</a></span>
+				<span><a href="#" class="footer-end-font">Brazil</a></span>
+				<span><a href="#" class="footer-end-font">Canada</a></span>
+				<span><a href="#" class="footer-end-font">China</a></span>
+				<span><a href="#" class="footer-end-font">France</a></span>
+				<span><a href="#" class="footer-end-font">Germany</a></span>
+				<span><a href="#" class="footer-end-font">Italy</a></span>
+				<span><a href="#" class="footer-end-font">Japan</a></span>
+				<span><a href="#" class="footer-end-font">Mexico</a></span>
+				<span><a href="#" class="footer-end-font">Netherlands</a></span>
+				<span><a href="#" class="footer-end-font">Poland</a></span>
+				<span><a href="#" class="footer-end-font">Singapore</a></span>
+				<span><a href="#" class="footer-end-font">Spain</a></span>
+				<span><a href="#" class="footer-end-font">Turkey</a></span>
+				<span><a href="#" class="footer-end-font">United Arab Emirates</a></span>
+				<span><a href="#" class="footer-end-font">United Kingdom</a></span>
+				<span><a href="#" class="footer-end-font">United States</a></span>
 			</div>
 		</div>
-	
+
+
+		<div id="footer-end">
+			<div class="row">
+				<div class="col-2">
+					<span>
+						<a href="#" class="footer-end-font">
+							<b>AbeBooks</b> <br> Books, art <br> & collectibles
+						</a>
+					</span>
+				</div>
+
+				<div class="col-2">
+					<span>
+						<a href="#" class="footer-end-font">
+							<b>Amazon Web Services</b> <br> Scalable Cloud <br> Computing Services
+						</a>
+					</span>
+				</div>
+
+				<div class="col-2">
+					<span>
+						<a href="#" class="footer-end-font">
+							<b>Audible</b> <br>Download <br> Audio Books
+						</a>
+					</span>
+				</div>
+
+				<div class="col-2">
+					<span>
+						<a href="#" class="footer-end-font">
+							<b>IMDb</b> <br>Movies, TV <br> & Celebrities
+						</a>
+					</span>
+				</div>
+			</div>
+
+			<div class="row mt-4">
+				<div class="col-2">
+					<span>
+						<a href="#" class="footer-end-font">
+							<b>Shopbop</b> <br> Designer <br> Fashion Brands
+						</a>
+					</span>
+				</div>
+
+				<div class="col-2">
+					<span>
+						<a href="#" class="footer-end-font">
+							<b>Amazon Business</b> <br> Everything For <br> Your Business
+						</a>
+					</span>
+				</div>
+
+				<div class="col-2">
+					<span>
+						<a href="#" class="footer-end-font">
+							<b>Prime Now</b> <br>2-Hour Delivery <br> on Everyday Items
+						</a>
+					</span>
+				</div>
+
+				<div class="col-2">
+					<span>
+						<a href="#" class="footer-end-font">
+							<b>Amazon Prime Music</b> <br>100 million songs, ad-free <br> Over 15 million podcast
+							episodes
+						</a>
+					</span>
+				</div>
+			</div>
+
+			<div id="footer-countries-link">
+				<span><a href="#" class="footer-end-font">Conditions of Use & Sale</a></span>
+				<span><a href="#" class="footer-end-font">Privacy Notice</a></span>
+				<span><a href="#" class="footer-end-font">Interest-Based Ads</a></span>
+			</div>
+			<div id="footer-last-div" class="footer-end-font">
+				© 1996-2023, Amazon.com, Inc. or its affiliates
+			</div>
+		</div>
+
+
+
 	</footer>
 
 
