@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Add a meta tag for character set and viewport settings. -->
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+
+		<!-- Customized Bootstrap Stylesheet -->
+		<link rel="stylesheet" href="public/docs/css/index.css">
+
+		<!-- Bootstrap Local (Note: the version number should be accurate) -->
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+		<!-- Bootstrap Online (Note: the version numbers should be accurate) -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+		<link rel="shortcut icon" href="public/images/Akash.ico">
+		<!-- Add a link to your favicon. -->
+
+		<title>Feedbacks</title>
+		<style>
+			#feedback {
+
+				/* height: 100vh;
+				width: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center; */
+				background: #0396ff;
+				padding: 10px;
+			}
+
+			#container {
+				/* border: 2px solid red; */
+				height: 450px;
+				min-width: 400px;
+				display: flex;
+				align-items: flex-end;
+			}
+			.icon-image {				
+				border: 1px solid red;
+				position: relative;
+				height: 70px;
+				width: 70px;
+				background: #fff;
+				border-radius: 50%;
+				margin: 15px 0px;
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+			}
+
+			.icon-image img {
+				position: absolute;
+				height: 95%;
+				width: 95%;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				object-fit: cover;
+				border-radius: 50%;
+				border: 3px solid #0396ff;
+			}
+
+			.box-image {
+				position: absolute;
+				height: 350px;
+				width: 300px;
+				bottom: 80px;
+				left: 250%;
+				transform: translateX(-50%);
+				border-radius: 25px;
+				box-shadow: 0 5px 10px rgba(12, 219, 222, 0.944);
+				z-index: 0;
+				transition: transform 0.5s, z-index 0s, left 0.5s;
+				transition-delay: 0s 0.5s, 0.5s;
+				pointer-events: none;
+			}
+
+			.icon-image:hover .box-image {
+				left: 0px;
+				z-index: 12;
+				transform: translateX(80px);
+				transition: left 0.5s, z-index 0s, transform 0.5s;
+				transition-delay: 0s, 0.5s, 0.5s;
+			}
+
+			.box-image img {
+				border: 4px double skyblue;
+				border-radius: 25px;
+			}
+
+			.content {
+				position: absolute;
+				width: 100%;
+				bottom: -20px;
+				left: 0;
+				padding: 0px 10px;
+			}
+
+			.content .details {
+				background: #fff;
+				padding: 10px;
+				border-radius: 12px;
+				border-radius: 12px;
+				text-align: center;
+				opacity: 0;
+				transform: translate(10px);
+			}
+
+			.icon-image:hover .details {
+				transition: all 0.3s ease;
+				transition-delay: 0.9s;
+				opacity: 1;
+				transform: translate(4px);
+			}
+
+			.details .name {
+				font-size: 20px;
+				font-weight: 500;
+			}
+
+			.details .school {
+				font-size: 17px;
+				color: #0396ff;
+			}
+
+			.details .feedback {
+				color: red
+			}
+		</style>
+	</head>
+
+<body>
+	<div id="feedback">
+
+		<div id="container">
+			<div class="icon-image">
+				<div class="icon">
+					<img src="public/images/profile-image-3.jpg" alt="">
+				</div>
+				<div class="box-image">
+					<div class="img">
+						<img src="public/images/profile-image-3.jpg" alt="">
+					</div>
+					<div class="content">
+						<div class="details">
+							<div class="name">Akash N. Parate</div>
+							<div class="school">MBCH</div>
+							<div class="feedback">Awesome</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="icon-image">
+				<div class="icon">
+					<img src="public/images/profile-image-25.jpg" alt="">
+				</div>
+				<div class="box-image">
+					<div class="img">
+						<img src="public/images/profile-image-25.jpg" alt="">
+					</div>
+					<div class="content">
+						<div class="details">
+							<div class="name">Akash N. Parate</div>
+							<div class="school">(MBCH)</div>
+							<div class="feedback">Awesome</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="icon-image">
+				<div class="icon">
+					<img src="public/images/profile-image-25.jpg" alt="">
+				</div>
+				<div class="box-image">
+					<div class="img">
+						<img src="public/images/profile-image-25.jpg" alt="">
+					</div>
+					<div class="content">
+						<div class="details">
+							<div class="name">Akash N. Parate</div>
+							<div class="school">MBCH</div>
+							<div class="feedback">Awesome</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="icon-image">
+				<div class="icon">
+					<img src="public/images/profile-image-25.jpg" alt="">
+				</div>
+				<div class="box-image">
+					<div class="img">
+						<img src="public/images/profile-image-25.jpg" alt="">
+					</div>
+					<div class="content">
+						<div class="details">
+							<div class="name">Akash N. Parate</div>
+							<div class="school">MBCH</div>
+							<div class="feedback">Awesome</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+	</div>
+
+
+
+</body>
+
+</html>
