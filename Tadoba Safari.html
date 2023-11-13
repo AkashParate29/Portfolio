@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Add a meta tag for character set and viewport settings. -->
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<!-- Customized Bootstrap Stylesheet -->
+	<!-- <link rel="stylesheet" href="public/docs/css/index.css"> -->
+
+	<!-- Bootstrap Local (Note: the version number should be accurate) -->
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+	<!-- Bootstrap Online (Note: the version numbers should be accurate) -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+	<link rel="shortcut icon" href="public/images/Akash.ico">
+	<!-- Add a link to your favicon. -->
+
+	<title>Tadoba</title>
+	<style>
+		body {
+			font-family: arial;
+		}
+
+		section {
+			display: grid;
+			grid-template-columns: 3fr 9fr;
+			margin-top: 20px;
+		}
+
+		main {
+			height: 500px;
+			overflow: auto;
+		}
+
+		nav ul {
+			list-style: none;			
+		}
+
+		nav ul li {
+			width: 150px;
+			border: 1px solid black;
+			background-color: darkcyan;
+			padding: 5px;
+			padding-left:  15px;
+			border-radius: 10px;
+			margin-bottom: 10px;
+		}
+
+		nav a {
+			text-decoration: none;
+			color: white;
+		}
+
+		nav a:visited {
+			color: yellow;
+		}
+
+
+		.card {
+			width: 600px;
+			box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.575);
+			border-radius: 20px;
+			border: none;
+		}
+
+		img {
+			width: 600px;
+			height: 300px;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+		}
+
+		.card-footer a {
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 20px;
+		}
+
+		.card-body p,
+		ol {
+			font-family: serif;
+			text-align: justify;
+		}
+
+		h3 {
+			font-family: Algerian;
+		}
+		ol li {
+
+		}
+	</style>
+	<script>
+
+	</script>
+</head>
+
+<body>
+	<section>
+		<nav>
+			<ul>
+				<li><a href="#about">About Tadoba</a></li>
+				<li><a href="#history">History</a></li>
+				<li><a href="#location">Location</a></li>
+				<li><a href="#area">Area</a></li>
+				<li><a href="#visit">How to visit?</a></li>
+				<li><a href="#visitors-experience">Visitor Experience</a></li>
+			</ul>
+		</nav>
+
+		<main>
+			<div class="d-flex ms-1 flex-wrap justify-content-center">
+				<div class="card bg-dark text-light">
+					<div class="carousel slide" data-bs-ride="carousel" id="imageCarousel" data-bs-interval="2000">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="public/images/tadoba/tadoba1.png">
+							</div>
+							<div class="carousel-item">
+								<img src="public/images/tadoba/tadoba2.png">
+							</div>
+							<div class="carousel-item">
+								<img src="public/images/tadoba/tadoba3.png">
+							</div>
+							<div class="carousel-item">
+								<img src="public/images/tadoba/tadoba4.png">
+							</div>
+							<div class="carousel-item">
+								<img src="public/images/tadoba/tadoba5.png">
+							</div>
+						</div>
+						<button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#imageCarousel">
+							<span class="carousel-control-prev-icon"></span>
+						</button>
+						<button class="carousel-control-next" data-bs-slide="next" data-bs-target="#imageCarousel">
+							<span class="carousel-control-next-icon"></span>
+						</button>
+						<div class="carousel-indicators">
+							<button data-bs-slide-to="0" data-bs-target="#imageCarousel" class="active"></button>
+							<button data-bs-slide-to="1" data-bs-target="#imageCarousel"></button>
+							<button data-bs-slide-to="2" data-bs-target="#imageCarousel"></button>
+							<button data-bs-slide-to="3" data-bs-target="#imageCarousel"></button>
+							<button data-bs-slide-to="4" data-bs-target="#imageCarousel"></button>
+							<button data-bs-slide-to="5" data-bs-target="#imageCarousel"></button>
+						</div>
+					</div>
+					<div class="card-header">
+						<h3 class="card-title pt-3">Tadoba</h3>
+					</div>
+					<div class="card-body">
+						<p>
+							Tadoba Andhari Tiger Reserve, often simply referred to as Tadoba, is one of the prominent
+							wildlife sanctuaries in India. It is located in the Chandrapur district of the state of
+							Maharashtra. The reserve is named after the Tadoba Lake and the Andhari River that flow
+							through its expanse.
+						</p>
+					</div>
+					<div class="card-footer">
+						<a href="#moreInfo" data-bs-target="#moreInfo" data-bs-toggle="collapse"
+							title="Five facts about Taj Mahal">See More</a>
+						<div>
+							<div class="collapse mt-2" id="moreInfo">
+								<h3>Five facts about Tadoba</h3>
+								<ol>
+									<li>
+										<dt>Bengal Tiger Sanctuary:</dt>
+										<dd>Tadoba Andhari Tiger Reserve is celebrated for its role in tiger
+											conservation, housing a notable population of Bengal tigers.</dd>
+									</li>
+									<li>
+										<dt>Ancient Roots:</dt>
+										<dd>The reserve's name, Tadoba, is derived from the local Gond deity "Taru,"
+											reflecting its deep historical and cultural connections.</dd>
+									</li>
+									<li>
+										<dt>Diverse Fauna:</dt>
+										<dd>Beyond tigers, Tadoba boasts a rich tapestry of wildlife, including
+											leopards, sloth bears, Indian bison, and various deer species.</dd>
+									</li>
+									<li>
+										<dt>Conservation Beyond Core:</dt>
+										<dd>Tadoba's commitment to conservation extends to buffer zones, providing
+											additional space for wildlife and contributing to overall ecological health.
+										</dd>
+									</li>
+									<li>
+										<dt>Avian Wonderland:</dt>
+										<dd>With over 195 bird species, Tadoba is a haven for bird watchers, featuring
+											everything from majestic raptors to migratory visitors during winter.</dd>
+									</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="card mt-4 bg-dark text-light">
+					<div id="about" class="card-body">
+						<h3>About</h3>
+						<p>
+							Tadoba Andhari Tiger Reserve is a wildlife extravaganza situated in Maharashtra, India,
+							renowned
+							for its diverse ecosystems and thriving biodiversity.
+						</p>
+						<p>
+
+							As one of India's premier tiger reserves, Tadoba offers an unparalleled opportunity to
+							witness
+							Bengal tigers in their natural habitat, making it a must-visit for wildlife enthusiasts.
+						</p>
+						<p>
+
+							Enriched with cultural significance, Tadoba derives its name from the local Gond deity
+							<b>Taru</b> weaving an ancient tapestry of myths and legends into its lush landscapes.
+
+						</p>
+						<p>
+
+							Tadoba's extensive area encompasses tropical dry deciduous forests, bamboo thickets, and
+							open
+							grasslands, creating a mosaic of habitats that supports a wide array of flora and fauna.
+
+						</p>
+						<p>
+
+							With over 195 bird species, Tadoba is a paradise for bird watchers, featuring rare and
+							migratory
+							species against the backdrop of the reserve's scenic landscapes.
+
+
+						</p>
+						<p>
+							Tadoba provides an opportunity for cultural immersion by interacting with local tribes like
+							the
+							Gonds and Kolams.
+						</p>
+					</div>
+				</div>
+
+
+				<div class="card mt-4 bg-dark text-light">
+					<div id="history" class="card-body">
+						<h3>History</h3>
+						<p>
+							With a history dating back to 1955, Tadoba Andhari Tiger Reserve stands as a testament to
+							India's commitment to wildlife conservation, ensuring the legacy of its natural wonders for
+							future generations.
+						</p>
+						<p>
+
+							Tadoba's history dates back to prehistoric times, with evidence of human habitation from the
+							Stone Age.
+						</p>
+						<p>
+
+							The British colonial elite favored Tadoba's rich biodiversity, establishing its significance
+							as
+							a hunting ground.
+						</p>
+						<p>
+
+							Tadoba was declared a wildlife sanctuary in 1955, formalizing its role in preserving diverse
+							flora and fauna.
+						</p>
+						<p>
+
+							Joining Project Tiger in 1993, Tadoba became a key player in Bengal tiger conservation.
+						</p>
+
+						<p>
+
+							The name "Tadoba" originates from the local Gond deity "Taru," reflecting cultural and
+							spiritual
+							ties.
+						</p>
+						<p>
+
+							Tadoba has seen successful tiger conservation efforts, resulting in a notable increase in
+							the
+							tiger population.
+						</p>
+						<p>
+
+							To ensure ecological health, Tadoba expanded with buffer zones, providing additional space
+							for
+							wildlife.
+						</p>
+						<p>
+
+							Actively engaging in wildlife research, Tadoba collaborates with scientific institutions for
+							better conservation strategies.
+
+						</p>
+						<p>
+							Evolving into an eco-tourism destination, Tadoba invites visitors to appreciate its natural
+							heritage responsibly.
+						</p>
+					</div>
+				</div>
+
+				<div class="card mt-4 bg-dark text-light">
+					<div id="location" class="card-body">
+						<h3>Location</h3>
+						<p>
+							Tadoba Andhari Tiger Reserve is located in the state of Maharashtra, India. Specifically, it
+							is
+							situated in the Chandrapur district, in the eastern part of Maharashtra. The reserve's
+							geographical coordinates are approximately 20.1739° N latitude and 79.3502° E longitude. The
+							reserve is strategically positioned at the meeting point of the Eastern Highlands and the
+							Deccan
+							Plateau, contributing to its diverse ecosystems and rich wildlife. Accessible by road,
+							Tadoba is
+							well-connected to major cities in Maharashtra, making it a popular destination for wildlife
+							enthusiasts and nature lovers.
+						</p>
+					</div>
+				</div>
+
+				<div class="card mt-4 bg-dark text-light">
+					<div id="area" class="card-body">
+						<h3>Area</h3>
+						<p>
+							Tadoba Andhari Tiger Reserve covers an area of approximately 625 square kilometers (241
+							square
+							miles). However, please note that these figures can be subject to change due to conservation
+							efforts, land management, or other factors.
+						</p>
+					</div>
+				</div>
+
+				<div class="card mt-4 bg-dark text-light">
+					<div id="visit" class="card-body">
+						<h3>How to visit</h3>
+						<ol>
+							<li>
+								<dt>Entry Permits:</dt>
+								<dd>Obtain necessary permits for entry. Check with the Maharashtra Forest Department or
+									the
+									official website of Tadoba Andhari Tiger Reserve for information on entry fees and
+									permits.</dd>
+							</li>
+							<li>
+								<dt>Best Time to Visit:</dt>
+								<dd>Plan your visit during the best time, usually from November to February, when the
+									weather is pleasant, and wildlife sightings are more likely due to dry vegetation.
+								</dd>
+							</li>
+							<li>
+								<dt>Accommodation:</dt>
+								<dd>Book accommodation in advance. Tadoba offers various lodging options, ranging from
+									budget to luxury resorts. Popular areas to stay include Moharli and Kolara gates.
+								</dd>
+							</li>
+							<li>
+								<dt>Safari Bookings:</dt>
+								<dd>Reserve your safari well in advance. Tadoba offers both jeep safaris and canter
+									safaris.
+									Bookings can be made through the official website, and it's advisable to check the
+									availability of slots.</dd>
+							</li>
+							<li>
+								<dt>Safari Timings:</dt>
+								<dd>Safaris usually occur during specific time slots, mainly early morning and late
+									afternoon. Be sure to adhere to the designated timings for your safari.</dd>
+							</li>
+							<li>
+								<dt>Guided Tours:</dt>
+								<dd>Consider hiring a knowledgeable guide. Local guides and naturalists can enhance your
+									wildlife experience by providing insights into the flora, fauna, and conservation
+									efforts.</dd>
+							</li>
+							<li>
+								<dt>Interpretation Centers:</dt>
+								<dd>Visit interpretation centers within the reserve. These educational hubs offer
+									information about Tadoba's ecology, wildlife, and conservation initiatives.</dd>
+							</li>
+							<li>
+								<dt>Travel Essentials:</dt>
+								<dd>Pack essentials such as comfortable clothing, sturdy footwear, a hat, sunscreen,
+									insect
+									repellent, binoculars, and a camera for wildlife photography.</dd>
+							</li>
+							<li>
+								<dt>Respect Wildlife and Regulations:</dt>
+								<dd>Follow ethical wildlife viewing practices. Maintain a respectful distance from
+									animals,
+									adhere to park regulations, and refrain from making loud noises.</dd>
+							</li>
+							<li>
+								<dt>Local Customs and Culture:</dt>
+								<dd>Respect local customs and tribal culture. Engage in cultural exchanges to gain a
+									deeper
+									understanding of the indigenous communities in the area.</dd>
+							</li>
+						</ol>
+						<p>
+							Note:
+							<i>
+								Always check for the latest information and guidelines before your visit, as regulations
+								and
+								procedures may change. Additionally, consulting with the Maharashtra Forest Department
+								or
+								the official website of Tadoba Andhari Tiger Reserve can provide up-to-date details on
+								permits, safari bookings, and other important information.
+							</i>
+						</p>
+					</div>
+				</div>
+
+				<div class="card mt-4 bg-dark text-light">
+					<div id="visitors-experience" class="card-body">
+						<h3>visitor experiences</h3>
+						<p>
+							Visiting Tadoba Andhari Tiger Reserve offers a range of memorable experiences for wildlife
+							enthusiasts and nature lovers. Here are some key visitor experiences:
+						</p>
+						<ul>
+							<li>
+								<dt>Tiger Spotting:</dt>
+								<dd>Tadoba is renowned for its Bengal tiger population, providing visitors with a unique
+									opportunity to witness these majestic creatures in their natural habitat. Jeep
+									safaris
+									and canter safaris offer a chance to spot tigers and other wildlife.</dd>
+							</li>
+							<li>
+								<dt>Diverse Wildlife Encounters:</dt>
+								<dd>Beyond tigers, Tadoba is home to a rich diversity of wildlife, including leopards,
+									sloth
+									bears, Indian bison, various deer species, and a multitude of bird species. Each
+									safari
+									brings the possibility of encountering different inhabitants of the reserve.</dd>
+							</li>
+							<li>
+								<dt>Bird Watching:</dt>
+								<dd>Tadoba is a paradise for bird watchers, with over 195 species recorded. Birding
+									enthusiasts can enjoy spotting both resident and migratory birds, making it a
+									rewarding
+									experience for those with an interest in ornithology.</dd>
+							</li>
+							<li>
+								<dt>Nature Walks and Trails:</dt>
+								<dd>Explore the natural beauty of Tadoba on guided nature walks and trails. This
+									immersive
+									experience allows visitors to appreciate the smaller details of the ecosystem, from
+									diverse plant life to insect activity.</dd>
+							</li>
+							<li>
+								<dt>Photography Opportunities:</dt>
+								<dd>Tadoba's picturesque landscapes and diverse wildlife provide ample opportunities for
+									photography. Capture the raw beauty of the reserve, from the morning mist over water
+									bodies to the elusive big cats and vibrant birdlife.</dd>
+							</li>
+							<li>
+								<dt>Cultural Interactions:</dt>
+								<dd>Engage with local communities and learn about the cultural heritage of the region.
+									Tadoba offers a chance to interact with indigenous tribes like the Gonds and Kolams,
+									providing insights into their traditional practices and lifestyles.</dd>
+							</li>
+							<li>
+								<dt>Interpretation Centers:</dt>
+								<dd>Visit interpretation centers within the reserve to gain a deeper understanding of
+									Tadoba's ecology, conservation efforts, and the importance of preserving this unique
+									ecosystem.</dd>
+							</li>
+							<li>
+								<dt>Eco-Tourism Initiatives:</dt>
+								<dd>Experience eco-tourism initiatives that focus on responsible and sustainable tourism
+									practices. Learn about the efforts to balance conservation with visitor experiences,
+									contributing to the long-term health of the reserve.</dd>
+							</li>
+							<li>
+								<dt>Stargazing:</dt>
+								<dd>In the evenings, away from city lights, Tadoba offers an excellent opportunity for
+									stargazing. The clear night sky can be a serene and mesmerizing experience.</dd>
+							</li>
+							<li>
+								<dt>Offbeat Activities:</dt>
+								<dd>Explore offbeat activities such as camping, if available. Some areas around Tadoba
+									may
+									offer camping experiences, providing a more immersive connection with the natural
+									surroundings.</dd>
+							</li>
+						</ul>
+						<div>
+							<a href="Tadoba.html">Back to Top</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+		</main>
+	</section>
+
+
+
+
+
+
+
+
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
