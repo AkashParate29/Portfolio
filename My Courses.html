@@ -24,116 +24,195 @@
 
 	<title>My courses</title>
 
-	<style>            
-        img{            
-            height: 125px;
-        }
+	<style>
+		header {
+			position: sticky;
+			top: 0px;			
+			/* z-index: 1; */
+		}
+		h1 {
+			
+			text-shadow: 15px 10px 10px skyblue;
+			text-decoration-line: underline;
+		}
+		main {			
+			border: 1px solid red;
+			margin-top: 10px;
+			height: 500px;
+			overflow: auto;
+		}
+		img {
+			height: 125px;
+			border: 2px solid white;
+		}
+
 		.card-title {
 			font-size: 20px;
 		}
-    </style> 
+
+		.card-body li {
+			margin-left: -10px;			
+		}
+		.card-footer a {
+			text-decoration: none;
+		}
+	</style>
 </head>
 
 <body>
+	<header>
+		<h1 class="text-center">Software Courses</h1>
+	</header>
 
-	<h1 class="text-center">Courses</h1>
-	<div class="d-flex flex-wrap justify-content-center">
+	<main>
+		<div class="d-flex flex-wrap justify-content-center">
 
-		<!-- card-1 HTML CSS JavaScript-->
-		<div class="card bg-success text-white m-3 p-2" style="width: 275px;">
-			<img src="public/images/my-courses/html.png" alt="html">
-
-			<div class="card-header">
-				<h2 class="card-title">Web Design</h2>
-				<p class="card-subtitle">HTMl, CSS, JavaScript</p>
+			<!-- card-1 HTML CSS JavaScript-->
+			<div class="card bg-success text-white m-3 p-2" style="width: 275px;">
+				<img src="public/images/my-courses/html.png" alt="html">
+	
+				<div class="card-header">
+					<h2 class="card-title">Web Design</h2>
+					<p class="card-subtitle">HTMl, CSS, JavaScript</p>
+				</div>
+	
+				<div class="card-body">
+					<ul>
+						<li><b>HTML:</b> Structure</li>
+						<li><b>CSS:</b> Styling</li>
+						<li><b>JavaScript:</b> Interactivity</li>
+						<li><b>Responsive:</b> Adaptability</li>
+						<li><b>Best Practices:</b> Optimization</li>
+					</ul>
+				</div>
+	
+				<div class="card-footer d-flex justify-content-between">
+					<button class="btn btn-light w-50 m-1">					
+							<a class="bi bi-whatsapp text-success" target="_blank" href="https://wa.me/917757009267"> Send</a>					
+					</button>
+					<button class="btn btn-light w-50 m-1">
+						<a class="bi bi-telephone-fill" href="tel:7757009267"> Call</a>
+					</button>
+				</div>
 			</div>
-
-			<div class="card-body">
-				<ul>
-					<li>Elements</li>
-					<li>Tags</li>
-					<li>Forms</li>
-					<li>Tables</li>
-				</ul>
+	
+			<!-- Card-2 Bootstrap framework -->	
+			<div class="card bg-warning text-white m-3 p-2" style="width: 275px;">
+				<img src="public/images/my-courses/bootstrap.png">
+	
+				<div class="card-header">
+					<h2 class="card-title">Front-end framework</h2>
+					<p class="card-subtitle">Open source</p>
+				</div>
+	
+				<div class="card-body">
+					<ul>
+						<li>Grid</li>
+						<li>Components</li>
+						<li>Responsiveness</li>
+						<li>Customization</li>
+						<li>Flexibility</li>
+					</ul>
+				</div>
+	
+				<div class="card-footer d-flex justify-content-between">
+					<button class="btn btn-light w-50 m-1">					
+							<a class="bi bi-whatsapp text-success" target="_blank" href="https://wa.me/917757009267"> Send</a>					
+					</button>
+					<button class="btn btn-light w-50 m-1">
+						<a class="bi bi-telephone-fill" href="tel:7757009267"> Call</a>
+					</button>
+				</div>
 			</div>
-
-			<div class="card-footer">
-				<button class="btn btn-light w-100">Contact to join</button>
+	
+			<!-- Card-3 Java Developer -->	
+			<div class="card bg-info text-white m-3 p-2" style="width: 275px;">
+				<img src="public/images/my-courses/java.png" alt="">
+	
+				<div class="card-header">
+					<h2 class="card-title">Java Developer</h2>
+					<p class="card-subtitle">Core Java</p>
+				</div>
+	
+				<div class="card-body">
+					<ul>
+						<li>Fundamentals of Java</li>
+						<li>OOP Concepts</li>
+						<li>Exception Handling</li>
+						<li>Input/Output Operations</li>
+						<li>Lambda Expressions</li>
+					</ul>
+				</div>
+	
+				<div class="card-footer d-flex justify-content-between">
+					<button class="btn btn-light w-50 m-1">					
+							<a class="bi bi-whatsapp text-success" target="_blank" href="https://wa.me/917757009267"> Send</a>					
+					</button>
+					<button class="btn btn-light w-50 m-1">
+						<a class="bi bi-telephone-fill" href="tel:7757009267"> Call</a>
+					</button>
+				</div>
 			</div>
-		</div>		
-
-		<!-- Card-2 Bootstrap framework -->
-
-		<div class="card bg-warning text-white m-3 p-2" style="width: 275px;">
-
-			<img src="public/images/my-courses/bootstrap.png">
-
-			<div class="card-header">
-				<h2 class="card-title">Front-end framework</h2>
-				<p class="card-subtitle">Open source</p>
+	
+			<!-- Card-4 Kotlin programming-->
+			<div class="card m-3 p-2 bg-danger text-white" style="width: 275px;">
+				<img src="public/images/my-courses/kotlin.png" alt="">
+	
+				<div class="card-header">
+					<h2 class="card-title">Kotlin Developer</h2>
+					<p class="card-subtitle">App development</p>
+				</div>
+	
+				<div class="card-body">
+					<ul>
+						<li>Introduction to Kotlin</li>
+						<li>OOP Concepts</li>
+						<li>Functional Programming</li>
+						<li>Android App Development</li>
+					</ul>
+				</div>
+	
+				<div class="card-footer d-flex justify-content-between">
+					<button class="btn btn-light w-50 m-1">					
+							<a class="bi bi-whatsapp text-success" target="_blank" href="https://wa.me/917757009267"> Send</a>					
+					</button>
+					<button class="btn btn-light w-50 m-1">
+						<a class="bi bi-telephone-fill" href="tel:7757009267"> Call</a>
+					</button>
+				</div>
 			</div>
-
-			<div class="card-body">
-				<ul>
-					<li>Alert</li>
-					<li>Badge </li>
-					<li>Card</li>
-					<li>Table</li>
-				</ul>
+	
+			<!-- Card-5 SQL / PL/SQL Oracle programming-->
+			<div class="card m-3 p-2 bg-dark text-white" style="width: 275px;">
+				<img src="public/images/my-courses/sql.png" alt="sql">
+	
+				<div class="card-header">
+					<h2 class="card-title">Oracle PL/SQL</h2>
+					<p class="card-subtitle">Database management</p>
+				</div>
+	
+				<div class="card-body">
+					<ul>
+						<li>Introduction to Databases</li>
+						<li>DDL, DML</li>
+						<li>Querying with SELECT</li>
+						<li>Filtering, Sorting, Grouping</li>
+						<li>Joining Tables</li>
+					</ul>
+				</div>
+	
+				<div class="card-footer d-flex justify-content-between">
+					<button class="btn btn-light w-50 m-1">					
+							<a class="bi bi-whatsapp text-success" target="_blank" href="https://wa.me/917757009267"> Send</a>					
+					</button>
+					<button class="btn btn-light w-50 m-1">
+						<a class="bi bi-telephone-fill" href="tel:7757009267"> Call</a>
+					</button>
+				</div>
 			</div>
-
-			<div class="card-footer">
-				<button class="btn btn-light w-100">Contact to join</button>
-			</div>
+				
 		</div>
-
-		<!-- Card-3 Java Developer -->
-
-		<div class="card bg-info text-white m-3 p-2" style="width: 275px;">
-			<img src="public/images/my-courses/java.png" alt="">
-
-			<div class="card-header">
-				<h2 class="card-title">Java Developer</h2>
-				<p class="card-subtitle">Core Java</p>
-			</div>
-
-			<div class="card-body">
-				<ul>
-					<li>Classes</li>
-					<li>Methods</li>
-					<li>Opps</li>
-				</ul>
-			</div>
-
-			<div class="card-footer">
-				<button class="btn btn-light w-100">Contact to join</button>
-			</div>
-		</div>
-
-		<!-- Card-4 Kotlin programming-->
-		<div class="card m-3 p-2 bg-danger text-white" style="width: 275px;">
-			<img src="public/images/my-courses/kotlin.png" alt="">
-
-			<div class="card-header">
-				<h2 class="card-title">Kotlin Developer</h2>
-				<p class="card-subtitle">App development</p>
-			</div>
-
-			<div class="card-body">
-				<ul>
-					<li>Android</li>
-					<li>Tv</li>
-					<li>Mobile</li>
-					<li>Watches</li>
-				</ul>
-			</div>
-
-			<div class="card-footer">
-				<button class="btn btn-light w-100">Contact to join</button>
-			</div>
-		</div>
-
-	</div>
+	</main>
 
 
 
