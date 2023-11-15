@@ -25,23 +25,33 @@
 	<title>Akash-Netflix-Clone</title>
 	<style>
 		body {
+			background-color: #232323 !important;
+		}
+
+
+		#main-body {
 			background-image: url(public/images/netflix/Netflix-Background.jpg);
 			background-size: cover;
+			color: white;
 		}
 
 		#shade {
-			background-color: rgba(0, 0, 0, 0.70);
+			background-color: rgba(0, 0, 0, 0.75);
 			width: 100%;
 			height: 100vh;
 		}
 
-		/* #brand-title {
-			font-size: 40px;
-			font-weight: bold;
-			color: red;
-		} */
-		#brand-logo {
-			height: 70px;
+		#div-header {
+			width: 100%;
+			padding-left: 150px;
+			padding-right: 150px;
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		#netflix-logo {
+			height: 75px;
 		}
 
 		#btn-language {
@@ -56,68 +66,45 @@
 		}
 
 		#btn-sign-in {
-			background-color:#e50914;
+			background-color: #e50914;
 			color: white;
-			/* padding-left: 15px;			
-			padding-right: 15px;
-			padding-top: 5px;
-			padding-bottom: 5px; */
 			padding: 5px 15px;
 			border-radius: 6px;
 			font-weight: bold;
 			font-size: 14px;
 		}
 
-		header {
-			/* background-color:  yellow ; */
-			height: 80px;
-			display: flex;
-			align-items: center;
-
-		}
-
-		#div-header {
-			/* background-color: yellow;		 */
-			width: 100%;
-			padding-left: 150px;
-			padding-right: 150px;
-			align-items: center;
-			display: flex;
-			justify-content: space-between;
-
-		}
-
-		#section-1 {
-			border: 5px solid blue;
-			color: white;
-			display: flex;
-			justify-content: center;
+		#div-body {
+			/* border: 5px solid blue; */
+			/* color: white; */
+			/* display: flex; */
+			/* justify-content: center; */
 			text-align: center;
 			padding-bottom: 150px;
 		}
-		
-		#title {
-			font-size: 50px;
-			font-weight: bold;
+
+		.margin {
 			margin-top: 190px;
-			margin-left: 100px;
-			margin-right: 100px;
+			/* margin-left: 100px;
+			margin-right: 100px; */
+		}
+				
+		.title {
+			font-size: 50px;
+			font-weight: bold;			
 		}
 
-		#sub-title1 {
+		.sub-title1 {
 			font-size: 25px;
-			margin-top: 10px;
-			margin-left: 100px;
-			margin-right: 100px;
+			margin-top: 10px;			
 		}
 
-		#sub-title2 {
+		
+		.sub-title2 {
 			font-size: 20px;
-			margin-top: 20px;
-			margin-left: 100px;
-			margin-right: 100px;
+			margin-top: 20px;			
 		}
-
+	
 		#div-start {
 			margin-top: 20px;
 		}
@@ -134,11 +121,7 @@
 		
 		#btn-get-started {
 			background-color: #e50914;
-			color: white;
-			/* padding-top: 15px;
-			padding-bottom: 15px;			
-			padding-left: 35px;
-			padding-right: 35px; */
+			color: white;			
 			padding: 15px 35px;
 			border-radius: 5px;
 			font-size: 20px;
@@ -147,136 +130,65 @@
 
 
 
-		/* New styles for responsiveness */
-
-		@media (max-width: 768px) {
-			#brand-title {
-				font-size: 25px;
-			}
-
-			#btn-language {
-				font-size: 12px;
-				margin-right: 1px;
-			}
-
-			#eng {
-				display: none;
-				/* visibility: hidden; */
-			}
-
-			#div-header {
-				/* background-color: yellow;		 */
-				width: 100%;
-				padding-left: 40px;
-				padding-right: 40px;
-				align-items: center;
-				display: flex;
-				justify-content: space-between;
-
-			}
-
-			section {
-				margin-top: 35px;
-			}
-
-			#title {
-				font-size: 30px;
-				margin-top: 10px;
-				margin-left: 35px;
-				margin-right: 35px;
-			}
-
-			#sub-title1 {
-				font-size: 19px;
-				margin-top: 10px;
-				margin-left: 100px;
-				margin-right: 100px;
-			}
-
-			#sub-title2 {
-				font-size: 19px;
-				margin-top: 20px;
-				margin-left: 50px;
-				margin-right: 50px;
-			}
-		}
-
-
-
-
-		/* Section 2 */
-		.section {
+		section {
+			/* border: 2px solid red; */
 			border: 5px solid yellow;
+			height: 500px;
+			margin-top: 10px;
 			background-color: black;
 			color: white;
-			display: grid;
-			grid-template-columns: 6fr 6fr;
+			display: flex;            
+            justify-content: space-evenly;
+            flex-wrap: wrap;						
+		}
+
+		#div1 {
+            border: 2px solid blue;
+			width: 600px;	
+			padding-top: 125px; ;
+			padding-left: 125px;			               			
+        }
+        #div2 {
+            border: 2px solid green;  
+			width: 600px;		
+			padding-top: 125px;	
 			
-			margin-top: 100px;
-			padding-top: 180px;
-			padding-bottom: 180px;
-		}
+        }
 
 
-		.title {
-			font-size: 50px;
-			font-weight: bold;
-			margin-top: -50px;
-			margin-left: 150px;
-			/* margin-right: 100px; */
-		}
-		.subtitle {
-			font-size: 25px;
-			/* font-weight: bold; */
-			/* margin-top: -50px; */
-			margin-left: 150px;
-			/* margin-right: 100px; */
-		}
 
 		
-		/* Section 3 */
-		#section3 {
-			border: 5px solid yellow;
-			background-color: black;
-			color: white;
-			display: grid;
-			grid-template-columns: 6fr 6fr;
-			
-			margin-top: 100px;
-			padding-top: 180px;
-			padding-bottom: 180px;
+		/* .padding-title {
+			padding-top: 125px; ;
+			padding-left: 145px;			
 		}
-		.title3 {			
-			font-size: 50px;			
-			font-weight: bold;
-			margin-top: -80px;
-			/* margin-left: 150px; */
-			margin-right: 200px;
-		}
-		.sub-title3 {			
-			font-size: 25px;			
-			/* font-weight: bold;
-			margin-top: -80px; */
-			/* margin-left: 150px; */
-			margin-right: 150px;
-		}
-	</style>
-	<script>
+		.padding-subtitle1{
+			padding-left: 145px;			
+		} */
 
-	</script>
+
+
+
+
+
+
+
+
+
+	</style>
 </head>
 
 <body>
-	<div id="shade">
-		<header>
+	<main id="main-body">
+		<div id="shade">
 			<div id="div-header">
 				<div>
-					<img id="brand-logo" src="public/images/netflix/Netflix_Logo_PMS.png" alt="">
-					<!-- <span id="brand-title">NETFLIX</span> -->
+					<img id="netflix-logo" src="public/images/netflix/Netflix_Logo_PMS.png" alt="netflix-logo">
 				</div>
+
 				<div id="div-btn">
-					<button id="btn-language" class="dropdown-toggle " data-bs-toggle="dropdown"> <span
-							class="bi bi-translate">&nbsp;</span>
+					<button id="btn-language" class="dropdown-toggle " data-bs-toggle="dropdown">
+						<span class="bi bi-translate">&nbsp;</span>
 						<span id="eng">English</span>
 						<ul class="dropdown-menu">
 							<li class="dropdown-item active">English</li>
@@ -289,56 +201,62 @@
 					</button>
 				</div>
 			</div>
-		</header>
 
-		<section id="section-1">
-			<div>
-				<div id="title">
-					Unlimited movies, TV shows and more
-				</div>
-				<div id="sub-title1">
-					Watch anywhere. Cancel anytime.
-				</div>
-				<div id="sub-title2">
-					Ready to watch? Enter your email to create or restart your membership.
-				</div>
-				<div id="div-start">
-					<input id="email" type="text" placeholder="Email address">
-					<button id="btn-get-started">
-						Get Started&nbsp; <span class="bi bi-chevron-right"></span>
-					</button>
+			<div id="div-body">
+				<div>
+					<div class="title margin">
+						Unlimited movies, TV shows and more
+					</div>
+					<div class="sub-title1">
+						Watch anywhere. Cancel anytime.
+					</div>
+					<div class="sub-title2">
+						Ready to watch? Enter your email to create or restart your membership.
+					</div>
+					<div id="div-start">
+						<input id="email" type="text" placeholder="Email address">
+						<button id="btn-get-started">
+							Get Started&nbsp; <span class="bi bi-chevron-right"></span>
+						</button>
+					</div>
 				</div>
 			</div>
-		</section>			
-	</div>
+		</div>
+	</main>
 
-
-	<section class="section">
-		<div>
+	<section id="section1">
+		<div id="div1">
 			<div class="title">Enjoy on your TV</div>
-			<div class="subtitle">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</div>
+			<div class="sub-title1">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</div>
 		</div>
 
-		<div class="d-flex justify-content-center">
-			<img src="public/images/netflix/tv-img.png" alt="" width="300px" height="150px">
+		<div id="div2">
+			<img src="public/images/netflix/section1.png" alt="" width="400px" height="250px">
 		</div>
 	</section>
 
-
-	<!-- section-3 -->
 	<section id="section3">
-		<div>
-			<img src="public/images/netflix/section3.png" alt="" height="300px">
-		</div>
-		
-		<div>
-			<div class="title3">Download your shows to watch offline</div>
-			<div class="sub-title3">Save your favourites easily and always have something to watch.</div>
+		<div id="div1">
+			<div class="title">Watch everywhere</div>
+			<div class="sub-title1">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</div>
 		</div>
 
+		<div id="div2">
+			<img src="public/images/netflix/section3.png" alt="" width="400px" height="250px">
+		</div>
 	</section>
 
 
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+	
+	
+
+
+</body>
 
 
 
@@ -353,9 +271,11 @@
 
 
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
