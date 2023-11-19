@@ -256,7 +256,7 @@
         }
 
         /* education starts here*/
-        table {
+        #table-education-data {
             width: 90%;
             border: 1px solid gray;
             border-radius: 10px;
@@ -289,10 +289,10 @@
             grid-template-columns: 6fr 6fr;
         }
 
-        .inner-display-in-two-column {
+        /* .inner-display-in-two-column {
             display: flex;
             justify-content: space-between;
-        }
+        } */
 
         fieldset {
             margin-bottom: 20px;
@@ -301,7 +301,7 @@
             width: 450px;
             border: 1px solid red;
             /* Add your desired border styles */
-            height: 220px;
+            height: auto;
         }
 
         legend {
@@ -538,8 +538,8 @@
             }
 
             header img {
-                height: 25px;
-                width: 25px;
+                height: 35px;
+                width: 35px;
                 border-radius: 50px;
                 /* border: 2px solid darkcyan;                 */
             }
@@ -565,6 +565,7 @@
 
             .title {
                 font-family: elephant;
+                font-weight: bold;
                 letter-spacing: 2px;
                 font-size: 15px;
                 color: navy;
@@ -577,6 +578,7 @@
             .sub-title {
                 /* top: 30px; */
                 padding: 5px;
+                font-weight: bold;
                 color: yellow;
                 background-color: black;
                 text-align: center;
@@ -637,8 +639,8 @@
             }
 
             #img-home {
-                height: 175px;
-                width: 175px;
+                height: 150px;
+                width: 150px;
                 box-shadow: 10px 10px 10px silver;
                 -webkit-box-reflect: right 1px linear-gradient(transparent, transparent, transparent, #000f);
             }
@@ -770,7 +772,7 @@
             }
 
             /* education starts here*/
-            table {
+            #table-education-data {
                 width: 90%;
                 /* height: 200px; */
                 border: 1px solid gray;
@@ -814,9 +816,11 @@
                 /* margin-bottom: 20px; */
                 /* box-shadow: 10px 5px 10px red; */
                 /* border-radius: 10px; */
-                width: 275px;
+                
                 /* border: 1px solid red; */
                 /* Add your desired border styles */
+                margin-left: 0px;
+                width: 300px;
                 height: auto;
             }
 
@@ -832,22 +836,30 @@
                 font-size: 15px;
             }
 
-            .myCourses ul li {
-                font-size: 15px;
-                border: 2px solid red;
+            .table-courses tr td {
+                border: 1px solid green;
+                border: none;
+                font-size: 12px;
+                
             }
 
-         
+            .myCourses ul li {
+                /* margin-top: 10px; */
+                /* font-size: 15px;
+                border: 2px solid red; */
+            }         
 
             #myCertificate ul li {
-                font-size: 15px;
-                border: 2px solid green;
+                /* margin-top: 10px; */
+                /* font-size: 15px;
+                border: 2px solid green; */
             }
 
 
 
             .text-shadaow {
                 /* font-size: 20px;
+                text-shadow: 5px 2px yellow;
                 text-shadow: 5px 2px yellow;
                 color: red; */
             }
@@ -1688,7 +1700,7 @@
 
                 <div class="tab-content table-responsive">
                     <div class="tab-pane mt-4 ms-4" id="education">
-                        <table class="table table-hover table-striped">
+                        <table id="table-education-data" class="table table-hover table-striped">
                             <!-- <caption>
                                 <h2>Education Summary</h2>
                             </caption> -->
@@ -1778,16 +1790,61 @@
                                     <legend class="float-none w-auto px-3">Computer</legend>
                                     <div class="inner-display-in-two-column">
                                         <div class="myCourses">
-                                            <ul class="list-unstyled text-shadaow">
+                                            <table class="table-courses text-shadaow">
+                                                <tr>
+                                                    <td>
+                                                        <span class="bi bi-check2-square"></span> CCC
+                                                    </td>
+                                                    <td>
+                                                        <a href="public/docs/pdf/Akash Parate CCC Certificate.pdf"
+                                                        target="_blank"><span class="bi bi-filetype-pdf"></span></a>
+                                                    </td>                                                    
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <span class="bi bi-check2-square"></span> Tally
+                                                    </td>
+                                                    <td>
+                                                        <a href="public/docs/pdf/Akash Parate Tally Certificate.pdf"
+                                                        target="_blank"><span class="bi bi-filetype-pdf"></span></a>
+                                                    </td>                                                    
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <span class="bi bi-check2-square"></span> MS-CIT
+                                                    </td>
+                                                    <td>
+                                                        <a href="public/docs/pdf/Akash Parate MS CIT Certificate.pdf"
+                                                        target="_blank"><span class="bi bi-filetype-pdf"></span></a>
+                                                    </td>                                                    
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <span class="bi bi-check2-square"></span> Kotlin Development
+                                                            Masterclass
+                                                    </td>
+                                                    <td>
+                                                        <a href="public/docs/pdf/Akash Parate Kotlin Development Masterclass Udemy certificate.pdf"
+                                                        target="_blank"><span class="bi bi-filetype-pdf"></span></a>
+                                                    </td>                                                    
+                                                </tr>
+                                            </table>
+
+
+                                            <!-- <ul class="list-unstyled text-shadaow">
                                                 <li><span class="bi bi-check2-square"></span> CCC</li>
                                                 <li><span class="bi bi-check2-square"></span> Tally</li>
                                                 <li><span class="bi bi-check2-square"></span> MS-CIT</li>
                                                 <li><span class="bi bi-check2-square"></span> Kotlin Development
                                                     Masterclass
                                                 </li>
-                                            </ul>
+                                            </ul> -->
                                         </div>
-                                        <div>
+
+                                        <!-- <div>
                                             <ul class="list-unstyled text-shadaow">
                                                 <li><a href="public/docs/pdf/Akash Parate CCC Certificate.pdf"
                                                         target="_blank"><span class="bi bi-filetype-pdf"></span></a>
@@ -1802,7 +1859,7 @@
                                                         target="_blank"><span class="bi bi-filetype-pdf"></span></a>
                                                 </li>
                                             </ul>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </fieldset>
                             </div>
@@ -1812,7 +1869,44 @@
                                     <legend class="float-none w-auto px-3">Typing</legend>
                                     <div class="inner-display-in-two-column">
                                         <div class="myCourses">
-                                            <ul class="list-unstyled text-shadaow">
+                                            
+                                                <table class="table-courses text-shadaow">
+                                                <tr>
+                                                    <td>
+                                                        <span class="bi bi-check2-square"></span> English typing <em>30
+                                                            WPM</em>
+                                                    </td>
+                                                    <td>
+                                                        <a href="public/docs/pdf/Akash Parate Typing English 30.pdf"
+                                                        target="_blank"><span class="bi bi-filetype-pdf"></span></a>
+                                                    </td>                                                    
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <span class="bi bi-check2-square"></span> English typing <em>40
+                                                            WPM</em>
+                                                    </td>
+                                                    <td>
+                                                        <a href="public/docs/pdf/Akash Parate Typing English 40.pdf"
+                                                        target="_blank"><span class="bi bi-filetype-pdf"></span></a>
+                                                    </td>                                                    
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <span class="bi bi-check2-square"></span> Marathi typing <em>30
+                                                            WPM</em>
+                                                    </td>
+                                                    <td>
+                                                        <a href="public/docs/pdf/Akash Parate Typing Marathi 30.pdf"
+                                                        target="_blank"><span class="bi bi-filetype-pdf"></span></a>
+                                                    </td>                                                    
+                                                </tr>                                             
+                                            </table>
+
+
+                                            <!-- <ul class="list-unstyled text-shadaow">
                                                 <li><span class="bi bi-check2-circle"></span> English typing <em>30
                                                         WPM</em></li>
                                                 <li><span class="bi bi-check2-circle"></span> English typing <em>40
@@ -1832,7 +1926,7 @@
                                                 <li><a href="public/docs/pdf/Akash Parate Typing Marathi 30.pdf"
                                                         target="_blank"><span class="bi bi-filetype-pdf"></span></a>
                                                 </li>
-                                            </ul>
+                                            </ul> -->
                                         </div>
                                     </div>
                                 </fieldset>
@@ -1844,7 +1938,41 @@
                                 <legend class=" float-none w-auto px-3">Other Certificate</legend>
                                 <div class="inner-display-in-two-column">
                                     <div>
-                                        <ul class="list-unstyled text-shadaow">
+                                        <table class="table-courses text-shadaow">
+                                            <tr>
+                                                <td>
+                                                    <span class="bi bi-stack-overflow text-success"> </span> Currently, I am
+                                                        pursuing a Full Stack Development
+                                                </td>
+                                                <td>
+                                                    <!-- <a href="#"
+                                                    target="_blank"><span class="bi bi-filetype-pdf"></span></a> -->
+                                                </td>                                                    
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <span class="bi bi-check-lg"></span> MS CIT Authorized Learning Center Certificate                                            
+                                                </td>
+                                                <td>
+                                                    <a href="public/docs/pdf/Akash Parate MS CIT ALC Certificate.pdf"
+                                                    target="_blank"><span class="bi bi-filetype-pdf"></span></a>
+                                                </td>                                                    
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <span class="bi bi-check-lg"></span> Maharashtra center for Entrepreneurship Development
+                                                </td>
+                                                <td>
+                                                    <a href="public/docs/pdf/Akash Parate Dic certificate.pdf"
+                                                    target="_blank"><span class="bi bi-filetype-pdf"></span></a>
+                                                </td>                                                    
+                                            </tr>                                             
+                                        </table>
+
+
+                                        <!-- <ul class="list-unstyled text-shadaow">
                                             <li><span class="bi bi-stack-overflow text-success"> Currently, I am
                                                     pursuing a Full Stack Development</span> </li>
                                             <li><span class="bi bi-check-lg"></span> MS CIT Authorized Learning Center
@@ -1861,7 +1989,7 @@
                                                     target="_blank"><span class="bi bi-filetype-pdf"></span></a></li>
                                             <li><a href="public/docs/pdf/Akash Parate Dic certificate.pdf"
                                                     target="_blank"><span class="bi bi-filetype-pdf"></span></a></li>
-                                        </ul>
+                                        </ul> -->
                                     </div>
                                 </div>
 
