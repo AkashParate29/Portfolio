@@ -746,6 +746,26 @@
                 font-size: 10px;
             }
 
+
+            /* basic details starts here */
+            h2 {
+                /* border: 2px solid red; */
+                font-size: 15px;
+            }
+            h3 {
+                /* border: 2px solid green; */
+                font-size: 13px;
+            }
+
+            h5 {
+                /* border: 2px solid yellow; */
+                font-size: 11px;
+            }
+
+            /* basic details ends here */
+
+            /* technical skill starts here */
+
             #technical-skill-main {
                 font-size: 15px;
                 list-style: none;
@@ -770,6 +790,8 @@
             mark {
                 /* font-weight: bold; */
             }
+
+            /* technical skill ends here */
 
             /* education starts here*/
             #table-education-data {
@@ -925,8 +947,8 @@
 
             /* experience starts here */
             #div-experience {
-                margin-left: 20px;
-                width: 85%;
+                /* margin-left: 20px; */
+                width: 90%;
                 /* font-size: 20px;                        */
                 text-align: justify;
             }
@@ -939,7 +961,7 @@
 
             .right-arrow {
                 list-style-type: '👉';
-                padding-inline-start: 1ch;
+                /* padding-inline-start: 1ch; */
             }
 
             /* experience ends here */
@@ -1052,6 +1074,9 @@
                 font-size: 14px;
                 color: #0396ff;
             }
+
+            
+
         }
     </style>
 </head>
@@ -1088,7 +1113,7 @@
                 <!-- <div>Experience</div> -->
             </a>
 
-            <a href="#feedback">
+            <a href="#feedback" hidden>
                 <img src="public/images/feedback.png" alt="">
                 <!-- <div>Experience</div> -->
             </a>
@@ -1134,7 +1159,7 @@
                 <li class="nav-li">
                     <a href="#experience" class="bi bi-person-workspace"> Experience</a>
                 </li>
-                <li class="nav-li">
+                <li class="nav-li" hidden>
                     <a href="#feedback" class="bi bi-person-workspace"> Feedback</a>
                 </li>
                 <li class="nav-li">
@@ -2077,8 +2102,6 @@
                             <strong>Chanda Public School</strong>, Chandrapur
                             <p>
                                 (Period: June-01-2020 to Mar-20-2021)
-
-
                             </p>
                         </span>
                     </li>
@@ -2144,8 +2167,8 @@
 
 
             <!-- Feedback starts here-->
-            <h2 id="feedback" class="title mt-5">Feedback</h2>
-            <div id="div-feedback">
+            <h2 hidden id="feedback" class="title mt-5">Feedback</h2>
+            <div id="div-feedback" hidden>
 
                 <div id="container">
                     <div class="icon-image">
