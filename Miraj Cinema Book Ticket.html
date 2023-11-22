@@ -78,7 +78,44 @@
             padding-left: 40px;
             padding-right: 40px;
         }
+
+        /* for main screen mobile view starts here */
+    @media (max-width: 600px) {
+        #top-banner {            
+            height: 400px;
+        }
+
+        img {
+            height: 400px;            
+        }
+
+        #miraj-heading {
+            position: absolute;
+            top: 10px;
+            left: 20px;            
+        }
+
+        #miraj-title {                        
+            font-size: 30px;            
+        }
+
+        #miraj-subtitle {            
+            font-size: 15px;            
+        }
+
+        #book-ticket-details {
+            border: 2px solid blue;              
+            flex-wrap: wrap;
+            padding: 20px;
+        }        
+    }
+    /* for main screen mobile view ends here */
     </style>
+
+
+ 
+
+
 
     <!-- for printing ticket starts here -->
     <style type="text/css" media="print">
@@ -97,6 +134,10 @@
         }
     </style>
     <!-- for printing ticket ends here -->
+
+
+   
+
 
     <script>
         function BookClick() {
@@ -173,7 +214,9 @@
         <div>
             <select name="" id="cinemas">
                 <option value="">Select Cinema</option>
-                <option value="Nagpur road, Wadgaon,  Chandrapur 442402">Nagpur road, Wadgaon, Chandrapur 442402
+                <option value="Nagpur road, Wadgaon,  Chandrapur">Nagpur road, Wadgaon, Chandrapur
+                <option value="Nagpur road, Wadgaon,  Chandrapur">Ballarpur road, Bypass, Chandrapur
+                <option value="Nagpur road, Wadgaon,  Chandrapur">Mul road, Bengali camp, Chandrapur
                 </option>
             </select>
         </div>
