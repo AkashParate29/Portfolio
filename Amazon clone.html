@@ -307,7 +307,264 @@
 		/*Footer End part ends here*/
 		/*Footer ends here*/
 
-    </style>
+		/* for mobile view starts here */
+		@media (max-width:600px) {
+		       
+        header {
+            background-color: skyblue;
+            color: white;
+            border-radius: 10px 0px 0px 0px;
+            padding: 10px;
+
+            display: flex;
+			flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        
+
+
+        #amazon-logo {
+            width: 100px;
+        }
+
+        #location-div {
+            display: flex;
+        }
+
+        #location-icon {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .header-top-text {
+            display: block;
+            font-size: 9px;
+        }
+
+        .header-bottom-text {
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        #header-search-select {
+            background-color: #e6e6e6;
+            width: 150px;
+        }
+
+        #btn-search-icon {
+            background-color: #febd69;
+        }
+
+        #flag {
+            width: 18px;
+            height: 13px;
+        }
+
+        #language {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .bi-cart2 {
+            font-size: 25px;
+            position: relative;
+        }
+
+        #txt-cart {
+            display: flex;
+            align-items: end;
+            margin-right: 10px;
+        }
+
+        #cart-count {
+            position: absolute;
+            margin-left: 10px;
+            margin-top: 9px;
+            top: 0;
+            color: goldenrod;
+            font-weight: bold;
+        }
+
+        /* header ends here */
+
+        /* Navbar starts here */
+
+        .navbar {
+            background-color: #232f3e;
+            font-size: 15px;
+        }
+
+        #navbar-div {
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 5px 5px 20px;
+        }
+
+        #navbar-div a {
+            margin-right: 20px;
+        }
+
+        #navbar-festival-deals-div {
+            width: 400px;
+            height: 30px;
+            background-image: url(public/images/amazon-images/festival-deals.png);
+            background-size: 300px;
+            background-repeat: no-repeat;
+            background-position: center right;
+        }
+
+        /* Navbar ends here */
+
+        /* Card starts here */
+       
+        main {
+			background-color:fuchsia;            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;			
+        }
+		.card {
+			background-color: wheat;
+            margin: 15px 2px 15px 2px;            
+            padding: 10px;			
+            max-width: 390px;			
+        }
+		th {
+            padding: 10px;					
+			padding-bottom: 0px;
+            font-size: 21px;
+			height: 60px;
+            vertical-align: top;
+        }		
+		figure img {
+			width: 100%;
+			padding-top: 10px;
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-bottom: -20px;
+		}
+		figcaption {
+			padding-left:10px ;
+		}
+		.row-height {        
+            height: 50px;
+            vertical-align: top;
+        }
+		tr td a {
+			text-decoration: none;
+			color: darkblue;
+			padding: 10px;
+		}
+		tr td a:hover {
+			text-decoration: underline;
+			color: red;
+		}
+        /* Card ends here */
+
+        /*Footer starts here*/		
+		#footer-header {
+			background-color: #37475a;			
+			text-align: center;
+			padding: 15px;
+		}
+        #footer-header a {
+            color: white;
+            text-decoration: none;
+        }
+        #footer-header:hover {
+        background-color: #4a5c77;	
+        }
+
+		.footer-body-background {
+			background-color: #232f3e;
+			color: white;
+			padding: 50px;
+		}
+
+		#footer-body-1 {
+			display: flex;
+			justify-content: space-evenly;
+		}
+
+		#footer-body-2 {
+			margin-top: -60px;
+		}
+
+		.footer-title {
+			font-size: 17px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		span a {
+			text-decoration: none;
+			color: white;
+			font-size: 15px;
+			display: block;
+			margin-top: 5px;
+		}
+
+		span a:hover {
+			text-decoration-line: underline;
+		}
+
+		#footer-countries-link {
+			margin-top: 50px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			text-align: center;
+		}
+
+		#footer-countries-link a {
+			margin: 0px 15px 0px 15px;
+		}
+
+
+		/*Footer End part starts here*/
+		#footer-end {
+			background-color: #131a22;
+		}
+
+		.row {			
+			padding-left: 50px;
+		}
+
+		.row div {
+			margin-left: 40px;
+			margin-right: 40px;
+		}
+
+		.footer-end-flex div {			
+			margin: 20px 20px 20px 20px;
+		}
+
+		.footer-end-font {
+			font-size: 12px;
+		}
+
+		#footer-last-div {
+			text-align: center;
+			padding-bottom: 20px;
+			color: white;
+		}
+		/*Footer End part ends here*/
+		/*Footer ends here*/
+
+    
+		}
+		/* for mobile view ends here */
+    
+	</style>
     <script>
 
     </script>
