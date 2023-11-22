@@ -2,168 +2,176 @@
 <html lang="en">
 
 <head>
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Add a meta tag for character set and viewport settings. -->
         <meta name="keywords" content="">
         <meta name="description" content="">
-    
+
         <!-- Customized Bootstrap Stylesheet -->
         <link rel="stylesheet" href="public/docs/css/index.css">
-    
+
         <!-- Bootstrap Local (Note: the version number should be accurate) -->
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
         <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    
+
         <!-- Bootstrap Online (Note: the version numbers should be accurate) -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    
+
         <link rel="shortcut icon" href="public/images/Akash.ico">
         <!-- Add a link to your favicon. -->
-    
-        
-    <title>Miraj Cinema Book Ticket</title>
-    <style>
-        #top-banner {
-            height: 400px;
-        }
-
-        img {
-            height: 400px;
-            width: 100%;
-        }
-
-        #miraj-heading {
-            position: absolute;
-            top: 20px;
-            left: 40px;
-            font-weight: bold;
-            text-shadow: 2px 2px 2px yellow;
-        }
-
-        #miraj-title {
-            font-family: elephant;
-            display: block;
-            font-size: 60px;
-            color: navy;
-        }
-
-        #miraj-subtitle {
-            display: block;
-            font-size: 20px;
-            color: red;
-        }
-
-        label {
-            font-weight: bold;
-        }
-
-        #book-ticket-details {
-            padding: 10px;
-            background-color: black;
-
-        }
-
-        select {
-            border: 1px solid white;
-            border-radius: 5px;
-            padding: 5px;
-            background-color: black;
-            color: white;
-        }
-
-        #btn-book {
-            padding-left: 40px;
-            padding-right: 40px;
-        }
-
-        /* for main screen mobile view starts here */
-    @media (max-width: 600px) {
-        #top-banner {            
-            height: 400px;
-        }
-
-        img {
-            height: 400px;            
-        }
-
-        #miraj-heading {
-            position: absolute;
-            top: 10px;
-            left: 20px;            
-        }
-
-        #miraj-title {                        
-            font-size: 30px;            
-        }
-
-        #miraj-subtitle {            
-            font-size: 15px;            
-        }
-
-        #book-ticket-details {
-            border: 2px solid blue;              
-            flex-wrap: wrap;
-            padding: 20px;
-        }        
-    }
-    /* for main screen mobile view ends here */
-    </style>
 
 
- 
-
-
-
-    <!-- for printing ticket starts here -->
-    <style type="text/css" media="print">
-        #summaryContainer {
-            width: auto;
-            padding: 5px;
-            border: 1px solid black;
-        }
-
-        #summaryContainer button {
-            display: none;
-        }
-
-        #summaryContainer h3 {
-            text-align: center;
-        }
-    </style>
-    <!-- for printing ticket ends here -->
-
-
-   
-
-
-    <script>
-        function BookClick() {
-            movie = document.getElementById("movies").value;
-            poster = document.getElementById("poster");
-
-            document.getElementById("summaryContainer").style.display = "block";
-            document.getElementById("lblMovie").innerHTML = document.getElementById("movies").value;
-            document.getElementById("lblCinemas").innerHTML = document.getElementById("cinemas").value;
-            document.getElementById("lblDate").innerHTML = document.getElementById("date").value
-            document.getElementById("lblTime").innerHTML = document.getElementById("time").value
-            document.getElementById("lblSeats").innerHTML = document.getElementById("seats").value
-
-            if (movie == "Gadar 2") {
-                poster.src = "public/images/miraj-images/movie-gadar2.png";
+        <title>Miraj Cinema Book Ticket</title>
+        <style>
+            #top-banner {
+                height: 400px;
             }
-            else {
-                poster.src = "public/images/miraj-images/movie-omg2.png";
-            }
-        }
 
-        function PrintTicket() {
-            window.print();
-        }
-    </script>
-</head>
+            img {
+                height: 400px;
+                width: 100%;
+            }
+
+            #miraj-heading {
+                position: absolute;
+                top: 20px;
+                left: 40px;
+                font-weight: bold;
+                text-shadow: 2px 2px 2px yellow;
+            }
+
+            #miraj-title {
+                font-family: elephant;
+                display: block;
+                font-size: 60px;
+                color: navy;
+            }
+
+            #miraj-subtitle {
+                display: block;
+                font-size: 20px;
+                color: red;
+            }
+
+            label {
+                font-weight: bold;
+            }
+
+            #book-ticket-details {
+                border: 1px solid blue;
+                padding: 10px;
+                background-color: black;
+
+            }
+
+            select {
+                border: 1px solid white;
+                border-radius: 5px;
+                padding: 5px;
+                background-color: black;
+                color: white;
+            }
+
+            #btn-book {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+
+            /* for main screen mobile view starts here */
+            @media (max-width: 600px) {
+                #top-banner {
+                    height: 400px;
+                }
+
+                img {
+                    height: 400px;
+                }             
+
+                #miraj-title {
+                    font-size: 30px;
+                }
+
+                #miraj-subtitle {
+                    font-size: 15px;
+                }               
+            }
+
+            /* for main screen mobile view ends here */
+        </style>
+
+
+
+
+
+
+        <!-- for printing ticket starts here -->
+        <style type="text/css" media="print">
+            #summaryContainer {
+                width: auto;
+                padding: 5px;
+                border: 1px solid black;
+            }
+
+            #summaryContainer button {
+                display: none;
+            }
+
+            #summaryContainer h3 {
+                text-align: center;
+            }
+
+            /* for main screen mobile view starts here */
+            @media (max-width: 600px) {
+                #summaryContainer {
+                    width: 400px;
+                    padding: 5px;
+                }
+                          
+
+                #summaryContainer h3 {
+                    font-size: 10px;
+                    color: yellow;
+                    text-align: center;
+                }
+            }
+
+            /* for main screen mobile view ends here */
+        </style>
+        <!-- for printing ticket ends here -->
+
+
+
+
+
+        <script>
+            function BookClick() {
+                movie = document.getElementById("movies").value;
+                poster = document.getElementById("poster");
+
+                document.getElementById("summaryContainer").style.display = "block";
+                document.getElementById("lblMovie").innerHTML = document.getElementById("movies").value;
+                document.getElementById("lblCinemas").innerHTML = document.getElementById("cinemas").value;
+                document.getElementById("lblDate").innerHTML = document.getElementById("date").value
+                document.getElementById("lblTime").innerHTML = document.getElementById("time").value
+                document.getElementById("lblSeats").innerHTML = document.getElementById("seats").value
+
+                if (movie == "Gadar 2") {
+                    poster.src = "public/images/miraj-images/movie-gadar2.png";
+                }
+                else {
+                    poster.src = "public/images/miraj-images/movie-omg2.png";
+                }
+            }
+
+            function PrintTicket() {
+                window.print();
+            }
+        </script>
+    </head>
 
 <body class="container-fluid mt-1">
 
@@ -202,7 +210,7 @@
         <label for="" class="text-bg-danger mt-2 p-2">Quick Booking</label>
     </div>
 
-    <div id="book-ticket-details" class="d-flex justify-content-between">
+    <div id="book-ticket-details" class="d-flex justify-content-between flex-wrap m-1">
         <div>
             <select name="" id="movies">
                 <option value="">Select Movie</option>
@@ -283,7 +291,8 @@
                         <dd class="col-8" id="lblSeats"></dd>
                     </dl>
 
-                    <button class="btn btn-link" data-bs-dismiss="modal" data-bs-target="#bookingSummary">Edit Booking</button>
+                    <button class="btn btn-link" data-bs-dismiss="modal" data-bs-target="#bookingSummary">Edit
+                        Booking</button>
                     <button id="print-button" class="btn btn-link" onClick="PrintTicket()">Print Ticket</button>
                 </div>
             </div>
@@ -294,4 +303,5 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
