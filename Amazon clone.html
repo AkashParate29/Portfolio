@@ -25,8 +25,7 @@
 	<title>Akash-Amazon-Clone</title>
 	<style>
 		body {
-			font-family: arial;
-			/* overflow-x: hidden; */
+			font-family: arial;			
 		}
 
 		#main-logo:hover,
@@ -41,7 +40,6 @@
 		}
 
 		#nav-search:hover {
-
 			border: 2px solid #ff9900;
 		}
 
@@ -57,7 +55,6 @@
 		}
 
 		header {
-
 			background-color: #131921;
 			color: white;
 			border-radius: 10px 0px 0px 0px;
@@ -266,7 +263,13 @@
 			display: flex;
 			justify-content: space-evenly;
 		}
-
+		
+		#amazon-links {
+				display: none;
+				justify-content: space-between;
+				padding-top: 0px;
+			}
+		
 		#footer-body-2 {
 			margin-top: -60px;
 		}
@@ -289,7 +292,7 @@
 			text-decoration-line: underline;
 		}
 
-		#footer-countries-link {
+		.footer-countries-link {
 			margin-top: 50px;
 			display: flex;
 			flex-wrap: wrap;
@@ -297,7 +300,7 @@
 			text-align: center;
 		}
 
-		#footer-countries-link a {
+		.footer-countries-link a {
 			margin: 0px 15px 0px 15px;
 		}
 
@@ -330,6 +333,10 @@
 			color: white;
 		}
 
+		#footer-sign-in {
+			display: none;
+		}
+
 		/*Footer End part ends here*/
 		/*Footer ends here*/
 
@@ -337,7 +344,7 @@
 		@media (max-width:600px) {
 
 			header {
-				background-color: seagreen;
+				background-color: #131921;				
 				color: white;
 				border-radius: 10px 0px 0px 0px;
 				padding: 10px;
@@ -384,159 +391,94 @@
 			/* header ends here */
 
 			/* Navbar starts here */
-
-			
-
 			#navbar-div {				
 				display: none;				
-			}
-
-			
+			}			
 			/* Navbar ends here */
 
 			/* Card starts here */
-
-			main {
-				background-color: fuchsia;
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: space-evenly;
+			.card {				
+				margin: 5px 2px 5px 2px;
+				padding: 5px;
+				max-width: 230px;
 			}
 
-			.card {
-				background-color: wheat;
-				margin: 15px 2px 15px 2px;
-				padding: 10px;
-				max-width: 390px;
+			th {				
+				font-size: 15px;				
 			}
-
-			th {
-				padding: 10px;
-				padding-bottom: 0px;
-				font-size: 21px;
-				height: 60px;
-				vertical-align: top;
+			td {
+				font-size: 12px;				
 			}
-
-			figure img {
-				width: 100%;
-				padding-top: 10px;
-				padding-left: 10px;
-				padding-right: 10px;
-				margin-bottom: -20px;
-			}
-
-			figcaption {
-				padding-left: 10px;
-			}
-
-			.row-height {
-				height: 50px;
-				vertical-align: top;
-			}
-
-			tr td a {
-				text-decoration: none;
-				color: darkblue;
-				padding: 10px;
-			}
-
-			tr td a:hover {
-				text-decoration: underline;
-				color: red;
-			}
-
 			/* Card ends here */
 
 			/*Footer starts here*/
-			#footer-header {
-				background-color: #37475a;
-				text-align: center;
-				padding: 15px;
-			}
-
-			#footer-header a {
-				color: white;
-				text-decoration: none;
-			}
-
-			#footer-header:hover {
-				background-color: #4a5c77;
-			}
-
-			.footer-body-background {
-				background-color: #232f3e;
-				color: white;
-				padding: 50px;
+			#footer-header {				
+				padding: 5px;				
 			}
 
 			#footer-body-1 {
+				display: none;				
+			}
+			hr {
+				display: none;
+			}
+
+			#amazon-links {
 				display: flex;
-				justify-content: space-evenly;
+				justify-content: space-between;
+				padding-top: 0px;
 			}
-
-			#footer-body-2 {
-				margin-top: -60px;
+			#amazon-links-left {
+				margin-top: 0px;
+				width: 150px;
 			}
-
-			.footer-title {
-				font-size: 17px;
-				font-weight: bold;
-				margin-bottom: 10px;
+			#amazon-links-right {
+				width: 150px;
 			}
-
-			span a {
-				text-decoration: none;
-				color: white;
-				font-size: 15px;
+			#amazon-links span {
 				display: block;
-				margin-top: 5px;
+				margin-top: 25px;				
+				font-size: 14px;
 			}
-
-			span a:hover {
-				text-decoration-line: underline;
-			}
-
-			#footer-countries-link {
-				margin-top: 50px;
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-				text-align: center;
-			}
-
-			#footer-countries-link a {
-				margin: 0px 15px 0px 15px;
-			}
-
-
-			/*Footer End part starts here*/
-			#footer-end {
+		
+			#footer-body-2 {				
 				background-color: #131a22;
+				margin-top: -30px;
+				margin-bottom: -20px;
+				padding-top:10px ;
 			}
 
-			.row {
-				padding-left: 50px;
+			#footer-logo {
+				display: none;
+			}
+			#footer-countries {
+				display: none;
+			}
+			
+			
+			/*Footer End part starts here*/
+			#footer-row1 {
+				display: none;
+			}
+			#footer-row2 {
+				display: none;
 			}
 
-			.row div {
-				margin-left: 40px;
-				margin-right: 40px;
+			.marginTop {
+				margin-top: 0px;
 			}
+			
 
-			.footer-end-flex div {
-				margin: 20px 20px 20px 20px;
-			}
-
-			.footer-end-font {
-				font-size: 12px;
-			}
-
-			#footer-last-div {
-				text-align: center;
-				padding-bottom: 20px;
+			/* xxxxxx */
+			#footer-sign-in {	
+				display: block;			
+				margin-bottom: 40px;
+				font-size: 20px;
 				color: white;
+				text-align: center;
 			}
+			
+			
 
 			/*Footer End part ends here*/
 			/*Footer ends here*/
@@ -707,9 +649,6 @@
 			</table>
 		</div>
 
-
-
-
 		<!-- 2nd card -->
 		<div class="card">
 			<table>
@@ -735,7 +674,7 @@
 					</tr>
 					<tr class="row-height">
 						<td>
-							<figcaption>Sports shoes asdf ashfsadh f asf </figcaption>
+							<figcaption>Sports shoes</figcaption>
 						</td>
 						<td>
 							<figcaption>Men's shoes</figcaption>
@@ -771,7 +710,6 @@
 			</table>
 		</div>
 
-
 		<!-- 3rd card -->
 		<div class="card">
 			<table>
@@ -799,12 +737,16 @@
 				</tbody>
 			</table>
 		</div>
-
 	</main>
 
 	<footer>
 		<div id="footer-header">
-			<a href="Amazon clone.html">Back to top</a>
+			
+			<a href="Amazon clone.html">
+				<span class="bi bi-chevron-up text-white"></span>
+			<br>
+				Back to top
+			</a>
 		</div>
 
 		<div id="footer-body-1" class="footer-body-background">
@@ -890,12 +832,35 @@
 			</div>
 		</div>
 
+		<div id="amazon-links" class="footer-body-background">
+			<div id="amazon-links-left">
+				<span>Amazon.in</span>
+				<span>Your Orders</span>
+				<span>Amazon App Download</span>
+				<span>Your Account</span>
+				<span>Returns</span>
+				<span>Customer Service</span>
+
+			</div>
+
+
+			<div id="amazon-links-right">
+				<span>Your Amazon.in</span>
+				<span>Amazon Pay</span>
+				<span>Your Lists</span>
+				<span>Your Recently Viewed Items</span>
+				<span>Sell</span>
+
+			</div>
+
+		</div>
+
 
 		<div id="footer-body-2" class="footer-body-background">
 			<hr>
 			<div class="d-flex justify-content-center align-items-center mt-5">
 				<a href=" #">
-					<img src="public/images/amazon-images/amazon-footer-logo.png" alt="" height="25px" width="100px">
+					<img id="footer-logo" src="public/images/amazon-images/amazon-footer-logo.png" alt="" height="25px" width="100px">
 				</a>
 
 				<button class="btn text-white border ms-5">
@@ -905,7 +870,7 @@
 				</button>
 			</div>
 
-			<div id="footer-countries-link">
+			<div id="footer-countries" class="footer-countries-link">
 				<span><a href="#" class="footer-end-font">Australia</a></span>
 				<span><a href="#" class="footer-end-font">Brazil</a></span>
 				<span><a href="#" class="footer-end-font">Canada</a></span>
@@ -928,7 +893,7 @@
 
 
 		<div id="footer-end">
-			<div class="row">
+			<div id="footer-row1" class="row">
 				<div class="col-2">
 					<span>
 						<a href="#" class="footer-end-font">
@@ -962,7 +927,7 @@
 				</div>
 			</div>
 
-			<div class="row mt-4">
+			<div id="footer-row2" class="row mt-4">
 				<div class="col-2">
 					<span>
 						<a href="#" class="footer-end-font">
@@ -997,12 +962,16 @@
 				</div>
 			</div>
 
-			<div id="footer-countries-link">
+			<div id="footer-sign-in" class="text-white">
+				Already a customer? Sign in
+			</div>
+
+			<div class="footer-countries-link marginTop">
 				<span><a href="#" class="footer-end-font">Conditions of Use & Sale</a></span>
 				<span><a href="#" class="footer-end-font">Privacy Notice</a></span>
 				<span><a href="#" class="footer-end-font">Interest-Based Ads</a></span>
 			</div>
-			<div id="footer-last-div" class="footer-end-font">
+			<div id="footer-last-div" class="footer-end-font marginTop">
 				© 1996-2023, Amazon.com, Inc. or its affiliates
 			</div>
 		</div>
