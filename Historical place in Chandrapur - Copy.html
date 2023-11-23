@@ -26,11 +26,14 @@
     <style>
         body {
             font-family: arial;
-        }		
+        }
+		
+		section {
+			display: grid;
+			grid-template-columns: 2fr 10fr;
+		}
         nav {
-            border: 2px solid blue;
             background-color: beige;
-            display: flex;            
         }
 		nav span {
             /* border:  2px solid red; */
@@ -48,8 +51,7 @@
             color: #000; /* Set the default text color */
             padding: 8px;
             display: inline-block;
-        }  
-       
+        }        
         nav span.clicked a {
             padding: 10px;
             border-radius: 20px;
@@ -83,7 +85,7 @@
 <body>
 	<section>
 		<nav>
-			<span><a href="Tadoba Safari.html" target="main-frame">Tadoba Safari </a></span>
+			<span><a href="Tadoba Safari.html" target="main-frame">Tadoba Safari</a></span>
 			<span><a href="Mahakali Temple.html" target="main-frame">Mahakali Temple</a></span>
 			<!-- <span><a href="Bhadrawati Temple.html" target="main-frame">Bhadrawati Temple</a></span>
 			<span><a href="Markandeshwar Temple.html" target="main-frame">Markandeshwar Temple</a></span>
