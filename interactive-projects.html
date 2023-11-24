@@ -34,7 +34,7 @@
             }
 
             .card {
-                width: 150px;
+                width: 250px;
                 /* padding: 20px; */
                 margin: 5px;
                 box-shadow: -5px -10px 10px 10px violet;
@@ -43,8 +43,8 @@
             }
 
             img {
-                width: 125px;
-                height: 100px;
+                width: 225px;
+                height: 200px;
                 border: 1px solid yellowgreen;
                 box-shadow: 5px 5px 20px 5px yellowgreen;
             }
@@ -61,15 +61,35 @@
             }
 
             a {
-                text-decoration: none;
                 text-decoration: none !important;
                 color: inherit;
+            }
+
+
+            @media (max-width: 600px) {
+                .card {
+                    width: 150px;
+                    /* margin: 5px;
+                    box-shadow: -5px -10px 10px 10px violet;
+                    align-items: center;
+                    text-align: center; */
+                }
+
+                img {
+                    width: 125px;
+                    height: 100px;
+                    /* border: 1px solid yellowgreen;
+                    box-shadow: 5px 5px 20px 5px yellowgreen; */
+                }
+
+                .title {
+                    font-weight: bold;
+                }
             }
         </style>
     </head>
 
-<body class="mt-2 ms-2 me-2">
-
+<body>
     <div class="card">
         <a href="Miraj Cinema Book Ticket.html" target="_blank">
 
@@ -77,7 +97,7 @@
                 <img src="public/images/card-images/miraj.png" alt="miraj-img">
             </div>
             <div class="card-body">
-                <p class="title">Ticket booking</p>                                
+                <p class="title">Ticket booking</p>
             </div>
             <div class="card-footer">
                 <p class="sub-title">Miraj Cinema</p>
@@ -91,10 +111,10 @@
                 <img src="public/images/card-images/amazon.png" alt="amazon-img">
             </div>
             <div class="card-body">
-                <p class="title">Amazon</p>                
+                <p class="title">Amazon</p>
             </div>
             <div class="card-footer">
-                <p class="sub-title">Shopping  here</p>
+                <p class="sub-title">Shopping here</p>
             </div>
         </a>
     </div>
@@ -105,7 +125,7 @@
                 <img src="public/images/card-images/chandrapur.png" alt="chandrapur-img">
             </div>
             <div class="card-body">
-                <p class="title">Historical Place in Chandrapur</p>                
+                <p class="title">Historical Place in Chandrapur</p>
             </div>
             <div class="card-footer">
                 <p class="sub-title">Visit</p>
@@ -119,7 +139,7 @@
                 <img src="public/images/card-images/netflix.png" alt="netflix-img">
             </div>
             <div class="card-body">
-                <p class="title">Netflix</p>                
+                <p class="title">Netflix</p>
             </div>
             <div class="card-footer">
                 <p class="sub-title">Go</p>
@@ -133,7 +153,7 @@
                 <img src="public/images/card-images/courses.png" alt="Akash Courses-img">
             </div>
             <div class="card-body">
-                <p class="title">My Courses</p>                
+                <p class="title">My Courses</p>
             </div>
             <div class="card-footer">
                 <p class="sub-title">Check</p>
@@ -148,7 +168,7 @@
                 In development....
             </div>
             <div class="card-body">
-                <p class="title">Neat Roots</p>                
+                <p class="title">Neat Roots</p>
             </div>
             <div class="card-footer">
                 <p class="sub-title">Youtube</p>
