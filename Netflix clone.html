@@ -105,8 +105,10 @@
 			margin-top: 20px;
 		}
 
-		#div-start {
+		#div-start-footer {
 			margin-top: 20px;
+			display: flex;
+			justify-content: center;
 		}
 
 		#email {
@@ -131,8 +133,6 @@
 
 
 		section {
-			/* border: 2px solid red; */
-			/* border: 5px solid yellow; */
 			height: 500px;
 			margin-top: 10px;
 			background-color: black;
@@ -143,40 +143,31 @@
 		}
 
 		.div1 {
-			/* border: 2px solid blue; */
 			width: 600px;
 			padding-top: 125px;
-			;
 			padding-left: 125px;
 		}
 
 		.div2 {
-			/* border: 2px solid green;   */
 			width: 600px;
 			padding-top: 125px;
-
 		}
 
 		.div3 {
-			/* border: 2px solid red; */
 			width: 600px;
 			padding-top: 100px;
-			;
 			padding-left: 220px;
 		}
 
 		.div4 {
-			/* border: 2px solid turquoise;   */
 			width: 600px;
 			padding-top: 100px;
 			padding-right: 100px;
 		}
 
 		.div5 {
-			/* border: 2px solid red; */
 			width: 600px;
 			padding-top: 75px;
-			;
 			padding-left: 160px;
 		}
 
@@ -194,17 +185,12 @@
 
 
 		/* footer */
-
-
 		#div-footer {
-			/* border: 5px solid white; */
 			background-color: black;
 			color: #b3b3b3;
-			/* padding: 100px; */
 			margin-top: 10px;
 			padding-top: 120px;
 			padding-left: 170px;
-			/* padding-right: 20px; */
 			padding-bottom: 100px;
 		}
 
@@ -227,140 +213,129 @@
 			margin-top: 15px;
 		}
 
-		@media (max-width:600px) {	
+		@media (max-width:600px) {
 			#div-header {
 				padding: 10px;
 			}
-			
+
 			.margin {
-				margin-top: 90px;				
+				margin-top: 90px;
 			}
-			
+
 			.title {
-				font-size: 30px;
+				text-align: center;
+				font-size: 25px;
 				font-weight: bold;
 			}
-			
+
 			.sub-title1 {
-				font-size: 15px;				
-			}		
-			
-			.sub-title2 {				
-				font-size: 15px;				
+				font-size: 15px;
+				text-align: center;
+				border: 5px solid red;
 			}
+
+			.sub-title2 {
+				font-size: 15px;
+				text-align: center;
+			}
+
 			#email {
-				border: 5px solid blue;				
+				width: 300px;
 				background-color: rgba(0, 0, 0, 0.2);
-				margin-bottom: 10px;				
+				margin-bottom: 10px;
 			}
-			/* XXXXX */
-
-			#btn-get-started {
-				background-color: #e50914;
-				color: white;
-				padding: 15px 35px;
-				border-radius: 5px;
-				font-size: 20px;
-				font-weight: bold;
-			}
-
-
 
 			section {
-				/* border: 2px solid red; */
-				/* border: 5px solid yellow; */
-				height: 500px;
-				margin-top: 10px;
-				background-color: black;
-				color: white;
-				display: flex;
-				justify-content: space-evenly;
-				flex-wrap: wrap;
+				height: auto;
 			}
 
 			.div1 {
-				/* border: 2px solid blue; */
-				width: 600px;
-				padding-top: 125px;
-				;
-				padding-left: 125px;
+				padding-left: 110px;
+				padding-right: 110px;
+				padding-top: 50px;
+				padding-bottom: 50px;
 			}
 
 			.div2 {
-				/* border: 2px solid green;   */
-				width: 600px;
-				padding-top: 125px;
+				align-items: center;
+				display: flex;
+				justify-content: center;
+				margin: 0px;
+				padding: 0px;
+				padding-bottom: 50px;
+			}
 
+			img {
+				width: 250px;
+				height: 150px;
 			}
 
 			.div3 {
-				/* border: 2px solid red; */
-				width: 600px;
-				padding-top: 100px;
-				;
-				padding-left: 220px;
+				order: 1;
+				align-items: center;
+				display: flex;
+				justify-content: center;
+				margin: 0px;
+				padding: 0px;
+				padding-bottom: 50px;
 			}
 
 			.div4 {
-				/* border: 2px solid turquoise;   */
-				width: 600px;
-				padding-top: 100px;
-				padding-right: 100px;
+				order: 0;
+				padding-left: 110px;
+				padding-right: 110px;
+				padding-top: 50px;
+				padding-bottom: 50px;
 			}
+
+			.div3 img {
+				height: 200px;
+				width: 200px;
+			}
+
 
 			.div5 {
-				/* border: 2px solid red; */
-				width: 600px;
-				padding-top: 75px;
-				;
-				padding-left: 160px;
+				order: 1;
+				align-items: center;
+				display: flex;
+				justify-content: center;
+				margin: 0px;
+				padding: 0px;
+				padding-bottom: 50px;
 			}
 
-			#accordion {
-				margin-top: 10px;
-				background-color: black;
-				color: white;
-				padding-top: 70px;
-				padding-bottom: 70px;
+			.div5 img {
+				height: 200px;
+				width: 200px;
 			}
 
 			.text-size {
-				font-size: 24px;
+				font-size: 15px;
 			}
 
+			#div-start-footer {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
 
 			/* footer */
-
-
 			#div-footer {
-				/* border: 5px solid white; */
-				background-color: black;
-				color: #b3b3b3;
-				/* padding: 100px; */
-				margin-top: 10px;
-				padding-top: 120px;
-				padding-left: 170px;
-				/* padding-right: 20px; */
-				padding-bottom: 100px;
+				/* margin-top: 10px; */
+				padding-top: 20px;
+				padding-left: 20px;
+				padding-bottom: 20px;
 			}
 
+			/* XXXXX */
 			#div-footer div {
 				margin-bottom: 10px;
 			}
 
 			#footer-grid {
-				display: grid;
-				grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-				gap: 20px;
-			}
-
-			#div-footer a {
-				color: #b3b3b3;
-			}
-
-			#footer-grid div span {
-				display: block;
-				margin-top: 15px;
+				/* border: 5px solid yellow; */
+				grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+				gap: 5px;
 			}
 		}
 	</style>
@@ -606,10 +581,11 @@
 			</div>
 		</div>
 
-		<div class="sub-title2 text-center mt-lg-5">Ready to watch? Enter your email to create or restart your
-			membership.</div>
+		<div class="sub-title2 text-center mt-lg-5">
+			Ready to watch? Enter your email to create or restart your membership.
+		</div>
 
-		<div id="div-start" class="d-flex justify-content-center">
+		<div id="div-start-footer">
 			<input id="email" type="text" placeholder="Email address">
 			<button id="btn-get-started">
 				Get Started&nbsp; <span class="bi bi-chevron-right"></span>
@@ -625,38 +601,30 @@
 			<span>
 				Questions? Call
 				<a href="#">000-800-919-1694</a>
-				<a href="#">abc</a>
 			</span>
 		</div>
 
 
+
 		<div id="footer-grid">
-			<div>
-				<span><a href="#">FAQ</a></span>
-				<span><a href="#">Investor Relations</a></span>
-				<span><a href="#">Privacy</a></span>
-				<span><a href="#">Speed Test</a></span>
-			</div>
+			<span><a href="#">FAQ</a></span>
+			<span><a href="#">Help Centre</a></span>
+			<span><a href="#">Account</a></span>
+			<span><a href="#">Media Centre</a></span>
 
-			<div>
-				<span><a href="#">Help Centre</a></span>
-				<span><a href="#">jobs</a></span>
-				<span><a href="#">Cookie Preferences</a></span>
-				<span><a href="#">Legal Notices</a></span>
-			</div>
+			<span><a href="#">Investor Relations</a></span>
+			<span><a href="#">jobs</a></span>
+			<span><a href="#">Ways to watch</a></span>
+			<span><a href="#">Terms of Use</a></span>
 
-			<div>
-				<span><a href="#">Account</a></span>
-				<span><a href="#">Ways to watch</a></span>
-				<span><a href="#">Corporate Information</a></span>
-				<span><a href="#">Only on Netflix</a></span>
-			</div>
+			<span><a href="#">Privacy</a></span>
+			<span><a href="#">Cookie Preferences</a></span>
+			<span><a href="#">Corporate Information</a></span>
+			<span><a href="#">Contact Us</a></span>
 
-			<div>
-				<span><a href="#">Media Centre</a></span>
-				<span><a href="#">Terms of Use</a></span>
-				<span><a href="#">Contact Us</a></span>
-			</div>
+			<span><a href="#">Speed Test</a></span>
+			<span><a href="#">Legal Notices</a></span>
+			<span><a href="#">Only on Netflix</a></span>
 		</div>
 
 		<div>
