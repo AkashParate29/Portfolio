@@ -87,56 +87,68 @@
 
         .bi-hand-index-fill {
             color: red;
+            animation-name: Blink;  
+            animation-duration: 800ms;
+            animation-iteration-count: infinite;
         }
-    </style>
-    <script>
-        function calculateClick() {
-            var maleGender = document.getElementById('optMale');
-            var femaleGender = document.getElementById('optFemale');
-            var feetHeight = parseInt(document.getElementById('height-feet').value);
-            var inchHeight = parseInt(document.getElementById('height-inch').value);
-            var age = parseInt(document.getElementById('age').value);
-            var weight = parseInt(document.getElementById('weight').value);
-            var height = (((feetHeight * 12) + inchHeight) * 2.54) * (((feetHeight * 12) + inchHeight) * 2.54) / 10000;
-            var BMI;
-
-            const slider = document.getElementById('slider');
-
-
-            if (maleGender.checked) {
-                BMI = weight / height;
-                BMI = Math.round(BMI);
-
-                if (BMI < 18.5) {
-                    slider.style.left = '5%';
-                    slider.style.transition = 'left 5s ease-in-out';
-                    document.getElementById('msg').innerHTML = 'Time to Grab a Bite';
-                    document.getElementById('BMI_value').innerHTML = BMI;
-                } else if (BMI >= 18.5 && BMI <= 24.9) {
-                    slider.style.left = '30%';
-                    slider.style.transition = 'left 5s ease-in-out';
-                    document.getElementById('msg').innerHTML = 'Great Shape';
-                    document.getElementById('BMI_value').innerHTML = BMI;
-                } else if (BMI >= 25 && BMI <= 29.9) {
-                    slider.style.left = '56%';
-                    slider.style.transition = 'left 5s ease-in-out';
-                    document.getElementById('msg').innerHTML = 'Time to Run';
-                    document.getElementById('BMI_value').innerHTML = BMI;
-                } else if (BMI >= 30 && BMI <= 35) {
-                    slider.style.left = '83%';
-                    slider.style.transition = 'left 5s ease-in-out';
-                    document.getElementById('msg').innerHTML = 'Time to Run';
-                    document.getElementById('BMI_value').innerHTML = BMI;
-                }
-                document.getElementById('quote').style.display = "block";
+        @keyframes Blink {
+            from  {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
             }
         }
+        
+    </style>
+    <script>
 
+        // function calculateClick() {
+        //     var maleGender = document.getElementById('optMale');
+        //     var femaleGender = document.getElementById('optFemale');
+        //     var feetHeight = parseInt(document.getElementById('height-feet').value);
+        //     var inchHeight = parseInt(document.getElementById('height-inch').value);
+        //     var age = parseInt(document.getElementById('age').value);
+        //     var weight = parseInt(document.getElementById('weight').value);
+        //     var height = (((feetHeight * 12) + inchHeight) * 2.54) * (((feetHeight * 12) + inchHeight) * 2.54) / 10000;
+        //     var BMI;
+
+        //     const slider = document.getElementById('slider');
+
+
+        //     if (maleGender.checked) {
+        //         BMI = weight / height;
+        //         BMI = Math.round(BMI);
+
+        //         if (BMI < 18.5) {
+        //             slider.style.left = '5%';
+        //             slider.style.transition = 'left 5s ease-in-out';
+        //             document.getElementById('msg').innerHTML = 'Time to Grab a Bite';
+        //             document.getElementById('BMI_value').innerHTML = BMI;
+        //         } else if (BMI >= 18.5 && BMI <= 24.9) {
+        //             slider.style.left = '30%';
+        //             slider.style.transition = 'left 5s ease-in-out';
+        //             document.getElementById('msg').innerHTML = 'Great Shape';
+        //             document.getElementById('BMI_value').innerHTML = BMI;
+        //         } else if (BMI >= 25 && BMI <= 29.9) {
+        //             slider.style.left = '56%';
+        //             slider.style.transition = 'left 5s ease-in-out';
+        //             document.getElementById('msg').innerHTML = 'Time to Run';
+        //             document.getElementById('BMI_value').innerHTML = BMI;
+        //         } else if (BMI >= 30 && BMI <= 35) {
+        //             slider.style.left = '83%';
+        //             slider.style.transition = 'left 5s ease-in-out';
+        //             document.getElementById('msg').innerHTML = 'Time to Run';
+        //             document.getElementById('BMI_value').innerHTML = BMI;
+        //         }
+        //         document.getElementById('quote').style.display = "block";
+        //     }
+        // }
 
     </script>
 </head>
 
-<body class="container-fluid" onload="bodyLoad()">
+<body class="container-fluid">
     <div id="main-div">
         <h1 id="title">BMI Calculator</h1>
         <h4 id="subtitle">(Body Mass Index)</h4>
@@ -200,24 +212,18 @@
             </div>
 
             <div class="d-flex ms-4">
-                <button class="btn btn-primary ms-4 me-4" id="calculate" onclick="calculateClick()">
+                <button class="btn btn-primary ms-4 me-4 d-none" id="calculate" onclick="calculateClick()">
                     Calculate
                 </button>
-                <button class="btn btn-secondary" id="reset" onclick="resetClick()">
+                <button class="btn btn-secondary d-none" id="reset" onclick="resetClick()">
                     Reset
                 </button>
             </div>
-
-
-
         </div>
 
-
-
-
-        <div class="details">
-            <h2 class="text-center"> Your BMI is</h2>
-            <h3 class="text-center" id="BMI_value">- -</h3>
+        <div class="details mt-0">
+            <h2 class="text-center text-primary"> Your BMI is</h2>
+            <h3 class="text-center" id="BMI_value" style="color: blue;">- -</h3>
             <div class="position-relative">
                 <div class="progress" style="height: 20px;">
                     <div class="progress-bar bg-info w-25 me-2">Under Weight</div>
@@ -240,7 +246,7 @@
 
 
 
-        <div class="mt-3">
+        <div class="mt-2 ps-5 pe-5">
             <p>
                 The Body Mass Index (BMI) calculator estimates the amount of body fat
                 a person has in relation to age, height, and weight.
@@ -274,11 +280,48 @@
             var maleGender = document.getElementById('optMale');
             var femaleGender = document.getElementById('optFemale');
             var feetHeight = parseInt(document.getElementById('height-feet').value);
-            var InchHeight = parseInt(document.getElementById('height-inch').value);
+            var inchHeight = parseInt(document.getElementById('height-inch').value);
             var age = parseInt(document.getElementById('age').value);
             var weight = parseInt(document.getElementById('weight').value);
-            var height = parseInt(document.getElementById('height').value);
+            var height = (((feetHeight * 12) + inchHeight) * 2.54) * (((feetHeight * 12) + inchHeight) * 2.54) / 10000;
+            var BMI;
+
+            const slider = document.getElementById('slider');
+
+            if (maleGender.checked || femaleGender.checked) {
+                BMI = weight / height;
+                BMI = Math.round(BMI);
+
+                if (BMI < 18.5) {
+                    slider.style.left = '5%';
+                    slider.style.transition = 'left 5s ease-in-out';
+                    document.getElementById('msg').innerHTML = 'Time to Grab a Bite';
+                    document.getElementById('BMI_value').innerHTML = BMI;
+                } else if (BMI >= 18.5 && BMI <= 24.9) {
+                    slider.style.left = '30%';
+                    slider.style.transition = 'left 5s ease-in-out';
+                    document.getElementById('msg').innerHTML = 'Great Shape';
+                    document.getElementById('BMI_value').innerHTML = BMI;
+                } else if (BMI >= 25 && BMI <= 29.9) {
+                    slider.style.left = '56%';
+                    slider.style.transition = 'left 5s ease-in-out';
+                    document.getElementById('msg').innerHTML = 'Time to Run';
+                    document.getElementById('BMI_value').innerHTML = BMI;
+                } else if (BMI >= 30 && BMI <= 35) {
+                    slider.style.left = '83%';
+                    slider.style.transition = 'left 5s ease-in-out';
+                    document.getElementById('msg').innerHTML = 'Time to Run';
+                    document.getElementById('BMI_value').innerHTML = BMI;
+                }
+                document.getElementById('quote').style.display = "block";
+            }
         }
+
+
+        document.getElementById('height-feet').addEventListener('input', updateCalculateBMI);
+        document.getElementById('height-inch').addEventListener('input', updateCalculateBMI);
+        document.getElementById('age').addEventListener('input', updateCalculateBMI);
+        document.getElementById('weight').addEventListener('input', updateCalculateBMI);
 
 
 
