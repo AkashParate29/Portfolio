@@ -31,3 +31,8 @@ https://sachinrathod0101.github.io/My-Portfolio/
 https://nikhil-ui-portfolio.github.io/my-profile/
 https://dharadewangan.github.io/Js-practice_projects/
 
+
+ @media only screen and (max-width: 768px) {  }
+ @media only screen and (max-width: 640px) {  }
+ @media only screen and (max-width: 475px) {  }
+
