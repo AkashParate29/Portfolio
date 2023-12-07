@@ -56,6 +56,14 @@
             justify-content: space-evenly;
         }
 
+        #height-feet,
+        #height-inch,
+        #height-centimeter,
+        #age,
+        #weight {
+            display: inline;
+        }
+
         input[type="number"] {
             width: auto;
         }
@@ -124,7 +132,7 @@
 
             input[type="number"] {
                 width: 100px;
-            }                     
+            }
 
             label {
                 font-size: 16px;
@@ -166,15 +174,15 @@
             input[type="number"] {
                 width: 100px;
                 height: 30px;
-            }                                 
+            }
 
             label {
                 font-size: 14px;
             }
 
-            span {                
+            span {
                 margin-left: 10px;
-                font-size: 12px;                                
+                font-size: 12px;
             }
 
             #yourBMI {
@@ -186,7 +194,7 @@
             }
         }
 
-        @media only screen and (max-width: 475px) {
+        @media only screen and (max-width: 401px) {
             #title {
                 padding: 4px;
                 border-radius: 6px;
@@ -203,24 +211,26 @@
                 border-radius: 4px;
                 padding: 4px;
                 width: 90%;
-                
             }
-            
-            
+
 
             input[type="number"] {
-                width: 100px;
-                height: 20px;
-            }                                 
-
-            label {
+                width: 100%;
+                height: auto;
+            }
+            
+            label {                
                 font-size: 14px;
             }
-
-            span {                
-                margin-left: 8px;
-                font-size: 10px;                                
+            
+            span {
+                display: block;
+                margin-top: 5px;
+                margin-left: 0px;
+                font-size: 10px;
             }
+            
+           
 
             #yourBMI {
                 font-size: 12px;
@@ -230,7 +240,6 @@
                 font-size: 8px;
             }
         }
-        
     </style>
 </head>
 
@@ -263,14 +272,12 @@
                 <div class="d-block">
                     <Label class="form-label">Height:</Label>
                     <span>Feet: </span>
-                    <input type="number" id="height-feet" min="0" step="1" placeholder="Feet"
-                        class="form-control d-inline">
+                    <input type="number" id="height-feet" min="0" step="1" placeholder="Feet" class="form-control">
                     <span>Inches: </span>
-                    <input type="number" id="height-inch" min="0" step="1" placeholder="Inches"
-                        class="form-control  d-inline">
+                    <input type="number" id="height-inch" min="0" step="1" placeholder="Inches" class="form-control">
                     <span>Centimeter: </span>
                     <input type="number" id="height-centimeter" min="0" step="1" placeholder="Centimeter"
-                        class="form-control  d-inline">
+                        class="form-control">
                 </div>
             </div>
 
@@ -279,12 +286,13 @@
                     <Label class="form-label">Gender:</Label>
                     <input type="radio" class="btn-check" id="optMale" name="gender" value="male" checked>
                     <label for="optMale" class="btn btn-outline-success bi-gender-male "> Male</label>
+                    
                     <input type="radio" class="btn-check" id="optFemale" name="gender" value="female">
                     <label for="optFemale" class="btn btn-outline-success bi-gender-female">Female</label>
                 </div>
                 <div>
                     <Label class="form-label">Age:</Label>
-                    <input type="number" name="age" id="age" placeholder="Age" class="form-control d-inline">
+                    <input type="number" name="age" id="age" placeholder="Age" class="form-control">
                 </div>
 
                 <div>
