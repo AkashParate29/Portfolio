@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="refresh" content="5" /> -->
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Bootstrap JS dependencies -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Akash Text Format</title>
+    <style>
+        #fontSize:hover,
+        #colorPicker:hover,
+        #btnBold:hover,
+        #btnUnderline:hover,
+        #btnItalic:hover,
+        #btnStrikethrough:hover,
+        #btnSelect:hover {
+            background-color: gray;
+        }
+
+        .outputStyle {
+            color: yellow;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        var text; // Declare text as a global variable
+        var btnSelect ;
+
+        function init() {
+            text = document.getElementById("inputText"); // Initialize text when the page loads
+            btnSelect = document.getElementById("btnSelect");
+        }
+
+
+
+        function changeSize() {
+            // var text = document.getElementById("inputText");
+            var size = document.getElementById("fontSize").value;
+            text.style.fontSize = size + "px";
+
+            var textSize = document.getElementById("textSize");
+            textSize.innerHTML = `${size}px`
+
+        }
+
+        function changeColor() {
+            // var text = document.getElementById("inputText");
+            var colorValue = document.getElementById("colorPicker").value;
+            text.style.color = colorValue;
+
+            var textColor = document.getElementById("textColor");
+            textColor.innerHTML = `${colorValue}`;
+        }
+
+        function changeTextBold() {
+            var btnBold = document.getElementById("btnBold");
+            btnBold.clicked = !btnBold.clicked;
+
+            if (btnBold.clicked) {
+                text.style.fontWeight = "bold";
+                btnBold.style.backgroundColor = "#e09e10";
+            } else {
+                text.style.fontWeight = "normal";
+                btnBold.style.backgroundColor = "white";
+            }
+        }
+
+        function changeTextUnderline() {
+            var btnUnderline = document.getElementById("btnUnderline");
+            btnUnderline.clicked = !btnUnderline.clicked;
+
+            if (btnUnderline.clicked) {
+                text.style.textDecoration = "underline";
+                btnUnderline.style.backgroundColor = "#e09e10";
+            } else {
+                text.style.textDecoration = "none";
+                btnUnderline.style.backgroundColor = "white";
+            }
+        }
+
+        function changeTextItalic() {
+            var btnItalic = document.getElementById("btnItalic");
+            btnItalic.clicked = !btnItalic.clicked;
+
+            if (btnItalic.clicked) {
+                text.style.fontStyle = "italic";
+                btnItalic.style.backgroundColor = "#e09e10";
+            } else {
+                text.style.fontStyle = "normal";
+                btnItalic.style.backgroundColor = "white";
+            }
+        }
+
+        function changeTextStrikethrough() {
+            var btnStrikethrough = document.getElementById("btnStrikethrough");
+            btnStrikethrough.clicked = !btnStrikethrough.clicked;
+
+            if (btnStrikethrough.clicked) {
+                text.style.textDecoration = "line-through";
+                btnStrikethrough.style.backgroundColor = "#e09e10";
+            } else {
+                text.style.textDecoration = "none";
+                btnStrikethrough.style.backgroundColor = "white";
+            }
+        }
+
+        function alignLeft() {
+            text.style.textAlign = "left";      
+            btnSelect.innerHTML = '<span class="bi bi-text-left"></span> Left';     
+            // btnSelect.innerHTML = "Left"
+        }
+
+        function alignCenter() {
+            text.style.textAlign = "center"; 
+            btnSelect.innerHTML = '<span class="bi bi-text-center"></span> Center';           
+            // btnSelect.innerHTML = "Center"
+        }
+
+        function alignRight() {
+            text.style.textAlign = "right";            
+            btnSelect.innerHTML = '<span class="bi bi-text-right"></span> Right';
+        }
+
+        function alignJustify() {
+            text.style.textAlign = "justify";            
+            // btnSelect.innerHTML = "Justify"
+            btnSelect.innerHTML = '<span class="bi bi-justify"></span> Justify';
+        }
+
+
+
+
+        window.onload = init;
+
+    </script>
+</head>
+
+<body class="container-fluid mt-4 bg-secondary">
+    <div class="row text-center">
+        <!-- col-1 -->
+        <div class="col-sm-6 col-lg-3 px-5 my-2">
+            <div class="fs-3 fw-bold">Font Size</div>
+            <input class="form-range" type="range" min="10" max="200" value="10" id="fontSize" name="fontSize"
+                oninput="changeSize()">
+            <div class="d-flex justify-content-between">
+                <span>10</span>
+                <span id="textSize" class="outputStyle"></span>
+                <span>200</span>
+            </div>
+        </div>
+
+        <!-- col-2 -->
+        <div class="col-sm-6 col-lg-3 px-5 my-2">
+            <div class="fs-3 fw-bold">Font Color</div>
+            <input class="form-control-color w-25 rounded" type="color" id="colorPicker" name="colorPicker"
+                oninput="changeColor()">
+            <div class="d-flex justify-content-center">
+                <span id="textColor" class="outputStyle"></span>
+            </div>
+        </div>
+
+        <!-- col-3 -->
+        <div class="col-sm-6 col-lg-3 px-5 my-2">
+            <div class="fs-3 fw-bold">Font Style</div>
+            <div class="input-group">
+                <button class="form-control fw-bold" id="btnBold" name="btnBold" onclick="changeTextBold()">B</button>
+                <button class="form-control fw-bold" id="btnUnderline" name="btnUnderline"
+                    onclick="changeTextUnderline()">U</button>
+                <button class="form-control fw-bold" id="btnItalic" name="btnItalic"
+                    onclick="changeTextItalic()">I</button>
+                <button class="form-control fw-bold" id="btnStrikethrough" name="btnStrikethrough"
+                    onclick="changeTextStrikethrough()"><strike>S</strike></button>
+            </div>
+        </div>
+
+        <!-- col-4 -->
+        <div class="col-sm-6 col-lg-3 px-5 my-2">
+            <div class="fs-3 fw-bold">Alignment</div>
+            <div class="dropdown-center">
+                <button id="btnSelect" class="dropdown-toggle rounded w-75" data-bs-toggle="dropdown"
+                    data-bs-target="#menu">
+                    Select
+                </button>
+
+                <ul class="dropdown-menu" id="menu" data-bs-theme="dark">
+                    <li class="dropdown-item" onclick="alignLeft()">
+                        <span class="bi bi-text-left">
+                            Left
+                        </span>
+                    </li>
+
+                    <li class="dropdown-item" onclick="alignCenter()">
+                        <span class="bi bi-text-center">
+                            Center
+                        </span>
+                    </li>
+
+                    <li class="dropdown-item" onclick="alignRight()">
+                        <span class="bi bi-text-right">
+                            Right
+                        </span>
+                    </li>
+
+                    <li class="dropdown-item" onclick="alignJustify()">
+                        <span class="bi bi-justify">
+                            Justify
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-2">
+        <textarea name="inputText" id="inputText" cols="30" rows="10" placeholder="Enter your text here..."
+            class="w-100 p-4"></textarea>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
