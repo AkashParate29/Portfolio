@@ -42,10 +42,6 @@
             font-weight: bold;
             font-size: 20px;
         }
-
-        #divButtons {
-            pointer-events: none;
-        }
     </style>
     <script>
         var text; // Declare text as a global variable
@@ -56,14 +52,6 @@
             btnSelect = document.getElementById("btnSelect");
         }
 
-        function textEntered() {
-            var divButtons = document.getElementById("divButtons");
-            if (text.value.trim().length > 0) {
-                divButtons.style.pointerEvents = "auto";
-            } else {
-                divButtons.style.pointerEvents = "none";
-            }
-        }
 
         function changeSize() {
             // var text = document.getElementById("inputText");
@@ -136,34 +124,25 @@
             }
         }
 
-        function alignLeft() {
-            text.style.textAlign = "left";
-            btnSelect.innerHTML = '<span class="bi bi-text-left"></span> Left';
-            // btnSelect.innerHTML = "Left"
+        function changeAlignment() {
+            var selectAlignment = document.getElementById("selectAlignment").value;
+            switch (selectAlignment) {
+                case "left-align":
+                    text.style.textAlign = "left";
+                    break;
+                case "right-align":
+                    text.style.textAlign = "right";
+                    break;
+                case "center-align":
+                    text.style.textAlign = "center";
+                    break;
+                case "justify-align":
+                    text.style.textAlign = "justify";
+                    break;
+            }
         }
-
-        function alignCenter() {
-            text.style.textAlign = "center";
-            btnSelect.innerHTML = '<span class="bi bi-text-center"></span> Center';
-            // btnSelect.innerHTML = "Center"
-        }
-
-        function alignRight() {
-            text.style.textAlign = "right";
-            btnSelect.innerHTML = '<span class="bi bi-text-right"></span> Right';
-        }
-
-        function alignJustify() {
-            text.style.textAlign = "justify";
-            // btnSelect.innerHTML = "Justify"
-            btnSelect.innerHTML = '<span class="bi bi-justify"></span> Justify';
-        }
-
-
-
 
         window.onload = init;
-
     </script>
 </head>
 
@@ -208,45 +187,23 @@
         <!-- col-4 -->
         <div class="col-sm-6 col-lg-3 px-5 my-2">
             <div class="fs-3 fw-bold">Alignment</div>
+
             <div class="dropdown-center">
-                <button id="btnSelect" class="dropdown-toggle rounded w-75" data-bs-toggle="dropdown"
-                    data-bs-target="#menu">
-                    Select
-                </button>
-
-                <ul class="dropdown-menu" id="menu" data-bs-theme="dark">
-                    <li class="dropdown-item" onclick="alignLeft()">
-                        <span class="bi bi-text-left">
-                            Left
-                        </span>
-                    </li>
-
-                    <li class="dropdown-item" onclick="alignCenter()">
-                        <span class="bi bi-text-center">
-                            Center
-                        </span>
-                    </li>
-
-                    <li class="dropdown-item" onclick="alignRight()">
-                        <span class="bi bi-text-right">
-                            Right
-                        </span>
-                    </li>
-
-                    <li class="dropdown-item" onclick="alignJustify()">
-                        <span class="bi bi-justify">
-                            Justify
-                        </span>
-                    </li>
-                </ul>
+                <select name="" id="selectAlignment" class="dropdown-toggle rounded w-75" data-bs-toggle="dropdown"
+                    data-bs-target="#menu" onchange="changeAlignment()">
+                    <option value="left-align" onchange="alignLeft()">Left align</option>
+                    <option value="right-align" onchange="alignRight()">Right align</option>
+                    <option value="center-align" onchange="alignCenter()">Center align</option>
+                    <option value="justify-align" onchange="alignJustify()">Justify align</option>
+                </select>
             </div>
         </div>
+
     </div>
 
     <div class="mt-2">
-        <textarea name="inputText" id="inputText" cols="30" rows="10"
-            placeholder="First Enter your text Then buttons will be active......" class="w-100 p-4"
-            onkeypress="textEntered()"></textarea>
+        <textarea name="inputText" id="inputText" cols="30" rows="10" placeholder="Enter your text here....."
+            class="w-100 p-4"></textarea>
     </div>
 </body>
 
