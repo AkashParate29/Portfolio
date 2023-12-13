@@ -3,16 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta http-equiv="refresh" content="5" /> -->
-    <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="" />
+    <!-- Add a meta tag for character set and viewport settings. -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <!-- <link rel="stylesheet" href="public/docs/css/index.css"> -->
+
+    <!-- Bootstrap Local (Note: the version number should be accurate) -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
 
+    <!-- Bootstrap Online (Note: the version numbers should be accurate) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
     <!-- Bootstrap JS dependencies -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="shortcut icon" href="">
+    <!-- Add a link to your favicon. -->
     <title>Akash Text Format</title>
+
     <style>
         #fontSize:hover,
         #colorPicker:hover,
@@ -29,17 +42,28 @@
             font-weight: bold;
             font-size: 20px;
         }
+
+        #divButtons {
+            pointer-events: none;
+        }
     </style>
     <script>
         var text; // Declare text as a global variable
-        var btnSelect ;
+        var btnSelect;
 
         function init() {
             text = document.getElementById("inputText"); // Initialize text when the page loads
             btnSelect = document.getElementById("btnSelect");
         }
 
-
+        function textEntered() {
+            var divButtons = document.getElementById("divButtons");
+            if (text.value.trim().length > 0) {
+                divButtons.style.pointerEvents = "auto";
+            } else {
+                divButtons.style.pointerEvents = "none";
+            }
+        }
 
         function changeSize() {
             // var text = document.getElementById("inputText");
@@ -113,24 +137,24 @@
         }
 
         function alignLeft() {
-            text.style.textAlign = "left";      
-            btnSelect.innerHTML = '<span class="bi bi-text-left"></span> Left';     
+            text.style.textAlign = "left";
+            btnSelect.innerHTML = '<span class="bi bi-text-left"></span> Left';
             // btnSelect.innerHTML = "Left"
         }
 
         function alignCenter() {
-            text.style.textAlign = "center"; 
-            btnSelect.innerHTML = '<span class="bi bi-text-center"></span> Center';           
+            text.style.textAlign = "center";
+            btnSelect.innerHTML = '<span class="bi bi-text-center"></span> Center';
             // btnSelect.innerHTML = "Center"
         }
 
         function alignRight() {
-            text.style.textAlign = "right";            
+            text.style.textAlign = "right";
             btnSelect.innerHTML = '<span class="bi bi-text-right"></span> Right';
         }
 
         function alignJustify() {
-            text.style.textAlign = "justify";            
+            text.style.textAlign = "justify";
             // btnSelect.innerHTML = "Justify"
             btnSelect.innerHTML = '<span class="bi bi-justify"></span> Justify';
         }
@@ -144,7 +168,7 @@
 </head>
 
 <body class="container-fluid mt-4 bg-secondary">
-    <div class="row text-center">
+    <div id="divButtons" class="row text-center">
         <!-- col-1 -->
         <div class="col-sm-6 col-lg-3 px-5 my-2">
             <div class="fs-3 fw-bold">Font Size</div>
@@ -220,15 +244,10 @@
     </div>
 
     <div class="mt-2">
-        <textarea name="inputText" id="inputText" cols="30" rows="10" placeholder="Enter your text here..."
-            class="w-100 p-4"></textarea>
+        <textarea name="inputText" id="inputText" cols="30" rows="10"
+            placeholder="First Enter your text Then buttons will be active......" class="w-100 p-4"
+            onkeypress="textEntered()"></textarea>
     </div>
-
-
-
-
-
-
 </body>
 
 </html>
