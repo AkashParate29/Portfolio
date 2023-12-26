@@ -9,12 +9,17 @@
     <link rel="shortcut icon" href="" />
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <title>61_1 JS Number to Currency</title>
+    <title>Number to Currency</title>
     <style>
-        label{
+        #container{            
+            display: grid;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+        }
+        label {
             font-weight: bold;
         }
-
     </style>
 
     <script>
@@ -24,17 +29,16 @@
             var lblDollar = document.getElementById("lblDollar");
             var rupee = document.getElementById("txtRupee");
             var dollar = document.getElementById("txtDollar");
-            
 
-            if (isNaN(num) || num =="") {
+            if (isNaN(num) || num == "") {
                 rupee.innerText = "";
                 dollar.innerText = "";
-                lblRupee.style.display="none";
-                lblDollar.style.display="none";
-                
+                lblRupee.style.display = "none";
+                lblDollar.style.display = "none";
+
             } else {
-                lblRupee.style.display="block";
-                lblDollar.style.display="block";
+                lblRupee.style.display = "block";
+                lblDollar.style.display = "block";
                 rupee.innerText = num.toLocaleString("en-IN", { style: 'currency', currency: 'INR' });
                 dollar.innerText = num.toLocaleString("en-US", { style: 'currency', currency: 'USD' });
             }
@@ -43,27 +47,22 @@
 </head>
 
 <body class="container-fluid mt-2 ms-2">
-    <div>
+    <div id="container">
         <label for="txtNumber">Enter Number</label>
         <input type="number" id="txtNumber" class="form-control w-50" placeholder="Enter number"
             onkeyup="convertIntoCurrency()">
 
         <label id="lblRupee" for="txtRupee" class="mt-4">Rupee</label>
         <p id="txtRupee"></p>
-        
+
         <hr width="50%" id="hrline">
         <label id="lblDollar" for="txtDollar">Dollar</label>
         <p id="txtDollar"></p>
-
     </div>
-
-
-
 
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
