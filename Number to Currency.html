@@ -24,24 +24,21 @@
             var lblDollar = document.getElementById("lblDollar");
             var rupee = document.getElementById("txtRupee");
             var dollar = document.getElementById("txtDollar");
+            
 
             if (isNaN(num) || num =="") {
                 rupee.innerText = "";
                 dollar.innerText = "";
                 lblRupee.style.display="none";
-                lblDollar.style.display="none"
+                lblDollar.style.display="none";
+                
             } else {
-                lblRupee.style.display="block"
-                lblDollar.style.display="block"
+                lblRupee.style.display="block";
+                lblDollar.style.display="block";
                 rupee.innerText = num.toLocaleString("en-IN", { style: 'currency', currency: 'INR' });
                 dollar.innerText = num.toLocaleString("en-US", { style: 'currency', currency: 'USD' });
             }
-
-
         }
-
-
-
     </script>
 </head>
 
@@ -54,7 +51,7 @@
         <label id="lblRupee" for="txtRupee" class="mt-4">Rupee</label>
         <p id="txtRupee"></p>
         
-        <hr width="25%">
+        <hr width="50%" id="hrline">
         <label id="lblDollar" for="txtDollar">Dollar</label>
         <p id="txtDollar"></p>
 
