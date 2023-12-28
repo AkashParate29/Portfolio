@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="refresh" content="5" /> -->
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Akash EMI Calculator</title>
+    <style>
+        #container {            
+            background-color: rgb(112, 90, 90);
+            border-radius: 15px;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        div {
+            margin: 5px;
+        }
+
+        .InputBox {
+            width: 40%;
+            border-radius: 5px;
+            border-color: aqua;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function TxtAmountChange() {
+            document.getElementById("amountRange").value = document.getElementById("txtAmount").value;
+
+        }
+        function AmountRangeChange() {
+            document.getElementById("txtAmount").value = document.getElementById("amountRange").value;
+        }
+
+        function TxtYearChange() {
+            document.getElementById("yearRange").value = document.getElementById("txtYear").value;
+        }
+
+        function YearRangeChange() {
+            document.getElementById("txtYear").value = document.getElementById("yearRange").value;
+        }
+
+        function TxtRateChange() {
+            document.getElementById("rateRange").value = document.getElementById("txtRate").value;
+        }
+
+        function RateRangeChange() {
+            document.getElementById("txtRate").value = document.getElementById("rateRange").value
+        }
+
+        function CalculateClick() {
+            var P = parseInt(document.getElementById("txtAmount").value);
+            var R = parseFloat(document.getElementById("txtRate").value / 12 / 100);
+            var N = parseInt(document.getElementById("txtYear").value * 12);
+            var EMI = P * R * Math.pow(1 + R, N) / Math.pow(1 + R, N) - 1;
+            document.getElementById("lblResult").innerHTML = `Your EMI for every months is <b>&#8377;${Math.round(EMI)}</b> for <b>${N}</b> months`;
+        }
+
+
+    </script>
+</head>
+
+<body class="container-fluid mt-2">
+    <h2 class="text-center">Personal Loan EMI Calculator </h2>
+    <div id="container">
+
+        <!-- 1st div -->
+        <div>
+            <div class="d-flex justify-content-between ">
+                <label class="form-label" for="txtAmount">Amount you need &#8377; &nbsp;</label>
+                <input class="InputBox" type="number" min="50000" max="1000000" id="txtAmount"
+                    onchange="TxtAmountChange()" oninput="TxtAmountChange()">
+            </div>
+            <input class="form-range" type="range" id="amountRange" min="50000" max="1000000" value="1"
+                onchange="AmountRangeChange()">
+            <div class="d-flex justify-content-between">
+                <span>&#8377 50,000</span>
+                <span>&#8377 10,00,000</span>
+            </div>
+        </div>
+
+        <!-- 2nd div -->
+        <div>
+            <div class="d-flex justify-content-between">
+                <label class="form-label" for="txtYear">For&nbsp;</label>
+                <input class="InputBox" type="number" min="1" max="10" step="1" id="txtYear" onchange="TxtYearChange()"
+                    oninput="TxtYearChange()">
+                <label class="form-label" for="txtYear">&nbsp;years</label>
+            </div>
+            <input class="form-range" type="range" id="yearRange" min="1" max="10" step="1" value="1"
+                onchange="YearRangeChange()">
+            <div class="d-flex justify-content-between">
+                <span>1</span>
+                <span>10</span>
+            </div>
+        </div>
+
+        <!-- 3rd div -->
+        <div>
+            <div class="d-flex justify-content-between">
+                <label class="form-label" for="">Interest Rate&nbsp;</label>
+                <input class="InputBox" type="number" min="10" max="20" step="0.1" id="txtRate"
+                    onchange="TxtRateChange()" oninput="TxtRateChange()">
+                <label class="form-label" for="">&nbsp;%</label>
+            </div>
+            <input class="form-range" type="range" id="rateRange" min="10" max="20" value="10" step="0.1"
+                onchange="RateRangeChange()">
+            <div class="d-flex justify-content-between">
+                <span>10%</span>
+                <span>20%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <button class="btn btn-primary" onclick="CalculateClick()">Calculate</button>
+    </div>
+    <div class="text-center">
+        <label for="" id="lblResult"></label>
+    </div>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

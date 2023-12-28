@@ -11,13 +11,26 @@
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <title>Number to Currency</title>
     <style>
-        #container{            
-            display: grid;
+        body {
+            display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            justify-items: center;
-            align-items: center;
         }
+        
+        #container {
+            background-color: rgba(210, 190, 190, 0.532);
+            border-radius: 20px;
+            margin-top: 20px;
+            padding: 25px;
+            text-align: center;
+            /* Center text inside the container */
+        }
+
         label {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        p{
             font-weight: bold;
         }
     </style>
@@ -47,22 +60,28 @@
 </head>
 
 <body class="container-fluid mt-2 ms-2">
-    <div id="container">
-        <label for="txtNumber">Enter Number</label>
-        <input type="number" id="txtNumber" class="form-control w-50" placeholder="Enter number"
-            onkeyup="convertIntoCurrency()">
+    <div>
 
-        <label id="lblRupee" for="txtRupee" class="mt-4">Rupee</label>
-        <p id="txtRupee"></p>
 
-        <hr width="50%" id="hrline">
-        <label id="lblDollar" for="txtDollar">Dollar</label>
-        <p id="txtDollar"></p>
+        <h2 align-text="center">Convert number into currency</h2>
+
+        <div id="container">
+            <label for="txtNumber">Enter Number</label>
+            <input type="number" id="txtNumber" class="form-control" min="1" placeholder="Enter number"
+                oninput="convertIntoCurrency()">
+
+            <label id="lblRupee" for="txtRupee" class="mt-4">Rupee</label>
+            <p id="txtRupee" class="text-success"></p>
+
+            <hr width="100%" id="hrline">
+            <label id="lblDollar" for="txtDollar">Dollar</label>
+            <p id="txtDollar" class="text-danger"></p>
+        </div>
     </div>
-
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
