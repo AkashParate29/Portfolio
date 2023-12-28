@@ -12,18 +12,22 @@
     <title>Akash EMI Calculator</title>
     <style>
         #container {            
-            background-color: rgb(112, 90, 90);
-            border-radius: 15px;
-            color: white;
+            background-color: rgba(233, 147, 147, 0.712);
+            border-radius: 15px;            
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            align-items: center;
-
+            align-items: center;            
+        }
+        .divWidth{
+            width: 300px;
         }
 
         div {
             margin: 5px;
+        }
+        label{
+            font-weight: bold;
         }
 
         .InputBox {
@@ -63,7 +67,12 @@
             var R = parseFloat(document.getElementById("txtRate").value / 12 / 100);
             var N = parseInt(document.getElementById("txtYear").value * 12);
             var EMI = P * R * Math.pow(1 + R, N) / Math.pow(1 + R, N) - 1;
-            document.getElementById("lblResult").innerHTML = `Your EMI for every months is <b>&#8377;${Math.round(EMI)}</b> for <b>${N}</b> months`;
+            
+            if(P==""||R==""||N==""){
+                document.getElementById("lblResult").innerHTML = `Kindly add all input values!`;
+            }else{   
+                document.getElementById("lblResult").innerHTML = `Your EMI for every months is <b>&#8377;${Math.round(EMI)}</b> for <b>${N}</b> months`;
+            }
         }
 
 
@@ -75,14 +84,14 @@
     <div id="container">
 
         <!-- 1st div -->
-        <div>
+        <div class="divWidth">
             <div class="d-flex justify-content-between ">
                 <label class="form-label" for="txtAmount">Amount you need &#8377; &nbsp;</label>
                 <input class="InputBox" type="number" min="50000" max="1000000" id="txtAmount"
-                    onchange="TxtAmountChange()" oninput="TxtAmountChange()">
+                    onchange="TxtAmountChange(),CalculateClick()" oninput="TxtAmountChange(),CalculateClick()">
             </div>
             <input class="form-range" type="range" id="amountRange" min="50000" max="1000000" value="1"
-                onchange="AmountRangeChange()">
+                onchange="AmountRangeChange(),CalculateClick()">
             <div class="d-flex justify-content-between">
                 <span>&#8377 50,000</span>
                 <span>&#8377 10,00,000</span>
@@ -90,15 +99,15 @@
         </div>
 
         <!-- 2nd div -->
-        <div>
+        <div class="divWidth">
             <div class="d-flex justify-content-between">
                 <label class="form-label" for="txtYear">For&nbsp;</label>
-                <input class="InputBox" type="number" min="1" max="10" step="1" id="txtYear" onchange="TxtYearChange()"
-                    oninput="TxtYearChange()">
+                <input class="InputBox" type="number" min="1" max="10" step="1" id="txtYear" onchange="TxtYearChange(),CalculateClick()"
+                    oninput="TxtYearChange() , CalculateClick()">
                 <label class="form-label" for="txtYear">&nbsp;years</label>
             </div>
             <input class="form-range" type="range" id="yearRange" min="1" max="10" step="1" value="1"
-                onchange="YearRangeChange()">
+                onchange="YearRangeChange(),CalculateClick()">
             <div class="d-flex justify-content-between">
                 <span>1</span>
                 <span>10</span>
@@ -106,15 +115,15 @@
         </div>
 
         <!-- 3rd div -->
-        <div>
+        <div class="divWidth">
             <div class="d-flex justify-content-between">
                 <label class="form-label" for="">Interest Rate&nbsp;</label>
                 <input class="InputBox" type="number" min="10" max="20" step="0.1" id="txtRate"
-                    onchange="TxtRateChange()" oninput="TxtRateChange()">
+                    onchange="TxtRateChange(),CalculateClick()" oninput="TxtRateChange(),CalculateClick()">
                 <label class="form-label" for="">&nbsp;%</label>
             </div>
             <input class="form-range" type="range" id="rateRange" min="10" max="20" value="10" step="0.1"
-                onchange="RateRangeChange()">
+                onchange="RateRangeChange(),CalculateClick()">
             <div class="d-flex justify-content-between">
                 <span>10%</span>
                 <span>20%</span>
