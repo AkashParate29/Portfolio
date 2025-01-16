@@ -29,7 +29,7 @@ https://amishasri.github.io/web-portfolio/
 https://rushikeshjogadand.github.io/portfolio/
 https://sachinrathod0101.github.io/My-Portfolio/
 https://nikhil-ui-portfolio.github.io/my-profile/
-https://dharadewangan.github.io/Js-practice_projects/
+
 
 
  @media only screen and (max-width: 768px) {  }
