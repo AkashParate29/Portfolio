@@ -25,7 +25,7 @@
 	<title>EMRS Hall Tickets 2025</title>
 
 	<style>
-		#div_header{
+		#div_header {
 			background-color: rgba(241, 241, 17, 0.665);
 			text-align: center;
 			justify-content: center;
@@ -61,7 +61,7 @@
 		}
 
 		main {
-			/* border: 1px solid red; */			
+			/* border: 1px solid red; */
 			margin-top: 10px;
 			height: 500px;
 			overflow: auto;
@@ -69,7 +69,8 @@
 
 		img {
 			height: 125px;
-			border: 2px solid white;
+			width: 90%;
+			border: 2px solid yellow;
 		}
 
 		.card-title {
@@ -87,6 +88,10 @@
 		.card-header {
 			text-align: left;
 		}
+
+		marquee {
+			color: red;
+		}
 	</style>
 </head>
 
@@ -94,8 +99,6 @@
 
 	<header>
 		<div id="div_header">
-
-
 			<div>
 				<img src="public/images/emrs/itdp_logo.png" alt="">
 			</div>
@@ -111,8 +114,9 @@
 		<div id="div_marquee">
 			<marquee scrollamount="5" width=100% direction="left" bgcolor="yellow">
 				<b>
-
 					प्रवेश पत्र Black & White किंवा कलर प्रिंट चालेल.
+					<br>
+					प्रवेश पत्रामध्ये त्रुटी असल्यास लवकरात लवकर कार्यालयाशी संपर्क करावा.
 				</b>
 			</marquee>
 		</div>
@@ -123,16 +127,20 @@
 
 
 		<div class="d-flex flex-wrap justify-content-center">
-			
+
 			<!-- card-1 Grade 6th-->
-			<div class="card bg-success text-white m-3 p-2" style="width: 275px;" align="center">
+			<div class="card bg-success text-white m-3 p-2" style="width: 310px;" align="center">
 				<a href="emrs-hall-tickets-grade6" target="_blank">
 					<img src="public/images/emrs/grade6.JPG" alt="html">
 				</a>
 
 				<div class="card-header">
 					<h2 class="card-title">Exam Date: 23/02/2023</h2>
-					<h3 class="card-title">Exam Day: Sunday</h3>
+					<h3 class="card-title">
+						Exam Time: XXXXXXXXX
+						<br>
+						Exam Day: Sunday
+					</h3>
 					<p class="card-subtitle"><b>Exam Center:</b> Eklavya Model Residential School, Dewada</p>
 				</div>
 
@@ -149,7 +157,11 @@
 					</button>
 
 					<button class="btn btn-light w-50 m-1">
-						<a class="bi bi-telephone-fill" href="tel:7757009267"> Call</a>
+						<a class="bi bi-telephone-fill" href="tel:7757009267"> Akash Sir</a>
+					</button>
+
+					<button class="btn btn-light w-50 m-1">
+						<a class="bi bi-telephone-fill" href="tel:7757009267"> Nimgade Ma'am</a>
 					</button>
 				</div>
 			</div>
