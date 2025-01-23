@@ -25,19 +25,34 @@
 	<title>EMRS Hall Tickets 2025</title>
 
 	<style>
-		header {
+		#div_header{
+			background-color: rgba(241, 241, 17, 0.665);
+			text-align: center;
+			justify-content: center;
+			justify-content: space-between;
+			align-items: center;
+			border-radius: 5px;
+			display: flex;
+			padding: 5px;
+
+
 			position: sticky;
 			top: 0px;
 			color: darkgoldenrod;
-			/* z-index: 1; */
+			z-index: 1;
+			gap: 10px;
+		}
 
+
+		header img {
+			height: 75px;
+			border-radius: 10px;
+			border: 1px solid goldenrod;
 		}
 
 		h1 {
-			position: sticky;
-			top: 0px;
 			z-index: 1000;
-			text-shadow: 15px 10px 10px yellow;
+			text-shadow: 15px 10px 10px darkgoldenrod;
 			text-decoration-line: underline;
 		}
 
@@ -46,7 +61,7 @@
 		}
 
 		main {
-			/*border: 1px solid red;*/
+			/* border: 1px solid red; */			
 			margin-top: 10px;
 			height: 500px;
 			overflow: auto;
@@ -76,13 +91,39 @@
 </head>
 
 <body>
+
 	<header>
-		<h1 class="text-center">EMRS Admission Exam Hall Ticket for 2025</h1>
+		<div id="div_header">
+
+
+			<div>
+				<img src="public/images/emrs/itdp_logo.png" alt="">
+			</div>
+			<div>
+				<h1 class="text-center">EMRS Admission Exam Hall Ticket for 2025</h1>
+			</div>
+
+			<div>
+				<img src="public/images/emrs/shivaji_maharaj_logo.png" alt="">
+			</div>
+
+		</div>
+		<div id="div_marquee">
+			<marquee scrollamount="5" width=100% direction="left" bgcolor="yellow">
+				<b>
+
+					प्रवेश पत्र Black & White किंवा कलर प्रिंट चालेल.
+				</b>
+			</marquee>
+		</div>
+
+
 	</header>
-
 	<main>
-		<div class="d-flex flex-wrap justify-content-center">
 
+
+		<div class="d-flex flex-wrap justify-content-center">
+			
 			<!-- card-1 Grade 6th-->
 			<div class="card bg-success text-white m-3 p-2" style="width: 275px;" align="center">
 				<a href="emrs-hall-tickets-grade6" target="_blank">
