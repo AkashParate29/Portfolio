@@ -35,8 +35,7 @@
 
         header {
             font-size: 25px;
-            text-align: center;
-            /* background-color: darkcyan; */
+            text-align: center;            
             background-color: rgba(241, 241, 17, 0.665);
             color: darkgoldenrod;
             border-radius: 5px;
@@ -48,28 +47,25 @@
         }
 
         header img {
-            height: 75px;
-            /* width: 50px; */
-            border-radius: 10px;
-            /* border: 2px solid darkcyan; */
-            border: 1px solid goldenrod;
-        }
-
+            height: 75px;            
+            border-radius: 10px;            
+            border: 2px solid goldenrod;
+        }        
         #class_text {
-            font-size: 50px;
-            z-index: 1000;
+            font-size: 45px;
+            font-weight: bold;
             text-shadow: 10px 5px 10px darkgoldenrod;
             text-decoration-line: underline;
         }
-
-
-
+        marquee{
+            color: red;
+            font-weight: bold;
+        }
         .title {
             font-family: elephant;
-            letter-spacing: 2px;
+            letter-spacing: 5px;
             font-size: 30px;
-            color: navy;
-            background-color: white;
+            color: navy;            
         }
 
         .sub-title {
@@ -84,17 +80,13 @@
             top: 0px;
         }
 
-        #ui-ux {
-            columns: 2;
-            column-gap: 50px;
-            margin-top: 10px;
-        }
+       
 
         section {
             /* border: 1px solid red; */
             display: grid;
-            grid-template-columns: 2fr 11fr;
-            margin-top: 5px;
+            grid-template-columns: 2fr 9fr;
+            margin-top: 2px;
         }
 
         #nav-ul {
@@ -102,29 +94,28 @@
             margin-left: -30px;
         }
 
-        .nav-li {
-            list-style: none;
-            font-size: 17px;
-            border: 1px dashed red;
-            border-radius: 5px;
-            background-color: darkcyan;
+        .nav-li {            
+            font-size: 19px;
+            border: 1px dashed goldenrod;
+            background-color: rgba(241, 241, 17, 0.665);
+            border-radius: 5px;            
             padding: 4px;
             margin-bottom: 10px;
         }
 
         .nav-li a {
-            color: yellow;
+            color: darkgoldenrod;
         }
 
         main {
             margin-left: 15px;
-            height: 450px;
+            height: 500px;
             overflow: auto;
         }
 
         nav,
         main {
-            margin-top: -50px;
+            margin-top: -60px;
         }
 
         #div-main {
@@ -140,19 +131,20 @@
         #div-home-right {
             display: block;
             padding: 5px;
-            font-size: 50px;
+            font-size: 30px;
         }
 
         #myName {
+            font-size: 40px;
             color: blue;
             font-weight: bold;
         }
 
         #img-home {
             height: 350px;
-            width: 350px;
-            box-shadow: 10px 10px 10px silver;
-            -webkit-box-reflect: right 1px linear-gradient(transparent, transparent, transparent, #000f);
+            width: auto;
+            /* box-shadow: 10px 10px 10px silver; */
+            /* -webkit-box-reflect: right 1px linear-gradient(transparent, transparent, transparent, #000f); */
         }
 
         /* Typing text Starts */
@@ -180,185 +172,41 @@
             gap: 20px;
         }
 
-        #img-about {
-            width: 300px;
-            margin-left: 50px;
-        }
+        
 
-        label {
-            margin-left: 25px;
-            margin-bottom: 20px;
-            color: brown;
-            font-size: 15px;
-            font-weight: bold;
-        }
-
+      
         .div-p {
             text-align: justify;
             padding: 20px;
             font-size: 20px;
             font-family: arial;
-        }
-
-        .about-spacing {
             margin-top: 30px;
             margin-left: 30px;
             margin-right: 30px;
-            font-size: 18px;
-            text-align: justify;
-        }
-
-        .about-spacing li {
-            margin-bottom: 10px;
-        }
-
-        .about-spacing li span {
-            font-weight: bold;
-            font-style: italic;
-        }
-
-        .about-spacing li img {
-            margin-right: 10px;
-            height: 20px;
-            width: 25px;
-        }
-
-        #about-ul li {
-            line-height: 40px;
-            font-size: 20px;
-            /* color: red; */
-        }
+        }  
 
         /*About ends*/
 
 
         /*Resume starts here*/
-        #cv-nav-tabs {
-            position: sticky;
-            top: 0px;
-            z-index: 1;
-            background-color: white;
-        }
-
-        #technical-skill-main {
-            font-size: 20px;
-            list-style: none;
-        }
-
-        #technical-skill-sub {
-            font-size: 15px;
-            font-weight: bold;
-        }
-
-        .bi-bookmark-check-fill {
-            color: green;
-            margin-right: 10px;
-
-        }
-
-        .bi-box-arrow-right {
-            color: blue;
-            margin-left: 50px;
-            margin-right: 10px;
-        }
-
-        mark {
-            font-weight: bold;
-        }
-
-        /* education starts here*/
-        #table-education-data {
-            width: 90%;
-            border: 1px solid gray;
-            border-radius: 10px;
-            box-shadow: 10px 10px 5px 3px lightgray;
-            border-collapse: collapse;
-        }
-
-        #heading-row {
-            font-size: 20px;
-        }
-
-        thead tr th {
-            padding: 10px;
-            color: gray;
-        }
-
-        th,
-        td {
-            border: 1px solid lightgray;
-            /* text-align: center;             */
-            padding: 15px;
-        }
-
-        /* education ends here*/
+    
 
 
-        /* courses starts here */
-        #display-in-two-column {
-            display: grid;
-            grid-template-columns: 6fr 6fr;
-        }
+        
 
-        /* .inner-display-in-two-column {
-            display: flex;
-            justify-content: space-between;
-        } */
+        
 
-        fieldset {
-            margin-bottom: 20px;
-            box-shadow: 10px 5px 10px red;
-            border-radius: 10px;
-            width: 450px;
-            border: 1px solid red;
-            /* Add your desired border styles */
-            height: auto;
-        }
+        
 
-        legend {
-            text-align: center;
-            background-color: black;
-            color: red;
-            font-weight: bold;
-            padding: 5px;
-            border: 5px solid yellow;
-            box-shadow: 10px 5px 10px cyan;
-            border-radius: 15px;
-        }
 
-        .text-shadaow {
-            font-size: 20px;
-            text-shadow: 5px 2px yellow;
-            color: red;
-        }
 
-        #myCertificate {
-            width: auto;
-        }
 
-        /* courses ends here*/
 
-        /* skill - school starts here */
-        #skill-in-school {
-            font-size: 20px;
-            list-style: none;
-        }
 
-        #skill-in-school li {
-            margin-top: 25px;
-            margin-bottom: 25px;
-        }
 
-        .bi-tag-fill {
-            color: green;
-        }
 
-        #skill-in-school li span {
-            color: black;
-        }
 
-        /* skill - school ends here */
-
+        
 
         /* declaration starts here */
         #declaration {
@@ -1135,7 +983,7 @@
         </div>
 
         <div id="class_text">
-            वर्ग 9 वी चे प्रवेश प्रत्र
+            एकलव्य परिक्षा 2025-26 प्रवेश पत्र
         </div>
         <div>
             <img src="public/images/emrs/grade9.JPG" alt="">
@@ -1157,7 +1005,14 @@
                 <a class="text-white" href="https://wa.me/917757009267"><span class="bi bi-whatsapp"></span></a>
             </button>
         </div>
+        
     </header>
+    <div>
+        <marquee scrollamount="5" bgcolor="yellow">
+            प्रवेश पत्र Black & White किंवा कलर प्रिंट चालेल.
+            <br> प्रवेश पत्रामध्ये त्रुटी असल्यास लवकरात लवकर कार्यालयाशी संपर्क करावा.
+        </marquee>
+    </div>
 
     <section>
         <nav>
@@ -1259,137 +1114,86 @@
 
 
 
-           
 
 
 
-                <!-- Experience starts here-->
-                <h2 id="experience" class="title mt-5"><b><> विद्यार्थ्यांसाठी मार्गदर्शक तत्त्वे</b></h2>
-                <div id="div-experience">
-                    <ul>
-                        <li class="right-arrow">
-                            <span>
-                                Presently Working as a <strong>Computer Operator</strong> with <strong>Vaishnavi online
-                                    services</strong>, Near RTO, Chandrapur
-                                <p>(Period: April-01-2021 to till now)</p>
-                            </span>
-                        </li>
-                        <li class="right-arrow">
-                            <span>
-                                <strong>1</strong> year of experience as a <strong>Computer Teacher</strong> under
-                                <strong>Chanda Public School</strong>, Chandrapur
-                                <p>
-                                    (Period: June-01-2020 to Mar-20-2021)
-                                </p>
-                            </span>
-                        </li>
-                        <li class="right-arrow">
-                            <span>
-                                <strong>1</strong> year of experience as a <strong>Computer Teacher</strong> under
-                                <strong>Stella Maris School</strong>, Bamanwada, Rajura
-                                <p>
-                                    (Period: June-24-2019 to Mar-2020)
-                                    <a href="public/docs/pdf/Akash Parate Experience Stella.pdf" target="_blank"><span
-                                            class="bi bi-file-pdf-fill"></span></a>
-                                </p>
-                            </span>
-                        </li>
-                        <li class="right-arrow">
-                            <span>
-                                <strong>2</strong> Year <strong>2</strong> Months of experience as a <strong>Computer
-                                    Operator</strong> under the firm <strong>Vaishnavi Enterprises</strong>, Padoli,
-                                Chandrapur
-                                <p>(Period: Nov-01-2016 to June-22-2019)</p>
-                            </span>
-                        </li>
-                        <li class="right-arrow">
-                            <span>
-                                <strong>1</strong> Year <strong>4</strong> Months of experience as a <strong>Computer
-                                    Teacher</strong> under <strong>Shree Maharishi Vidya Mandir</strong>, Datala,
-                                Chandrapur
-                                <p>
-                                    (Period: Jul-17-2017 to Nov-03-2018)
-                                    <a href="public/docs/pdf/Akash Parate Experience Maharishi.pdf"
-                                        target="_blank"><span class="bi bi-file-pdf-fill"></span></a>
-                                </p>
-                            </span>
-                        </li>
-                        <li class="right-arrow">
-                            <span>
-                                <strong>2</strong> Year <strong>9</strong> Months of experience as a <strong>Computer
-                                    Instructor</strong> under the firm <strong>IL&FS (ICT-project)</strong> on
-                                <strong>Murlidhar Bagla Convent High School & Jr. College</strong> in Chandrapur
-                                <p>
-                                    (Period:Dec-16-2013 to Sep-30-2016)
-                                    <a href="public/docs/pdf/Akash Parate Experience Bagla.pdf" target="_blank"><span
-                                            class="bi bi-file-pdf-fill"></span></a>
-                                    <a href="public/docs/pdf/Akash Parate Experience Letter by ILFS.pdf"
-                                        target="_blank"><span class="bi bi-file-pdf-fill"></span></a>
-                                </p>
-                            </span>
-                        </li>
-                        <li class="right-arrow">
-                            <span>
-                                <strong>3</strong> Year <strong>3</strong> Months of experience as a <strong>MS-CIT
-                                    Teacher</strong> under the <strong>Next Computer Institute</strong> in Chandrapur
-                                <p>
-                                    (Period: Apr-11-2013 to July-08-2016)
-                                    <a href="public/docs/pdf/Akash Parate Experience Next Computer.pdf"
-                                        target="_blank"><span class="bi bi-file-pdf-fill"></span></a>
-                                </p>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
 
-                <!-- Experience ends here -->
+            <!-- Experience starts here-->
+            <h2 id="experience" class="title mt-5"><b><u> विद्यार्थ्यांसाठी मार्गदर्शक तत्त्वे</u></b></h2>
+            <div id="div-experience">
+                <ul>
+                    <li class="right-arrow">विद्यार्थ्यांनी परीक्षा केंद्रावर नियोजित वेळेच्या 30 मिनिटे आधी उपस्थित
+                        राहावे.</li>
+                    <li class="right-arrow">प्रवेशपत्र परीक्षा केंद्रावर आणणे अनिवार्य आहे. प्रवेशपत्राशिवाय परीक्षा
+                        केंद्रात प्रवेश दिला जाणार नाही.</li>
+                    <li class="right-arrow">आधार कार्ड, शाळेचे ओळखपत्र इत्यादी वैध ओळखपत्र सोबत ठेवा.</li>
+                    <li class="right-arrow">फक्त निळ्या/काळ्या शाईच्या बॉलपॉईंट पेन, पेन्सिल, रबर, व गणिती साधने
+                        (जिओमेट्री बॉक्स) सोबत ठेवा.</li>
+                    <li class="right-arrow">मोबाइल फोन, कॅल्क्युलेटर, स्मार्टवॉच किंवा कोणतेही इलेक्ट्रॉनिक उपकरण
+                        परीक्षा हॉलमध्ये आणू नका.</li>
+                    <li class="right-arrow">अभ्यासासाठी वापरणारी कोणतीही सामग्री, नोट्स किंवा पिशव्या सोबत आणणे टाळा.
+                    </li>
+                    <li class="right-arrow">प्रवेशपत्रावरील सर्व तपशील (नाव, क्रमांक, परीक्षा केंद्र इ.) नीट तपासा. जर
+                        काही विसंगती आढळल्यास, त्वरित कार्यालयाशी संपर्क साधा.</li>
+                    <li class="right-arrow">शालेय गणवेश किंवा सभ्य औपचारिक पोशाख परिधान करा.</li>
+                    <li class="right-arrow">विद्यार्थ्यांनी परीक्षेदरम्यान शांतता व शिस्त राखावी.</li>
+                    <li class="right-arrow">पर्यवेक्षकांनी दिलेल्या सर्व सूचनांचे पालन करा. चुकीच्या वर्तनामुळे अपात्र
+                        ठरवले जाईल.</li>
+                    <li class="right-arrow">परीक्षा सुरू झाल्यानंतर 15 मिनिटांपेक्षा उशिरा येणाऱ्या विद्यार्थ्यांना
+                        परीक्षा केंद्रात प्रवेश दिला जाणार नाही.</li>
+                    <li class="right-arrow">कोणत्याही शंका किंवा आपत्कालीन परिस्थितीत शाळेच्या प्रशासनाशी / प्रकल्प
+                        कार्यालयाशी संपर्क साधा.</li>
+                </ul>
+            </div>
+
+            <!-- Experience ends here -->
 
 
 
 
 
-                <!-- Contact starts here-->
+            <!-- Contact starts here-->
 
-                <h2 id="contact" class="title mt-5">Contact</h2>
+            <h2 id="contact" class="title mt-5">Contact</h2>
+            <div id="div-contact">
                 <div id="div-contact">
-                    <div id="div-contact">
-                        <div class="mt-4 ms-4" id="basic-details">
-                            <h2><b> कार्यालय प्रकल्प अधिकारी
-                                    <br>
-                                    एकात्मिक आदिवासी विकास प्रकल्प,
-                                </b></h2>
-                            <h3>
-                                <p>
-                                    सिव्हिल लाईन,<br>
-                                    जिल्हा क्रिडा संकुलच्या मागे,<br>
-                                    चंद्रपूर 442401. (M.H.)
-                                </p>
-                            </h3>
-                            <h5>
-                                <a class="bi bi-envelope"
-                                    href="mailto:akashparate29@gmail.com">&nbsp;pochandrapur@gmail.com</a>
-                            </h5>
+                    <div class="mt-4 ms-4" id="basic-details">
+                        <h2><b> कार्यालय प्रकल्प अधिकारी
+                                <br>
+                                एकात्मिक आदिवासी विकास प्रकल्प,
+                            </b></h2>
+                        <h3>
+                            <p>
+                                सिव्हिल लाईन,<br>
+                                जिल्हा क्रिडा संकुलच्या मागे,<br>
+                                चंद्रपूर 442401. (M.H.)
+                            </p>
+                        </h3>
+                        <h5>
+                            <a class="bi bi-envelope"
+                                href="mailto:akashparate29@gmail.com">&nbsp;pochandrapur@gmail.com</a>
+                        </h5>
 
-                            <h5>
-                                <a class="bi bi-telephone-fill" href="tel:7757009267">&nbsp;7757009267</a>
-                            </h5>
+                        <h5>
+                            <a class="bi bi-telephone-fill" href="tel:7757009267">&nbsp;7757009267</a>
+                        </h5>
 
-                            <h5>
-                                <a class="bi bi-whatsapp text-success" href="https://wa.me/917757009267"> Send
-                                    Message</a>
-                            </h5>
+                        <h5>
+                            <a class="bi bi-whatsapp text-success" href="https://wa.me/917757009267"> Send
+                                Message</a>
+                        </h5>
 
-                            <h5>
-                                <a class="bi bi-facebook" href="https://www.facebook.com/POChandrapur/"> Facebook</a>
-                            </h5>
-                            <h5>
-                                <a class="bi bi-youtube" href="https://www.youtube.com/@projcetofficer1812"> Youtube</a>
-                            </h5>
-                        </div>
+                        <h5>
+                            <a class="bi bi-facebook" href="https://www.facebook.com/POChandrapur/"> Facebook</a>
+                        </h5>
+                        <h5>
+                            <a class="bi bi-youtube" href="https://www.youtube.com/@projcetofficer1812"> Youtube</a>
+                        </h5>
                     </div>
-
                 </div>
-                <!-- Contact ends here -->
+
+            </div>
+            <!-- Contact ends here -->
 
         </main>
     </section>
