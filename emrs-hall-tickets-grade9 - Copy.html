@@ -4,26 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Add a meta tag for character set and viewport settings. -->
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-
-    <!-- Customized Bootstrap Stylesheet -->
     <link rel="stylesheet" href="public/docs/css/index.css">
-
-    <!-- Bootstrap Local (Note: the version number should be accurate) -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
-
-    <!-- Bootstrap Online (Note: the version numbers should be accurate) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="shortcut icon" href="public/images/Akash.ico">
-    <!-- Add a link to your favicon. -->
-
     <title>EMRS Hall Tickets 2025</title>
-
     <style>
         html {
             font-family: arial;
@@ -63,6 +50,10 @@
             color: red;
             background-color: yellow;
             font-weight: bold;
+        }
+
+        body {
+            background-color: #ffea7f;
         }
 
         .title {
@@ -145,8 +136,6 @@
         #img-home {
             height: 350px;
             width: auto;
-            /* box-shadow: 10px 10px 10px silver; */
-            /* -webkit-box-reflect: right 1px linear-gradient(transparent, transparent, transparent, #000f); */
         }
 
         .text-container p {
@@ -172,13 +161,13 @@
             margin-right: 10px;
         }
 
-        li{
+        li {
             color: #0d6efd;
-            font-size: 19px;
+            font-size: 21px;
             padding: 5px;
         }
 
-        #guidelines li{
+        #guidelines li {
             color: black;
         }
 
@@ -194,351 +183,13 @@
             padding-inline-start: 1ch;
         }
 
-        @media (max-width: 600px) {
+        #div-contact{
+            display: flex;       
+        }
 
-            header {
-                font-size: 15px;
-                text-align: center;
-                padding: 5px 15px;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            header img {
-                height: 35px;
-                width: 35px;
-                border-radius: 50px;
-            }
-
-            nav {
-                display: none;
-            }
-
-            section {
-                margin-top: 2px;
-            }
-
-            main {
-                margin-top: -60px;
-                margin-left: 0px;
-                width: 340px;
-                overflow: auto;
-            }
-
-            .title {
-                font-family: elephant;                
-                letter-spacing: 2px;
-                font-size: 15px;
-                color: navy;
-                position: sticky;
-                top: 0px;
-                z-index: 2;
-            }
-
-            .sub-title {
-                padding: 5px;                
-                color: yellow;
-                background-color: black;
-                text-align: center;
-                border-radius: 10px;
-                position: sticky;
-                top: 18px;
-            }
-
-            #ui-ux {
-                column-gap: 20px;
-            }
-
-            #img-home {
-                height: 150px;
-                width: 150px;
-                box-shadow: 10px 10px 10px silver;
-                -webkit-box-reflect: right 1px linear-gradient(transparent, transparent, transparent, #000f);
-            }
-
-            #myName {
-                font-weight: bold;
-                color: blue;
-                font-size: 20px;
-            }
-
-            .text-container p {
-                font-weight: bold;
-                color: red;
-                font-family: elephant;
-                font-size: 15px;
-            }
-
-            .text-container p span {
-                animation: typing 5s steps(18) 1s forwards, blink-caret 1s step-end infinite;
-            }
-
-            .text-container p:last-child span:last-child {
-                animation-iteration-count: infinite;
-                animation-fill-mode: forwards;
-            }
-
-            #div-about {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-
-            #img-about {
-                width: 250px;
-                margin-left: 0px;
-            }
-
-            label {
-                margin-bottom: 2px;
-                color: brown;
-                font-size: 14px;
-                font-weight: bold;
-            }
-
-            .about-spacing {
-                font-size: 15px;
-            }
-
-            .about-spacing li img {
-                height: 15px;
-                width: 15px;
-            }
-
-            #about-ul li {
-                line-height: 20px;
-                font-size: 14px;
-            }
-
-            #cv-nav-tabs {
-                position: sticky;
-                top: 18px;
-                z-index: 1;
-                background-color: white;
-                font-size: 10px;
-            }
-
-            h2 {
-                font-size: 15px;
-            }
-
-            h3 {
-                font-size: 13px;
-            }
-
-            h5 {
-                font-size: 11px;
-            }
-
-            #technical-skill-main {
-                font-size: 15px;
-                list-style: none;
-            }
-
-            #technical-skill-sub {
-                font-size: 11px;
-                font-weight: bold;
-            }
-
-            .bi-bookmark-check-fill {
-                color: green;
-            }
-
-            .bi-box-arrow-right {
-                color: blue;
-                margin-left: 10px;
-            }
-
-            #table-education-data {
-                width: 90%;
-                border: 1px solid gray;
-                border-radius: 10px;
-                box-shadow: 10px 10px 5px 3px lightgray;
-                border-collapse: collapse;
-            }
-
-            #heading-row {
-                font-size: 15px;
-            }
-
-            thead tr th {
-                padding: 10px;
-                color: gray;
-            }
-
-            #display-in-two-column {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            fieldset {
-                margin-left: -20px;
-                width: 290px;
-                height: auto;
-            }
-
-            legend {
-                font-size: 15px;
-            }
-
-            .table-courses tr td {
-                border: none;
-                font-size: 15px;
-                padding: 2px;
-            }
-
-            #skill-in-school li {
-                font-size: 15px;
-                margin-top: 10px;
-                margin-bottom: 10px;
-            }
-
-            #declaration {
-                font-size: 15px;
-                text-align: justify;
-                width: 300px;
-            }
-
-            #my-declaration {
-                line-height: 20px;
-            }
-
-            #img-declaration {
-                height: 130px;
-                width: 150px;
-                box-shadow: 10px 10px 10px silver;
-                margin-left: 25px;
-            }
-
-            #img-declaration:hover {
-                transform: scale(2, 1.5);
-                transition: 5s;
-            }
-
-            #div-experience {
-                margin-left: 0px;
-                width: 90%;
-                text-align: justify;
-            }
-
-            #div-experience p {
-                margin-left: 0px;
-                text-align: right;
-                font-family: 'Times New Roman', Times, serif;
-                font-style: italic;
-            }
-
-            .right-arrow {
-                list-style-type: '👉';
-            }
-
-            #div-feedback {
-                background: #0396ff;
-                padding: 5px;
-            }
-
-            #container {
-                height: 400px;
-                min-width: 400px;
-                display: flex;
-                align-items: flex-end;
-            }
-
-            .icon-image {
-                border: 1px solid red;
-                position: relative;
-                height: 70px;
-                width: 70px;
-                background: #fff;
-                border-radius: 50%;
-                margin: 15px 0px;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-            }
-
-            .icon-image img {
-                position: absolute;
-                height: 95%;
-                width: 95%;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                object-fit: cover;
-                border-radius: 50%;
-                border: 4px solid #0396ff;
-            }
-
-            .box-image {
-                position: absolute;
-                height: 300px;
-                width: 250px;
-                bottom: 80px;
-                left: 250%;
-                transform: translateX(-50%);
-                border-radius: 25px;
-                box-shadow: 0 5px 10px rgba(12, 219, 222, 0.944);
-                z-index: 0;
-                transition: transform 0.5s, z-index 0s, left 0.5s;
-                transition-delay: 0s 0.5s, 0.5s;
-                pointer-events: none;
-            }
-
-            .icon-image:hover .box-image {
-                left: 0px;
-                z-index: 12;
-                transform: translateX(80px);
-                transition: left 0.5s, z-index 0s, transform 0.5s;
-                transition-delay: 0s, 0.5s, 0.5s;
-            }
-
-            .box-image img {
-                border: 4px double skyblue;
-                border-radius: 25px;
-            }
-
-            .content {
-                position: absolute;
-                width: 100%;
-                bottom: -40px;
-                left: 0;
-                padding: 0px 10px;
-            }
-
-            .content .details {
-                background: whitesmoke;
-                padding: 5px;
-                border-radius: 12px;
-                text-align: justify;
-                opacity: 0;
-                transform: translate(10px);
-            }
-
-            .icon-image:hover .details {
-                transition: all 0.3s ease;
-                transition-delay: 0.9s;
-                opacity: 1;
-                transform: translate(4px);
-            }
-
-            .details .feedback {
-                text-align: justify;
-                font-size: 15px;
-                color: brown;
-            }
-
-            .details .name {
-                font-family: algerian;
-                font-size: 18px;
-                text-align: right;
-            }
-
-            .details .school {
-                text-align: right;
-                font-family: elephant;
-                font-size: 14px;
-                color: #0396ff;
-            }
+        #contact-office-building{
+            height: 350px;
+            width:150% ;
         }
     </style>
 </head>
@@ -546,17 +197,17 @@
 <body class="container-fluid mt-1">
     <header>
         <div>
-            <img src="public/images/emrs/itdp_logo.png" alt="">
+            <img src="public/images/emrs/itdp_logo.png" alt="ITDP Logo">
         </div>
 
         <div id="class_text">
             एकलव्य परिक्षा 2025-26 प्रवेश पत्र
         </div>
         <div>
-            <img src="public/images/emrs/grade9.JPG" alt="">
+            <img src="public/images/emrs/grade9.JPG" alt="Grade9">
         </div>
         <div>
-            <img src="public/images/emrs/shivaji_maharaj_logo.png" alt="">
+            <img src="public/images/emrs/shivaji_maharaj_logo.png" alt="Shivaji Maharaj">
         </div>
 
         <div class="btn-group">
@@ -612,7 +263,7 @@
 
                 <div id=" div-home-left">
                     <figure>
-                        <img id="img-home" src="public/images/emrs/emrs_school_building.jpeg    " alt="Akash N. Parate">
+                        <img id="img-home" src="public/images/emrs/emrs_school_building.jpeg    " alt="EMRS School Building">
                     </figure>
                 </div>
 
@@ -620,7 +271,7 @@
                     <p id="myName"> वर्ग 9 वी चे प्रवेश प्रत्र </p>
                     <div class="text-container">
                         <p>
-                            <span id="text"></span>
+                            <span id="text" style="white-space: pre-line; "></span>
                         </p>
                     </div>
                 </div>
@@ -628,7 +279,7 @@
             <!-- Home ends here -->
 
             <!-- About starts here-->
-            <h2 id="about" class="title mt-5"> <b><u> एकलव्य शाळा </u></b> (About EMRS School)</h2>            
+            <h2 id="about" class="title mt-5"> <b><u> एकलव्य शाळा </u></b> (About EMRS School)</h2>
             <div class="div-p">
                 <p>
                     A dedicated computer teacher with a passion for nurturing the next generation of tech-savvy
@@ -637,7 +288,7 @@
                 </p>
             </div>
 
-            <!-- Teaching philosophy starts here-->
+            <!-- Download Hall tickets starts here-->
             <h2 id="download_hall_tickets" class="title mt-5"></h2>
             <div>
                 <p class="title sub-title mt-4">Download Hall Ticket <br> (वर्ग 9 वी चे प्रवेश प्रत्र डाऊनलोड करा)</p>
@@ -663,8 +314,9 @@
                 </p>
             </div>
 
-            <!-- Experience starts here-->
-            <h2 id="experience" class="title mt-5"><b><u> विद्यार्थ्यांसाठी मार्गदर्शक तत्त्वे </u></b>(Guidelines for Students)</h2>
+            <!-- Guidelines starts here-->
+            <h2 id="experience" class="title mt-5"><b><u> विद्यार्थ्यांसाठी मार्गदर्शक तत्त्वे </u></b>(Guidelines for
+                Students)</h2>
             <div id="div-experience">
                 <ul id="guidelines">
                     <li class="right-arrow">विद्यार्थ्यांनी परीक्षा केंद्रावर नियोजित वेळेच्या 30 मिनिटे आधी उपस्थित
@@ -690,55 +342,60 @@
                         कार्यालयाशी संपर्क साधा.</li>
                 </ul>
             </div>
-           
+
             <!-- Contact starts here-->
-            <h2 id="contact" class="title mt-5"> <b><u> संपर्क </u></b> (Contact)</h2>
+            <h2 id="contact" class="title mt-5"> <b><u> कार्यालयाशी संपर्क साधा </u></b> (Contact Office)</h2>
+
             <div id="div-contact">
-                <div id="div-contact">
-                    <div class="mt-4 ms-4" id="basic-details">
-                        <h2><b> कार्यालय प्रकल्प अधिकारी
-                                <br>
-                                एकात्मिक आदिवासी विकास प्रकल्प,
-                            </b>
-                        </h2>
-                        <h3>
-                            <p>
-                                सिव्हिल लाईन,<br>
-                                जिल्हा क्रिडा संकुलच्या मागे,<br>
-                                चंद्रपूर 442401. (M.H.)
-                            </p>
-                        </h3>
-                        <h5>
-                            <a class="bi bi-envelope"
-                                href="mailto:pochandrapur@gmail.com">&nbsp;pochandrapur@gmail.com</a>
-                        </h5>
+                <div class="mt-4 ms-4" id="contact-left-basic-details">
+                    <h2><b> कार्यालय प्रकल्प अधिकारी
+                            <br>
+                            एकात्मिक आदिवासी विकास प्रकल्प,
+                        </b>
+                    </h2>
+                    <h3>
+                        <p>
+                            सिव्हिल लाईन,<br>
+                            जिल्हा क्रिडा संकुलच्या मागे,<br>
+                            चंद्रपूर 442401. (M.H.)
+                        </p>
+                    </h3>
+                    <h5>
+                        <a class="bi bi-envelope" href="mailto:pochandrapur@gmail.com">&nbsp;pochandrapur@gmail.com</a>
+                    </h5>
 
-                        <h5>
-                            <a class="bi bi-telephone-fill" href="tel:7757009267">&nbsp;7757009267</a>
-                        </h5>
+                    <h5>
+                        <a class="bi bi-telephone-fill" href="tel:7757009267">&nbsp;7757009267</a>
+                    </h5>
 
-                        <h5>
-                            <a class="bi bi-whatsapp text-success" href="https://wa.me/917757009267"> Send
-                                Message</a>
-                        </h5>
+                    <h5>
+                        <a class="bi bi-whatsapp text-success" href="https://wa.me/917757009267"> Send
+                            Message</a>
+                    </h5>
 
-                        <h5>
-                            <a class="bi bi-facebook" href="https://www.facebook.com/POChandrapur/"> Facebook</a>
-                        </h5>
-                        <h5>
-                            <a class="bi bi-youtube text-danger" href="https://www.youtube.com/@projcetofficer1812"> Youtube</a>
-                        </h5>
-                    </div>
+                    <h5>
+                        <a class="bi bi-facebook" href="https://www.facebook.com/POChandrapur/"> Facebook</a>
+                    </h5>
+                    <h5>
+                        <a class="bi bi-youtube text-danger" href="https://www.youtube.com/@projcetofficer1812">
+                            Youtube</a>
+                    </h5>
                 </div>
-            </div>            
+                <div class="mt-4 ms-4" id="contact-right-office-building">
+                    <figure>
+                        <img id="contact-office-building" src="public/images/emrs/office_building.jpg" alt="ITDP Office Building">
+                    </figure>
+                </div>
+            </div>
+
         </main>
     </section>
 
 
 
     <script>
-        const textElement = document.getElementById("text");        
-        const phrases = ["Exam Date: 23 Feb 2025 Exam Time: XXXXX Exam Center: Eklavya Model Residential Schools ~ Dewada, Ta. Rajura, Dist. Chandrapur."];
+        const textElement = document.getElementById("text");
+        const phrases = ["Exam Date: 23 Feb 2025\nExam Day: Sunday\nExam Time: 11:00 am to 01:00 pm\nExam Center: Eklavya Model Residential Schools ~ Dewada,\nTa. Rajura, Dist. Chandrapur."];
         let phraseIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
@@ -772,4 +429,5 @@
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
+
 </html>
