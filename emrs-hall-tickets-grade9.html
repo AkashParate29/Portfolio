@@ -103,11 +103,9 @@
         main {
             margin-left: 15px;
             /* height: 1000px; */
-            overflow: auto;
         }
 
-        nav,
-        main {
+        nav,main {
             margin-top: -60px;
         }
 
@@ -183,7 +181,6 @@
             padding-inline-start: 1ch;
         }
 
-
         .about-spacing {
             margin-top: 30px;
             margin-left: 30px;
@@ -209,7 +206,6 @@
             width: 25px;
         }
 
-
         #div-contact {
             display: flex;
         }
@@ -219,234 +215,73 @@
             width: 150%;
         }
 
-        @media (max-width: 600px) {
-            /* html {
-                font-family: arial;
-            } */
-            /* 
-            a {
-                text-decoration: none;
-            } */
-
-            header {
-                /* font-size: 15px; */
-                /* text-align: center; */
-                /* background-color: rgba(241, 241, 17, 0.665); */
-                /* color: darkgoldenrod; */
-                /* border-radius: 5px;
-                display: flex;
-                justify-content: center;
-                justify-content: space-between;
-                align-items: center;
-                padding: 5px 15px; */
-            }
-
+        @media (max-width: 600px) {        
             header img {
                 height: 50px;
-                border-radius: 5px;
-                border: 1px solid goldenrod;
+                margin: 2px;                
             }
 
             #class_text {
                 font-size: 15px;
-                /* font-weight: bold;
-                text-shadow: 10px 5px 10px darkgoldenrod;
-                text-decoration-line: underline; */
             }
 
-            .btn-group {
+            .btn-group, nav {
                 display: none;
             }
 
             marquee {
                 font-size: 10px;
-                /* color: red;
-                background-color: yellow;
-                font-weight: bold; */
             }
-
-            nav {
-                display: none;
-            }
-
 
             .title {
-                /* font-family: elephant;
-                letter-spacing: 2px; */
                 font-size: 18px;
-                /* text-decoration: underline;
-                color: navy; */
             }
 
-            .sub-title {
-                /* top: 30px; */
-                /* padding: 5px; */
-                /* color: yellow;
-                background-color: black;
-                text-align: center;
-                border-radius: 15px;
-                margin-bottom: -10px;
-                position: sticky;
-                top: 0px; */
+            section {                
+                display: block;
+                margin-top: 0px;
             }
-
-            section {
-                border:  5px solid red;
-                display: flex;
-                /* grid-template-columns: 2fr 9fr; */
-                margin-top: 1px;
-            }
-
-            #nav-ul {
-                /* margin-left: -30px; */
-            }
-
-            .nav-li {
-                /* border:  5px solid red;
-                font-size: 14px; */
-                /* border: 1px dashed goldenrod;
-                background-color: rgba(241, 241, 17, 0.665);
-                border-radius: 10px;
-                padding: 4px;
-                margin-bottom: 10px; */
-            }
-
-            .nav-li a {
-                /* color: darkgoldenrod;
-                font-weight: bold; */
-            }
-
-            main {
-                margin-left: 0px;
-                /* height: 1000px; */
-                /* overflow: auto; */
-            }
-            
-            nav,
-            main {
-                /* margin-top: -60px; */
-            }
-            
-            #div-main {
-                /* display: flex;
-                grid-template-columns: 6fr 6fr; */
-            }
-          
-            #div-home-left {
-                /* display: flex;
-                justify-content: center; */
-            }
-
-            #div-home-right {
-                /* display: block;
-                padding: 5px;
-                font-size: 30px; */
-            }
-
 
             #img-home {
                 height: 150px;
                 width: auto;
             }
-            #myName {
-                font-size: 22px;
-                /* display: flex;
-                justify-content: center; */
-                /* color: blue; */
-                /* font-weight: bold; */
-            }
 
-            
+            #myName {
+                font-size: 18px;
+            }
 
             .text-container p {
-                /* color: red; */
-                /* font-family: elephant; */
-                font-size: 14px;
-            }
-
-            /* .text-container p span {
-                animation: typing 5s steps(18) 1s forwards, blink-caret 1s step-end infinite;
-            }
-
-            .text-container p:last-child span:last-child {
-                animation-iteration-count: infinite;
-                animation-fill-mode: forwards;
-            } */
-
-            .div-p {
-                /* border: 10px solid green;
-                text-align: justify;
-                padding: 2px;
-                font-size: 200px;
-                margin-top: 10px;
-                margin-left: 10px;
-                margin-right: 10px; */
+                font-size: 15px;
             }
 
             li {
-                /* color: #0d6efd; */
                 font-size: 15px;
-                /* padding: 5px; */
-            }
-
-            #guidelines li {
-                /* color: black; */
-            }
-
-            #div-experience {
-                /* margin-left: 10px;
-                width: 90%;
-                font-size: 20px;
-                text-align: justify; */
-            }
-
-            .right-arrow {
-                /* list-style-type: '👉';
-                padding-inline-start: 1ch; */
             }
 
 
             .about-spacing {
-                margin-top: 5px;
+                margin-top: 15px;
                 margin-left: 5px;
                 margin-right: 5px;
                 font-size: 15px;
-                /* text-align: justify; */
-                /* color: black; */
             }
-            
+
             .about-spacing li {
-                /* color: black;
-                margin-bottom: 10px; */
+                /* color: black; */
+                margin-bottom: 1px;
             }
-            
-            .about-spacing li span {
-                /* font-weight: bold;
-                font-style: italic;
-                color: blue; */
-            }
-            
-            .about-spacing li img {
-                /* height: 25px;
-                width: 25px; */
-            }
-            
-            
-            #div-contact {
-                /* border: 10px solid green; */
+
+            #div-contact {             
                 display: block;
             }
 
             #contact-office-building {
                 /* height: 350px; */
-                width: auto;
+                width: fit-content;
             }
         }
     </style>
-
-
-
-
 </head>
 
 <body class="container-fluid mt-1">
@@ -850,7 +685,7 @@
 
     <script>
         const textElement = document.getElementById("text");
-        const phrases = ["Exam Date: 23 Feb 2025\nExam Day: Sunday\nExam Time: 11:00 am to 01:00 pm\nExam Center: Eklavya Model Residential Schools ~ Dewada,\nTa. Rajura, Dist. Chandrapur."];
+        const phrases = ["Exam Date: 23 Feb 2025\nExam Day: Sunday\nExam Time: 02:00 pm to 04:00 pm\nExam Center: Eklavya Model Residential Schools ~ Dewada,\nTa. Rajura, Dist. Chandrapur."];
         let phraseIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
