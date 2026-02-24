@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandwich Customizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .item {
+            margin-bottom: 10px;
+        }
+        .total {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Customize your Sandwich <br> कस्टमाइज्ड सैंडविच बनाएं</h2>
+
+    <div class="item">
+        <input type="checkbox" class="option" data-price="10" id="onion"> <label for="onion">Onion / प्याज / कांदा (+₹10)</label>
+    </div>
+    <div class="item">
+        <input type="checkbox" class="option" data-price="15" id="tomato"> <label for="tomato">Tomato / टमाटर (+₹15)</label>
+    </div>
+    <div class="item">
+        <input type="checkbox" class="option" data-price="20" id="cheese"> <label for="cheese">Chees / चीज (+₹20)</label>
+    </div>
+    <div class="item">
+        <input type="checkbox" class="option" data-price="10" id="corn"> <label for="corn">कॉर्न (+₹10)</label>
+    </div>
+
+    <div class="total">
+        Total / कुल / एकूण: ₹<span id="total">0</span>
+    </div>
+
+    <button onclick="submitOrder()">ऑर्डर सबमिट करें</button>
+
+    <script>
+        const options = document.querySelectorAll('.option');
+        const totalEl = document.getElementById('total');
+
+        options.forEach(opt => {
+            opt.addEventListener('change', () => {
+                calculateTotal();
+            });
+        });
+
+        function calculateTotal() {
+            let total = 50; // बेस सैंडविच कीमत
+            options.forEach(opt => {
+                if (opt.checked) {
+                    total += parseInt(opt.dataset.price);
+                }
+            });
+            totalEl.textContent = total;
+        }
+
+        function submitOrder() {
+            let selectedItems = [];
+            options.forEach(opt => {
+                if (opt.checked) {
+                    selectedItems.push(opt.nextElementSibling.innerText);
+                }
+            });
+            let total = totalEl.textContent;
+            // For now, simple alert (आप backend से कनेक्ट कर सकते हो)
+            alert('आपका ऑर्डर: ' + selectedItems.join(', ') + '\nकुल कीमत: ₹' + total);
+
+            // यहाँ पर आप Firebase या Backend को ऑर्डर भेज सकते हो
+        }
+    </script>
+</body>
+</html>
