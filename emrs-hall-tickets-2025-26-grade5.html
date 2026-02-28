@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/docs/css/index.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="public/images/Akash.ico">
+    <title>EMRS Hall Tickets 2025</title>
+    <style>
+        html {
+            font-family: arial;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            font-size: 25px;
+            text-align: center;
+            background-color: rgba(241, 241, 17, 0.665);
+            color: darkgoldenrod;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 15px;
+        }
+
+        header img {
+            height: 75px;
+            border-radius: 10px;
+            border: 2px solid goldenrod;
+        }
+
+        #class_text {
+            font-size: 45px;
+            font-weight: bold;
+            text-shadow: 10px 5px 10px darkgoldenrod;
+            text-decoration-line: underline;
+        }
+
+        marquee {
+            color: red;
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        body {
+            background-color: #ffea7f;
+        }
+
+        .title {
+            font-family: elephant;
+            letter-spacing: 2px;
+            font-size: 30px;
+            text-decoration: underline;
+            color: navy;
+        }
+
+        .sub-title {
+            top: 30px;
+            padding: 5px;
+            color: yellow;
+            background-color: black;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: -10px;
+            position: sticky;
+            top: 0px;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: 2fr 9fr;
+            margin-top: 1px;
+        }
+
+        #nav-ul {
+            margin-left: -30px;
+        }
+
+        .nav-li {
+            font-size: 19px;
+            border: 1px dashed goldenrod;
+            background-color: rgba(241, 241, 17, 0.665);
+            border-radius: 10px;
+            padding: 4px;
+            margin-bottom: 10px;
+        }
+
+        .nav-li a {
+            color: darkgoldenrod;
+            font-weight: bold;
+        }
+
+        main {
+            margin-left: 15px;
+            /* height: 1000px; */
+        }
+
+        nav,
+        main {
+            margin-top: -60px;
+        }
+
+        #div-main {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+
+        #div-home-left {
+            display: flex;
+            justify-content: center;
+        }
+
+        #div-home-right {
+            display: block;
+            padding: 5px;
+            font-size: 30px;
+        }
+
+        #myName {
+            font-size: 40px;
+            color: blue;
+            font-weight: bold;
+        }
+
+        #img-home {
+            height: 350px;
+            width: auto;
+        }
+
+        .text-container p {
+            color: red;
+            font-family: elephant;
+        }
+
+        .text-container p span {
+            animation: typing 5s steps(18) 1s forwards, blink-caret 1s step-end infinite;
+        }
+
+        .text-container p:last-child span:last-child {
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+
+        .div-p {
+            text-align: justify;
+            padding: 2px;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        li {
+            color: #0d6efd;
+            font-size: 21px;
+            padding: 5px;
+        }
+
+        #guidelines li {
+            color: black;
+        }
+
+        #div-experience {
+            margin-left: 2px;
+            /* width: 90%; */
+            font-size: 20px;
+            text-align: justify;
+        }
+
+        .right-arrow {
+            list-style-type: '👉';
+            /* padding-inline-start: 1ch; */
+        }
+
+        .about-spacing {
+            margin-top: 30px;
+            margin-left: 30px;
+            margin-right: 30px;
+            font-size: 19px;
+            text-align: justify;
+            color: black;
+        }
+
+        .about-spacing li {
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .about-spacing li span {
+            font-weight: bold;
+            font-style: italic;
+            color: blue;
+        }
+
+        .about-spacing li img {
+            height: 25px;
+            width: 25px;
+        }
+
+        #div-contact {
+            display: flex;
+        }
+
+        #contact-office-building {
+            height: 350px;
+            width: 150%;
+        }
+
+        @media (max-width: 600px) {
+            header img {
+                height: 50px;
+                margin: 2px;
+                border: 1px solid;
+            }
+
+            #class_text {
+                font-size: 15px;
+            }
+
+            .btn-group,
+            nav {
+                display: none;
+            }
+
+            marquee {
+                font-size: 10px;
+            }
+
+            .title {
+                font-size: 18px;
+            }
+
+            section {
+                display: block;
+                margin-top: 0px;
+            }
+
+            #img-home {
+                height: 150px;
+                width: 150px;
+            }
+
+            #myName {
+                font-size: 18px;
+            }
+
+            .text-container p {
+                font-size: 15px;
+            }
+
+            li {
+                font-size: 15px;
+            }
+
+            .about-spacing {
+                margin-top: 15px;
+                margin-left: 5px;
+                margin-right: 5px;
+                font-size: 15px;
+            }
+
+            .about-spacing li {
+                /* color: black; */
+                margin-bottom: 1px;
+            }
+
+            #div-contact {
+                display: block;
+            }
+
+            #contact-office-building {
+                /* height: 350px; */
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+
+<body class="container-fluid mt-1">
+    <header>
+        <div>
+            <img src="public/images/emrs/itdp_logo.png" alt="ITDP Logo">
+        </div>
+
+        <div id="class_text">
+            एकलव्य परिक्षा 2025-26 प्रवेश पत्र
+        </div>
+        <div>
+            <img src="public/images/emrs/grade5.JPG" alt="Grade5">
+        </div>
+        <div>
+            <img src="public/images/emrs/shivaji_maharaj_logo.png" alt="Shivaji Maharaj">
+        </div>
+
+        <div class="btn-group">
+            <button class="btn btn-primary">
+                <a class="text-white" href="https://www.facebook.com/POChandrapur/"><span
+                        class="bi bi-facebook"></span></a>
+            </button>
+            <button class="btn btn-danger">
+                <a class="text-white" href="https://www.youtube.com/@projcetofficer1812"><span
+                        class="bi bi-youtube"></span></a>
+            </button>
+            <button class="btn btn-success">
+                <a class="text-white" href="https://wa.me/917757009267"><span class="bi bi-whatsapp"></span></a>
+            </button>
+        </div>
+    </header>
+    <div>
+        <marquee>
+            प्रवेश पत्र Black & White किंवा कलर प्रिंट चालेल.
+            <br>
+            प्रवेश पत्रामध्ये त्रुटी असल्यास लवकरात लवकर कार्यालयाशी संपर्क करावा.
+        </marquee>
+    </div>
+
+    <section>
+        <nav>
+            <ul id="nav-ul">
+                <li class="nav-li">
+                    <a href="#home" class="bi bi-house"> Home</a>
+                </li>
+
+                <li class="nav-li">
+                    <a href="#about" class="bi bi-person"> About EMRS</a>
+                </li>
+
+                <li class="nav-li">
+                    <a href="#download_hall_tickets" class="bi bi-file-pdf"> Download hall tickets</a>
+                </li>
+                <li class="nav-li">
+                    <a href="#experience" class="bi bi-person-workspace"> Exam Guidelines</a>
+                </li>
+
+                <li class="nav-li">
+                    <a href="#contact" class="bi bi-telephone-plus"> Contact Office</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- Home starts here-->
+            <h2 id="home" class="title">Home</h2>
+            <div id="div-main" class="mb-5">
+
+                <div id=" div-home-left">
+                    <figure>
+                        <img id="img-home" src="public/images/emrs/emrs_school_building.jpeg    "
+                            alt="EMRS School Building">
+                    </figure>
+                </div>
+
+                <div id="div-home-right">
+                    <p id="myName"> वर्ग 5 वी मध्ये शिकत असलेल्या विद्यार्थ्यांचे प्रवेश प्रत्र </p>
+                    <div class="text-container">
+                        <p>
+                            <span id="text" style="white-space: pre-line; "></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Home ends here -->
+
+
+
+            <!-- Download Hall tickets starts here-->
+            <h2 id="download_hall_tickets" class="title mt-5"></h2>
+            <div>
+                <p class="title sub-title mt-4">Download Hall Ticket <br> (वर्ग 5 वी चे प्रवेश प्रत्र डाऊनलोड करा)</p>
+                <p>
+                <ol>
+
+
+<li><a href="public/docs/emrs_hall_tickets_2025/Aarush Sudhakar Shedmake.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Aarush Sudhakar Shedmake</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Aayush Sanjay Dandekar.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Aayush Sanjay Dandekar</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Abhishek Satish Ude.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Abhishek Satish Ude</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Adarsh Diwakar Todase.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Adarsh Diwakar Todase</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Adiraj Jagdish Sawsakade.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Adiraj Jagdish Sawsakade</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Akshara Ramesh Gedam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Akshara Ramesh Gedam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Aman Rahul Dhok.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Aman Rahul Dhok</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Amrita Subhash Madavi.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Amrita Subhash Madavi</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Ankit Sandip Atram.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Ankit Sandip Atram</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Ankita Dilip Maraskolhe.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Ankita Dilip Maraskolhe</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Ankita Mahesh Kotnake.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Ankita Mahesh Kotnake</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Ansh Vinod Soyam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Ansh Vinod Soyam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Anushka Hiralal Tekam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Anushka Hiralal Tekam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Anushree Sanjay Garate.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Anushree Sanjay Garate</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Aradhya Avinash Chaudhari.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Aradhya Avinash Chaudhari</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Aradhya Raju Mundhare.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Aradhya Raju Mundhare</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Arohi Sitaram Kodape.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Arohi Sitaram Kodape</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Arosh Ajay Kodape.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Arosh Ajay Kodape</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Arushi Sanjay Dandekar.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Arushi Sanjay Dandekar</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Aryan Narayan Pendor.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Aryan Narayan Pendor</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Ashlesha Ramchandra Gedam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Ashlesha Ramchandra Gedam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Ashtam Ramkisan Atram.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Ashtam Ramkisan Atram</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Asmita Mahendra Shedmake.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Asmita Mahendra Shedmake</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Atharv Daulat Jumnake.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Atharv Daulat Jumnake</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Avani Bhaiyyaji Waghmare.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Avani Bhaiyyaji Waghmare</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Avanti Avinash Nannaware.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Avanti Avinash Nannaware</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Bhusan Ravindra Magare.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Bhusan Ravindra Magare</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Darshana Shankar Shedmake.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Darshana Shankar Shedmake</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Dimpal Amol Shrirame.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Dimpal Amol Shrirame</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Dishant Amol Meshram.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Dishant Amol Meshram</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Dishita Dilip Meshram.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Dishita Dilip Meshram</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Divya Ramaji Meshram.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Divya Ramaji Meshram</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Durga Sandip Gajbhiye.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Durga Sandip Gajbhiye</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Ganesh Dilip Barekar.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Ganesh Dilip Barekar</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Gokul Manoj Madavi.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Gokul Manoj Madavi</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Gunjan Sunil Alam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Gunjan Sunil Alam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Hirkanya Prakash Bharade.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Hirkanya Prakash Bharade</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Humanshi Shailendra Salame.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Humanshi Shailendra Salame</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Hushankumar Kailas Mangam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Hushankumar Kailas Mangam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Ishika Kishor Waghmare.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Ishika Kishor Waghmare</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Ishwari Praful Meshram.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Ishwari Praful Meshram</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Jayanti Nagesh Palelu.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Jayanti Nagesh Palelu</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Jaydip Vikash Todase.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Jaydip Vikash Todase</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Kalyani Giridhar Koram.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Kalyani Giridhar Koram</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Karan Ganesh Madavi.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Karan Ganesh Madavi</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Kartavya Gajanan Dharne.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Kartavya Gajanan Dharne</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Kartik Keraba Upparwad.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Kartik Keraba Upparwad</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Kranti Rakesh Sonawane.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Kranti Rakesh Sonawane</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Krishna Digambar Barekar.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Krishna Digambar Barekar</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Krishna Dumdev Madavi.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Krishna Dumdev Madavi</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Krutika Charandas Pandhare.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Krutika Charandas Pandhare</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Kumud Gurudas Chaudhari.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Kumud Gurudas Chaudhari</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Kumud Rajesh Naitam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Kumud Rajesh Naitam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Kumud Rakesh Kumare.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Kumud Rakesh Kumare</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Kunal Sainath Gedam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Kunal Sainath Gedam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Lakhan Manoj Kulmethe.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Lakhan Manoj Kulmethe</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Lakki Manik Madavi.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Lakki Manik Madavi</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Lokesh Shalikram Surpam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Lokesh Shalikram Surpam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Maheshwari Jagannath Jambhule.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Maheshwari Jagannath Jambhule</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Mahi Pravin Kannake.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Mahi Pravin Kannake</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Mahi Ravindra Yerme.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Mahi Ravindra Yerme</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Manashri Tarachand Nannaware.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Manashri Tarachand Nannaware</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Manish Visatrao Kotnake.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Manish Visatrao Kotnake</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Mansi Harishchandra Jivtode.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Mansi Harishchandra Jivtode</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Manthan Ravindra Chauke.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Manthan Ravindra Chauke</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Mayank Kailas Pendor.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Mayank Kailas Pendor</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Mayur Rajnikant Pendor.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Mayur Rajnikant Pendor</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Megha Santosh Kumare.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Megha Santosh Kumare</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Meghana Waman Korange.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Meghana Waman Korange</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Mohini Ganesh Dhone.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Mohini Ganesh Dhone</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Mohit Sanjay Jivtode.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Mohit Sanjay Jivtode</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Monika Santosh Kotnake.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Monika Santosh Kotnake</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Mukul Samir Madavi.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Mukul Samir Madavi</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Naitik Manohar Randaye.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Naitik Manohar Randaye</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Nayan Lingorao Soyam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Nayan Lingorao Soyam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Nayan Yogesh Gedam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Nayan Yogesh Gedam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Nikita Rajkumar Sidam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Nikita Rajkumar Sidam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Nisha Kishor Sawsakade.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Nisha Kishor Sawsakade</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Nishant Dipak Randaye.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Nishant Dipak Randaye</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Noham Premanand Bagde.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Noham Premanand Bagde</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Om Dadaji Shrirame.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Om Dadaji Shrirame</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Om Vilas Gedam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Om Vilas Gedam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Palak Kalidas Alam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Palak Kalidas Alam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Pallavi Bhavrao Gedam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Pallavi Bhavrao Gedam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Parul Gurudev Meshram.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Parul Gurudev Meshram</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Piyush Kapildev Pendor.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Piyush Kapildev Pendor</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Piyush Kishor Sidam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Piyush Kishor Sidam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Prachi Tulshiram Kinnake.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Prachi Tulshiram Kinnake</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Prajakta Maroti Ude.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Prajakta Maroti Ude</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Prajwal Pawan Bagade.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Prajwal Pawan Bagade</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Prajwal Sanjay Chaudhari.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Prajwal Sanjay Chaudhari</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Pranali Sandip Kannake.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Pranali Sandip Kannake</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Pranay Maroti Madavi.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Pranay Maroti Madavi</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Pratik Mangal Todase.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Pratik Mangal Todase</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Pratik Shankar Pendor.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Pratik Shankar Pendor</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Prem Kisan Gedam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Prem Kisan Gedam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Prishna Mahendra Sidam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Prishna Mahendra Sidam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Pritam Arvind Shedmake.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Pritam Arvind Shedmake</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Pritam Rajendra Kumare.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Pritam Rajendra Kumare</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Priya Paulas Soyam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Priya Paulas Soyam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Pruthviraj Manohar Magare.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Pruthviraj Manohar Magare</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Punam Nitesh Chauke.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Punam Nitesh Chauke</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Punam Shivaji Bombilwad.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Punam Shivaji Bombilwad</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Purva Premraj Madavi.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Purva Premraj Madavi</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Ragini Vyankatesh Kulsange.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Ragini Vyankatesh Kulsange</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Rajshri Sanjay Waghmare.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Rajshri Sanjay Waghmare</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Ram Murlidhar Atram.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Ram Murlidhar Atram</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Rashi Yogiraj Chaudhari.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Rashi Yogiraj Chaudhari</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Riya Chandrashekhar Chauke.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Riya Chandrashekhar Chauke</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Riya Ganesh Parchake.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Riya Ganesh Parchake</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Riya Vishwesharao Korange.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Riya Vishwesharao Korange</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Rohan Chandrahas Dharne.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Rohan Chandrahas Dharne</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Ronak Moreshwar Atram.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Ronak Moreshwar Atram</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Rupali Balaji Chauke.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Rupali Balaji Chauke</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Rutuja Gulab Sidam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Rutuja Gulab Sidam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Sai Vinod Dandekar.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Sai Vinod Dandekar</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Sakshi Pundlik Madavi.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Sakshi Pundlik Madavi</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Samiksha Gevidas Chaudhari.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Samiksha Gevidas Chaudhari</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Samiksha Kamraj Waghmare.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Samiksha Kamraj Waghmare</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Sanjana Sanjay Atram.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Sanjana Sanjay Atram</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Sanjana Sanjay Madavi.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Sanjana Sanjay Madavi</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Sanket Ghanashyam Jambhule.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Sanket Ghanashyam Jambhule</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Sanskar Kailas Yerme.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Sanskar Kailas Yerme</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Sanskar Santosh Pendor.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Sanskar Santosh Pendor</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Sanskruti Premraj Ade.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Sanskruti Premraj Ade</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Santosh Jangu Madapachi.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Santosh Jangu Madapachi</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Sejal Devidas Garate.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Sejal Devidas Garate</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Shantanu Aatesh Sawsakade.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Shantanu Aatesh Sawsakade</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Shantanu Dnyaneshwar Waghmare.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Shantanu Dnyaneshwar Waghmare</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Shashvat Khanesh Pendor.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Shashvat Khanesh Pendor</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Shivam Ajay Jambhule.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Shivam Ajay Jambhule</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Shivam Kanu Narote.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Shivam Kanu Narote</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Shraddha Nilesh Ade.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Shraddha Nilesh Ade</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Shravan Dipak Todase.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Shravan Dipak Todase</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Shravan Jiwandas Bagade.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Shravan Jiwandas Bagade</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Shravani Bhashkar Dandekar.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Shravani Bhashkar Dandekar</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Shravani Ghanshyam Meshram.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Shravani Ghanshyam Meshram</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Shravani Surendra Sidam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Shravani Surendra Sidam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Shreya Vinod Maraskolhe.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Shreya Vinod Maraskolhe</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Shreyash Megharaj Madavi.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Shreyash Megharaj Madavi</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Shreyash Rupesh Mundare.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Shreyash Rupesh Mundare</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Shreyash Sunil Garmale.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Shreyash Sunil Garmale</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Shriniwas Dilip Bombilwad.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Shriniwas Dilip Bombilwad</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Shrisha Sudharshan Pullewad.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Shrisha Sudharshan Pullewad</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Shrushti Arvind Gayakwad.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Shrushti Arvind Gayakwad</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Shubhra Rahul Dandekar.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Shubhra Rahul Dandekar</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Sneha Santosh Mandali.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Sneha Santosh Mandali</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Snehal Govinda Kinnake.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Snehal Govinda Kinnake</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Snehal Naresh Neware.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Snehal Naresh Neware</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Soham Rajendra Barekar.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Soham Rajendra Barekar</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Soham Suresh Magare.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Soham Suresh Magare</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Soham Vilas Dodake.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Soham Vilas Dodake</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Sonali Vikash Meshram.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Sonali Vikash Meshram</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Suhana Madhukar Chaudhari.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Suhana Madhukar Chaudhari</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Suhasi Sunil Dhurve.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Suhasi Sunil Dhurve</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Sushant Wagesh Wetti.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Sushant Wagesh Wetti</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Swastika Kailas Chikram.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Swastika Kailas Chikram</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Tanmay Subhash Sarye.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Tanmay Subhash Sarye</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Tanvi Ramesh Masram.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Tanvi Ramesh Masram</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Tejas Vinod Chaudhari.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Tejas Vinod Chaudhari</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Tina Chhabil Chaudhari.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Tina Chhabil Chaudhari</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Trisha Ishwar Sonawane.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Trisha Ishwar Sonawane</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Trisha Sandip Soyam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Trisha Sandip Soyam</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Trishali Sanjay kumbare.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Trishali Sanjay kumbare</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Utkarsha Nandu Pendor.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Utkarsha Nandu Pendor</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Vaidehi Roshan Madavi.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Vaidehi Roshan Madavi</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Vaishnavi Suresh Pendor.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Vaishnavi Suresh Pendor</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Varsha Pramod Aale.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Varsha Pramod Aale</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Vedant Khemdev Gayakwad.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Vedant Khemdev Gayakwad</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Vedant Ramesh Madavi.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Vedant Ramesh Madavi</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Vedhika Prabhakar Sawsakade.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Vedhika Prabhakar Sawsakade</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Vihan Manoj Garmale.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Vihan Manoj Garmale</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Virat Mangesh Chauke.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Virat Mangesh Chauke</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Virat Vasanta Kulmethe.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Virat Vasanta Kulmethe</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Vishwas Anil Madavi.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Vishwas Anil Madavi</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Vishwas Kailas Kove.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Vishwas Kailas Kove</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Yash Laxman Kotnake.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Yash Laxman Kotnake</span></a></li>
+<li><a href="public/docs/emrs_hall_tickets_2025/Yogeshwari Vinod Alam.pdf"target="_blank"><span class="bi bi-file-pdf-fill">Yogeshwari Vinod Alam</span></a></li>
+
+                </ol>
+                </p>
+            </div>
+
+            <!-- Guidelines starts here-->
+            <h2 id="experience" class="title mt-5"><b><u> विद्यार्थ्यांसाठी मार्गदर्शक तत्त्वे </u></b>(Guidelines for
+                Students)</h2>
+            <div id="div-experience">
+                <ul id="guidelines">
+                    <li class="right-arrow">विद्यार्थ्यांनी परीक्षा केंद्रावर नियोजित वेळेच्या 30 मिनिटे आधी उपस्थित
+                        राहावे.</li>
+                    <li class="right-arrow">प्रवेशपत्र परीक्षा केंद्रावर आणणे अनिवार्य आहे. प्रवेशपत्राशिवाय परीक्षा
+                        केंद्रात प्रवेश दिला जाणार नाही.</li>
+                    <li class="right-arrow">आधार कार्ड, शाळेचे ओळखपत्र इत्यादी वैध ओळखपत्र सोबत ठेवा.</li>
+                    <li class="right-arrow">फक्त निळ्या/काळ्या शाईच्या बॉलपॉईंट पेन, पेन्सिल, रबर, व गणिती साधने
+                        (जिओमेट्री बॉक्स) सोबत ठेवा.</li>
+                    <li class="right-arrow">मोबाइल फोन, कॅल्क्युलेटर, स्मार्टवॉच किंवा कोणतेही इलेक्ट्रॉनिक उपकरण
+                        परीक्षा हॉलमध्ये आणू नका.</li>
+                    <li class="right-arrow">अभ्यासासाठी वापरणारी कोणतीही सामग्री, नोट्स किंवा पिशव्या सोबत आणणे टाळा.
+                    </li>
+                    <li class="right-arrow">प्रवेशपत्रावरील सर्व तपशील (नाव, क्रमांक, परीक्षा केंद्र इ.) नीट तपासा. जर
+                        काही विसंगती आढळल्यास, त्वरित कार्यालयाशी संपर्क साधा.</li>
+                    <li class="right-arrow">शालेय गणवेश किंवा सभ्य औपचारिक पोशाख परिधान करा.</li>
+                    <li class="right-arrow">विद्यार्थ्यांनी परीक्षेदरम्यान शांतता व शिस्त राखावी.</li>
+                    <li class="right-arrow">पर्यवेक्षकांनी दिलेल्या सर्व सूचनांचे पालन करा. चुकीच्या वर्तनामुळे अपात्र
+                        ठरवले जाईल.</li>
+                    <li class="right-arrow">परीक्षा सुरू झाल्यानंतर 15 मिनिटांपेक्षा उशिरा येणाऱ्या विद्यार्थ्यांना
+                        परीक्षा केंद्रात प्रवेश दिला जाणार नाही.</li>
+                    <li class="right-arrow">कोणत्याही शंका किंवा आपत्कालीन परिस्थितीत शाळेच्या प्रशासनाशी / प्रकल्प
+                        कार्यालयाशी संपर्क साधा.</li>
+                </ul>
+            </div>
+
+            <!-- About School starts here-->
+            <div id="about">
+                <p class="title sub-title mt-4"> एकलव्य शाळा (About EMRS School) </p>
+                <div class="about-spacing">
+                    <p>इंडियन ट्रायबल अफेयर्स मंत्रालयाच्या अंतर्गत एकलव्य मॉडेल रेसिडेंशियल स्कूल्स (EMRS) या विशेष
+                        शाळा आहेत, ज्या आदिवासी विद्यार्थ्यांसाठी उभारण्यात आल्या आहेत. या शाळा आदिवासी विद्यार्थ्यांना
+                        गुणवत्तापूर्ण शिक्षण, वसतिगृहाची सुविधा, आणि संपूर्ण व्यक्तिमत्त्व विकासासाठी प्रोत्साहन देतात.
+                    </p>
+                    <ul class="list-unstyled">
+                        <li>
+                            <img src="public/images/emrs/bullet3.png">
+                            <span> स्थापना : </span>
+                            1998 मध्ये भारत सरकारने आदिवासी भागांमधील विद्यार्थ्यांना गुणवत्तापूर्ण शिक्षण देण्यासाठी
+                            EMRS शाळांची स्थापना केली. यामध्ये राष्ट्रीय शैक्षणिक निकषांनुसार विद्यार्थी शिक्षण घेतात.
+                        </li>
+                        <li>
+                            <img src="public/images/emrs/bullet3.png">
+                            <span> EMRS चा उद्देश : </span>
+                            <ul>
+                                <li>
+                                    आदिवासी विद्यार्थ्यांच्या जीवनशैलीमध्ये शैक्षणिक, आर्थिक व सामाजिक सुधारणा करणे.
+                                </li>
+                                <li>
+                                    त्यांना भविष्यामध्ये उच्च शिक्षण आणि रोजगाराच्या संधीसाठी सज्ज करणे.
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <img src="public/images/emrs/bullet3.png">
+                            <span> प्रमुख वैशिष्ट्ये :</span>
+                            <ol>
+                                <li>
+                                    <span> गुणवत्तापूर्ण शिक्षण : </span>
+                                    EMRS मध्ये CBSE किंवा राज्य मंडळाच्या पाठ्यक्रमावर आधारित शिक्षण दिले जाते. यामध्ये
+                                    विज्ञान, गणित,
+                                    भाषा, कला आणि तांत्रिक विषयांचा समावेश आहे.
+                                </li>
+                                <li>
+                                    <span> मोफत वसतिगृह व सुविधा : </span>
+                                    विद्यार्थी वसतिगृहात राहतात आणि त्यांना मोफत भोजन, शिक्षण साहित्य, व गणवेश पुरवले
+                                    जातात.
+                                </li>
+                                <li>
+                                    <span> स्पर्धात्मक परीक्षांची तयारी :</span>
+                                    विद्यार्थी NEET, JEE, UPSC सारख्या परीक्षांसाठी तयारी करू शकतात. या शाळा त्यांच्या
+                                    शैक्षणिक पायाभरणी मजबूत करतात.
+                                </li>
+                                <li>
+                                    <span> संस्कृती व परंपरा जतन करण्याचा उपक्रम :</span>
+                                    आदिवासी विद्यार्थ्यांना त्यांच्या परंपरा, भाषा, व संस्कृतीशी जोडून ठेवण्यासाठी विविध
+                                    उपक्रम राबवले जातात.
+                                </li>
+                                <li>
+                                    <span> क्रीडा व व्यक्तिमत्त्व विकास :</span>
+                                    विद्यार्थ्यांना राष्ट्रीय व आंतरराष्ट्रीय स्तरावर क्रीडा व सांस्कृतिक
+                                    कार्यक्रमांमध्ये भाग घेण्याची संधी दिली जाते.
+                                </li>
+                            </ol>
+                        </li>
+
+
+                        <li>
+                            <img src="public/images/emrs/bullet3.png">
+                            <span> प्रवेश प्रक्रिया : </span>
+                            <ul>
+                                <li>
+                                    प्रवेश प्रक्रिया विशेषतः आदिवासी विद्यार्थ्यांसाठी आहे.
+                                </li>
+                                <li>
+                                    कुटुंबाचे उत्पन्न व इतर पात्रतेचे निकष पाळले जातात.
+                                </li>
+                                <li>
+                                    जिल्हानिहाय प्रवेश परीक्षा घेतली जाते.
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+
+                        <li>
+                            <img src="public/images/emrs/bullet3.png">
+                            <span> सुविधा :</span>
+                            <ol>
+                                <li>
+                                    <span> शैक्षणिक सुविधा : </span>
+                                    डिजिटल क्लासरूम, विज्ञान प्रयोगशाळा, संगणक कक्ष.
+                                </li>
+                                <li>
+                                    <span> रहिवास व आरोग्य सुविधा : </span>
+                                    उत्तम दर्जाचे वसतिगृह, स्वच्छता, व वैद्यकीय तपासणी.
+                                </li>
+                                <li>
+                                    <span> अभ्यासक्रम पूरक उपक्रम :</span>
+                                    शिष्यवृत्ती योजना, मार्गदर्शन सत्र, व शैक्षणिक सहली.
+                                </li>
+                            </ol>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+            <!-- About School Ends here-->
+
+
+
+
+
+
+
+            <!-- About EMRS Dewada School starts here-->
+            <div id="about-emrs">
+                <p class="title sub-title mt-4">एकलव्य शाळा देवाडा (About EMRS Dewada School) </p>
+                <div class="about-spacing">
+                    <ul class="list-unstyled">
+                        <li>
+                            <img src="public/images/emrs/bullet3.png">
+                            <span> अभिमानास्पद बाबी (Achievements): </span>
+                            आमच्या शाळेने गेल्या काही वर्षांत उल्लेखनीय प्रगती साधली आहे:
+
+                            <ul>
+                                <li>
+                                    विद्यार्थ्यांनी <b>शैक्षणिक क्षेत्रात मिळवलेले महत्त्वाचे पुरस्कार</b>, तसेच विविध
+                                    विज्ञान प्रदर्शनांमध्ये भाग घेऊन राज्य व राष्ट्रीय पातळीवर चमकदार कामगिरी केली आहे.
+                                </li>
+                                <li>
+                                    आमच्या विद्यार्थ्यांनी <b>क्रीडा स्पर्धांमध्ये राज्य व राष्ट्रीय स्तरावर पदके</b>
+                                    पटकावली आहेत.
+                                </li>
+                                <li>
+                                    शाळेत दरवर्षी आयोजित होणाऱ्या <b>कला, विज्ञान प्रदर्शन आणि क्रीडा महोत्सवांमध्ये</b>
+                                    विद्यार्थ्यांनी प्रकल्प सादर करून आपल्या कौशल्याचे प्रदर्शन केले आहे.
+                                </li>
+                                <li>
+                                    अनेक विद्यार्थ्यांनी <b>राष्ट्रीय पातळीवरील स्पर्धात्मक परीक्षा</b> जिंकून शाळेचे
+                                    नाव उज्ज्वल केले आहे.
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <img src="public/images/emrs/bullet3.png">
+                            <span> शिक्षक आणि स्टाफची गुणवत्ता :</span>
+                            <ul>
+                                <li>
+                                    <span> अनुभवी शिक्षक: </span>
+                                    आमच्या शाळेतील शिक्षक हे तज्ज्ञ असून, त्यांना विविध विषयांमध्ये विशेष प्राविण्य
+                                    मिळाले आहे. ते विद्यार्थ्यांना नुसते शिकवत नाहीत, तर त्यांच्या आवडीनिवडी समजून घेत
+                                    त्यांना योग्य मार्गदर्शन करतात.
+                                </li>
+                                <li>
+                                    <span> मार्गदर्शक सत्रे: </span>
+                                    विद्यार्थ्यांना <b>NEET, JEE, UPSC आणि इतर स्पर्धा परीक्षांसाठी विशेष प्रशिक्षण</b>
+                                    दिले जाते.
+                                </li>
+                                <p>
+                                    शाळेतील प्रशासकीय आणि शिक्षकेत्तर कर्मचारी विद्यार्थ्यांच्या सर्वांगीण विकासासाठी
+                                    समर्पित आहे.
+                                </p>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <img src="public/images/emrs/bullet3.png">
+                            <span> सांस्कृतिक उपक्रम: </span>
+                            <ul>
+                                <li>
+                                    आदिवासी परंपरांना जपण्यासाठी शाळा विविध सांस्कृतिक उपक्रम राबवते, जसे की <b>आदिवासी
+                                        कला महोत्सव, लोकनृत्य सादरीकरण, आणि पारंपरिक संगीत कार्यक्रम</b>
+                                </li>
+                                <li>
+                                    दरवर्षी <b>वन महोत्सव, वार्षिक स्नेहसंमेलन आणि राष्ट्रीय दिनांचे उत्सव</b> मोठ्या
+                                    उत्साहाने साजरे केले जातात.
+                                </li>
+                                <li>
+                                    विद्यार्थ्यांना त्यांच्या मातृभाषा आणि परंपरा शिकण्यासाठी प्रोत्साहन दिले जाते.
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <img src="public/images/emrs/bullet3.png">
+                            <span> शाळेच्या ठिकाणाचे वर्णन:</span>
+                            <ul>
+                                <li>
+                                    आमची शाळा निसर्गाच्या सान्निध्यात, शांत आणि स्वच्छ वातावरणात वसलेली आहे, जे
+                                    अभ्यासासाठी अत्यंत पोषक आहे.
+                                </li>
+                                <li>
+                                    शाळेचा परिसर हिरवळ, स्वच्छता, आणि विद्यार्थ्यांसाठी खेळाच्या उत्तम सुविधा यासाठी
+                                    ओळखला जातो.
+                                </li>
+                                <li>
+                                    शाळेत विद्यार्थ्यांच्या <b>सुरक्षेची विशेष काळजी घेतली जाते</b>, जसे की CCTV
+                                    यंत्रणा, गार्ड, व मुलींसाठी वेगळ्या सुरक्षित सुविधा.
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <img src="public/images/emrs/bullet3.png">
+                            <span> विद्यार्थ्यांसाठी योजना व शिष्यवृत्ती:</span>
+                            <ul>
+                                <li>
+                                    आमची शाळा विद्यार्थ्यांसाठी विविध योजना राबवते, जसे की:
+                                </li>
+                                <ul>
+                                    <li>
+                                        <span> गुणवत्ताधारित शिष्यवृत्ती: </span>
+                                        विशेष गुणवत्ताधारित सवलती व आर्थिक मदत.
+                                    </li>
+
+                                    <li>
+                                        <span> शैक्षणिक साहित्य व सुविधा: </span>
+                                        मोफत गणवेश, पुस्तके व स्टेशनरी विद्यार्थ्यांना दिली जाते.
+                                    </li>
+                                </ul>
+                                <li>
+                                    <span> नोकरी व उच्च शिक्षणासाठी मार्गदर्शन: </span>
+                                    आमच्या विद्यार्थ्यांना शाळा संपल्यानंतर करिअर निवडण्यासाठी विशेष मार्गदर्शन आणि
+                                    सल्ला दिला जातो.
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <img src="public/images/emrs/bullet3.png">
+                            <span> आधुनिक तंत्रज्ञानाचा वापर:</span>
+                            <ul>
+                                <li>
+                                    शाळेत <b>स्मार्ट क्लासरूम</b> आहेत, जिथे डिजिटल शिक्षण प्रणालीचा वापर होतो.
+                                </li>
+                                <li>
+                                    विद्यार्थ्यांसाठी <b>संगणक प्रयोगशाळा</b> आणि इंटरनेटच्या सोयीसह आधुनिक शिक्षण
+                                    तंत्रज्ञान उपलब्ध आहे.
+                                </li>
+                                <li>
+                                    डिजिटल लर्निंग प्लॅटफॉर्म्सद्वारे विद्यार्थ्यांना <b>ऑनलाइन शिक्षणाची सोय</b> दिली
+                                    जाते.
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <img src="public/images/emrs/bullet3.png">
+                            <span> पालकांसाठी विशेष माहिती:</span>
+                            <ul>
+                                <li>
+                                    पालकांसाठी दरवर्षी <b>पालक-शिक्षक संमेलन</b> आयोजित केले जाते, ज्यामध्ये
+                                    विद्यार्थ्यांच्या प्रगतीवर चर्चा केली जाते.
+                                </li>
+                                <li>
+                                    विद्यार्थ्यांसाठी शाळेची सर्व माहिती व अपडेट्स वेळेवर पालकांपर्यंत पोहोचवली जाते.
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <img src="public/images/emrs/bullet3.png">
+                            <span> आमचे उद्दिष्ट:</span>
+                            <ul>
+                                <li>
+                                    विद्यार्थ्यांच्या सर्वांगीण विकासासाठी प्रयत्न करणे आणि त्यांना उच्च शिक्षण व
+                                    चांगल्या करिअरसाठी तयार करणे.
+                                </li>
+                                <li>
+                                    आदिवासी समाजाच्या प्रगतीसाठी शिक्षण हे साधन बनवून त्यांना सशक्त करणे.
+                                </li>
+                                <li>
+                                    प्रत्येक विद्यार्थ्याला त्यांच्या <b>कौशल्यांनुसार योग्य संधी उपलब्ध करून देणे</b>.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- About EMRS Dewada School Ends here-->
+
+            
+            <!-- Contact starts here-->
+            <h2 id="contact" class="title mt-5"> <b><u> कार्यालयाशी संपर्क साधा </u></b> (Contact Office)</h2>
+
+            <div id="div-contact">
+                <div class="mt-4 ms-4" id="contact-left-basic-details">
+                    <h2><b> कार्यालय प्रकल्प अधिकारी
+                            <br>
+                            एकात्मिक आदिवासी विकास प्रकल्प,
+                        </b>
+                    </h2>
+                    <h3>
+                        <p>
+                            सिव्हिल लाईन,<br>
+                            जिल्हा क्रिडा संकुलच्या मागे,<br>
+                            चंद्रपूर 442401. (M.H.)
+                        </p>
+                    </h3>
+                    <h5>
+                        <a class="bi bi-envelope" href="mailto:pochandrapur@gmail.com">&nbsp;pochandrapur@gmail.com</a>
+                    </h5>
+
+                    <h5>
+                        <a class="bi bi-telephone-fill" href="tel:7757009267">&nbsp;7757009267</a>
+                    </h5>
+
+                    <h5>
+                        <a class="bi bi-whatsapp text-success" href="https://wa.me/917757009267"> Send
+                            Message</a>
+                    </h5>
+
+                    <h5>
+                        <a class="bi bi-facebook" href="https://www.facebook.com/POChandrapur/"> Facebook</a>
+                    </h5>
+                    <h5>
+                        <a class="bi bi-youtube text-danger" href="https://www.youtube.com/@projcetofficer1812">
+                            Youtube</a>
+                    </h5>
+                </div>
+                <div class="mt-4 ms-4" id="contact-right-office-building">
+                    <figure>
+                        <img id="contact-office-building" src="public/images/emrs/office_building.jpg"
+                            alt="ITDP Office Building">
+                    </figure>
+                </div>
+            </div>
+
+        </main>
+    </section>
+
+
+
+    <script>
+        const textElement = document.getElementById("text");
+        const phrases = ["Exam Date: 23 Feb 2025\nExam Day: Sunday\nExam Time: 11:00 am to 01:00 pm\nExam Center: Eklavya Model Residential Schools ~ Dewada,\nTa. Rajura, Dist. Chandrapur."];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeText() {
+            const currentPhrase = phrases[phraseIndex];
+            if (isDeleting) {
+                textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                setTimeout(typeText, 1000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                setTimeout(typeText, 500);
+            } else {
+                setTimeout(typeText, isDeleting ? 50 : 100);
+            }
+        }
+        typeText();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript libraries (jQuery and Bootstrap) -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
